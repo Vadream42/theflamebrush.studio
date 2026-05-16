@@ -1,0 +1,17 @@
+{
+  "title": "Stillwater",
+  "season": "Winter 2025",
+  "tagline": "Cobalt, ash, and the long blue dusk.",
+  "blurb": "A study in patience. Cobalt and pearl over a clear core, frit laid down slowly, kiln cycles run long. The pieces in this collection were made through January and February in a studio that never got above 58°F — a quiet body of work for a quiet time of year.",
+  "cover": "01-stillwater-no-1.jpeg",
+  "order": 1,
+  "pieces": {
+    "01-stillwater-no-1.jpeg":   { "title": "Stillwater, no. 1",   "size": "6½″ × 4″", "year": "2025", "price": 240, "edition": "1/1" },
+    "02-stillwater-no-2.jpeg":   { "title": "Stillwater, no. 2",   "size": "5″ × 3½″", "year": "2025", "price": 195, "edition": "1/1" },
+    "03-hydrangea-cobalt.jpeg":  { "title": "Hydrangea (cobalt)",  "size": "5″ × 4″",  "year": "2025", "price": 210, "edition": "1/1" },
+    "04-long-dusk.jpeg":         { "title": "Long Dusk",           "size": "7″ × 4″",  "year": "2025", "price": 285, "edition": "1/1" },
+    "05-tide-pool-pair.jpeg":    { "title": "Tide Pool, pair",     "size": "3″ × 3″",  "year": "2025", "price": 145, "note": "Set of two" },
+    "06-ash-carrier.jpeg":       { "title": "Ash Carrier",         "size": "6″ × 4″",  "year": "2025", "price": 230, "edition": "1/1" },
+    "07-marbled-quiet.jpeg":     { "title": "Marbled Quiet",       "size": "5½″ × 4″", "year": "2025", "price": 210, "edition": "1/1" }
+  }
+}

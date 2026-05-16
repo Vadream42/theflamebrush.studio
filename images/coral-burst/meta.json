@@ -1,0 +1,17 @@
+{
+  "title": "Coral Burst",
+  "season": "Summer 2026",
+  "tagline": "Loud color, fast hands, the height of the season.",
+  "blurb": "Made in the height of August heat. We pulled colors we don't normally trust ourselves with — ruby, amber, hot pink, emerald speckle — and let them argue. Most of the pieces in this collection took less than a week from gather to anneal. You can feel it.",
+  "cover": "01-coral-burst-no-1.jpeg",
+  "order": 2,
+  "pieces": {
+    "01-coral-burst-no-1.jpeg":     { "title": "Coral Burst, no. 1",     "size": "6″ × 4″",  "year": "2026", "price": 240, "edition": "1/1" },
+    "02-confetti-pair.jpeg":        { "title": "Confetti Pair",          "size": "4″ × 4″",  "year": "2026", "price": 320, "note": "Set of two" },
+    "03-field-study-emerald.jpeg":  { "title": "Field Study (emerald)",  "size": "7″ × 4″",  "year": "2026", "price": 285, "edition": "1/1" },
+    "04-petal-static.jpeg":         { "title": "Petal Static",           "size": "5½″ × 4″", "year": "2026", "price": 210, "edition": "1/1" },
+    "05-ruby-hydrangea.jpeg":       { "title": "Ruby Hydrangea",         "size": "5″ × 3½″", "year": "2026", "price": 195, "edition": "1/1" },
+    "06-amethyst-ring-dish.jpeg":   { "title": "Amethyst Ring Dish",     "size": "4″ wide",  "year": "2026", "price": 95,  "edition": "1/1" },
+    "07-heat-mirage.jpeg":          { "title": "Heat Mirage",            "size": "6″ × 4″",  "year": "2026", "price": 240, "edition": "1/1" }
+  }
+}
