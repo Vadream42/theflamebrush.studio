@@ -197,25 +197,47 @@
   function heroWall() {
     const photos = ALL_PIECES.map(p => p.photo).filter(Boolean);
     const tileRecipe = [
-      { col: "1 / 3", row: "1", dy: 0.30 },
-      { col: "3 / 5", row: "1", dy: 0.10 },
-      { col: "5 / 7", row: "1", dy: 0.50 },
-      { col: "1 / 2", row: "2", dy: 0.20 },
-      { col: "2 / 4", row: "2", dy: 0.40 },
-      { col: "4 / 5", row: "2", dy: 0.15 },
-      { col: "5 / 7", row: "2", dy: 0.35 },
-      { col: "1 / 3", row: "3", dy: 0.45 },
-      { col: "3 / 5", row: "3", dy: 0.20 },
-      { col: "5 / 7", row: "3", dy: 0.30 },
+      { col: "1 / 3", row: "1", colStart: 1, dy: 0.30 },
+      { col: "3 / 5", row: "1", colStart: 3, dy: 0.10 },
+      { col: "5 / 7", row: "1", colStart: 5, dy: 0.50 },
+      { col: "1 / 2", row: "2", colStart: 1, dy: 0.20 },
+      { col: "2 / 4", row: "2", colStart: 2, dy: 0.40 },
+      { col: "4 / 5", row: "2", colStart: 4, dy: 0.15 },
+      { col: "5 / 7", row: "2", colStart: 5, dy: 0.35 },
+      { col: "1 / 3", row: "3", colStart: 1, dy: 0.45 },
+      { col: "3 / 5", row: "3", colStart: 3, dy: 0.20 },
+      { col: "5 / 7", row: "3", colStart: 5, dy: 0.30 },
     ];
     const grid = h("div", { class: "grid" });
+    const tileImages = [];
     if (photos.length > 0) {
       tileRecipe.forEach((t, i) => {
         const photo = photos[(i * 3 + 1) % photos.length];
-        grid.append(h("div", {
+        // Diagonal cascade: top-left first, bottom-right last
+        const delay = (parseInt(t.row) - 1) * 180 + (t.colStart - 1) * 60;
+        const tile = h("div", {
+          class: "hero-tile",
           dataset: { dy: String(t.dy) },
-          style: { gridColumn: t.col, gridRow: t.row, backgroundImage: `url("${photo}")` },
-        }));
+          style: {
+            gridColumn: t.col,
+            gridRow: t.row,
+            "--reveal-delay": `${delay}ms`,
+          },
+        });
+        const img = h("img", {
+          src: photo, alt: "",
+          loading: "eager",
+          fetchpriority: i < 6 ? "high" : "auto",
+          decoding: "async",
+        });
+        tile.append(img);
+        grid.append(tile);
+        tileImages.push(img);
+
+        // Preload hint in <head> so the browser prioritizes these.
+        if (i < 6 && !document.querySelector(`link[rel="preload"][href="${photo}"]`)) {
+          document.head.append(h("link", { rel: "preload", as: "image", href: photo, fetchpriority: "high" }));
+        }
       });
     }
 
@@ -240,16 +262,33 @@
       ),
     );
 
-    // parallax
+    // Choreographed reveal: wait for all hero images to load, then cascade.
+    // Bail out after 2.5s if some are slow — we don't want a stuck-blank hero.
+    const markReady = () => requestAnimationFrame(() => section.classList.add("is-ready"));
+    if (tileImages.length === 0) {
+      markReady();
+    } else {
+      const pending = tileImages.map(img =>
+        img.complete && img.naturalWidth > 0
+          ? Promise.resolve()
+          : new Promise(resolve => {
+              img.addEventListener("load", resolve, { once: true });
+              img.addEventListener("error", resolve, { once: true });
+            })
+      );
+      Promise.all(pending).then(markReady);
+      setTimeout(markReady, 2500);
+    }
+
+    // Parallax — applies to the tile (parent), reveal animations target the inner <img>
     const onScroll = () => {
       const y = window.scrollY;
       section.querySelectorAll("[data-dy]").forEach(el => {
         const dy = parseFloat(el.dataset.dy || "0");
-        el.style.transform = `translate3d(0, ${y * dy * 0.4}px, 0)`;
+        el.style.setProperty("--parallax-y", `${(y * dy * 0.4).toFixed(2)}px`);
       });
     };
     window.addEventListener("scroll", onScroll, { passive: true });
-    // remove listener when this section is removed
     const observer = new MutationObserver(() => {
       if (!document.contains(section)) {
         window.removeEventListener("scroll", onScroll);

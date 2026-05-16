@@ -248,8 +248,34 @@ a:hover { background-size: 100% 1px; }
   gap: 8px; padding: 8px;
   filter: saturate(1.05) contrast(1.02);
 }
-.hero-wall .grid > div {
-  background-size: cover; background-position: center; will-change: transform;
+
+/* Hero tile — parent gets parallax via --parallax-y, reveal opacity */
+.hero-wall .hero-tile {
+  position: relative;
+  overflow: hidden;
+  background: var(--ink-800);
+  opacity: 0;
+  transform: translate3d(0, var(--parallax-y, 0px), 0);
+  transition: opacity 1100ms var(--ease-out-quint);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+.hero-wall .hero-tile img {
+  display: block;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transform: scale(1.10);
+  transition: transform 1400ms var(--ease-out-quint);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+/* When the section is ready (all hero images loaded), play the cascade */
+.hero-wall.is-ready .hero-tile { opacity: 1; }
+.hero-wall.is-ready .hero-tile img { transform: scale(1); }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-wall .hero-tile { opacity: 1; transition: none; }
+  .hero-wall .hero-tile img { transform: none; transition: none; }
 }
 .hero-wall .scrim {
   position: absolute; inset: 0;
