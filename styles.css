@@ -516,6 +516,25 @@ a:hover { background-size: 100% 1px; }
   font-family: var(--font-display); font-style: italic; font-weight: 400;
   font-size: 22px; line-height: 1.6; color: var(--paper-100); margin: 0 0 24px;
 }
+.fb-about-postscript {
+  font-family: var(--font-text); font-size: 15px; line-height: 1.65;
+  color: var(--paper-300); margin: 0; max-width: 460px;
+  padding-top: 24px; border-top: 1px solid var(--line-700);
+}
+
+/* Transition header between intro and bios */
+.fb-about-transition {
+  max-width: 1080px; margin: 0 auto;
+  padding: 32px 32px 16px; text-align: center;
+}
+.fb-about-transition h2 {
+  font-family: var(--font-display); font-style: italic; font-weight: 300;
+  font-size: clamp(32px, 3.4vw, 48px); line-height: 1.25;
+  letter-spacing: -0.015em; margin: 0;
+  color: var(--paper-50); text-wrap: balance;
+}
+.fb-about-transition h2 em { color: var(--ember-400); font-style: italic; }
+
 .fb-about-intro-photo {
   margin: 0; position: relative; overflow: hidden;
   aspect-ratio: 4/5; background: var(--ink-800);
@@ -591,23 +610,21 @@ a:hover { background-size: 100% 1px; }
 }
 
 /* =========================================================
-   Values (kept; spacing tightened for new context)
+   Values
    ========================================================= */
 .fb-values {
   max-width: 1280px; margin: 64px auto 0; padding: 96px 32px 128px;
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 56px;
   border-top: 1px solid var(--line-700);
 }
-.fb-values .v .num {
-  font-family: var(--font-display); font-style: italic; font-weight: 300;
-  font-size: 56px; color: var(--ember-400); line-height: 1; margin-bottom: 16px;
-}
 .fb-values .v h4 {
   font-family: var(--font-display); font-style: italic; font-weight: 400;
-  font-size: 28px; line-height: 1.2; letter-spacing: -0.01em;
-  margin: 0 0 12px; color: var(--paper-50);
+  font-size: 32px; line-height: 1.15; letter-spacing: -0.01em;
+  margin: 0 0 14px; color: var(--ember-400);
 }
-.fb-values .v p { font-size: 14px; line-height: 1.65; color: var(--paper-200); margin: 0; }
+.fb-values .v p {
+  font-size: 14px; line-height: 1.7; color: var(--paper-200); margin: 0;
+}
 
 /* =========================================================
    Scroll-reveal utility
@@ -767,9 +784,13 @@ a:hover { background-size: 100% 1px; }
   .fb-about-intro { padding: 56px 0 16px; }
   .fb-about-intro-inner { grid-template-columns: 1fr; gap: 32px; padding: 0 16px; }
   .fb-bio, .fb-bio.alt { grid-template-columns: 1fr; gap: 32px; padding: 64px 16px; }
-  .fb-bio.alt .fb-bio-photo { order: 0; }
-  .fb-bio.alt .fb-bio-text { justify-self: start; }
+  /* On mobile, every bio block puts the photo first, then the text */
+  .fb-bio .fb-bio-photo { order: 1; }
+  .fb-bio .fb-bio-text  { order: 2; justify-self: start; }
   .fb-bio-text { max-width: none; }
+
+  /* Tighter transition header on mobile */
+  .fb-about-transition { padding: 24px 16px 8px; }
   .fb-values { margin-top: 32px; padding: 64px 16px 96px; }
   .fb-contact { padding: 56px 16px 96px; }
   .fb-form .row2 { grid-template-columns: 1fr; gap: 28px; }

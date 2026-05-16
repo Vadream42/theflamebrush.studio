@@ -506,9 +506,11 @@
       h("section", { class: "fb-about-intro" },
         h("div", { class: "fb-about-intro-inner" },
           h("div", { class: "fb-about-intro-text reveal" },
-            h("h1", { html: `Meet the <em>makers</em>.` }),
+            h("h1", { html: `Meet the <em>makers</em> of The Flame Brush!` }),
             h("p", { class: "lede" },
               "Together, Caitlin and Gwen have built The Flame Brush as a space where curiosity, experimentation, and creativity collide. By bridging cutting-edge science with an artist's sensitivity, The Flame Brush invites viewers to see glass not just as a medium, but as a living interface where discovery and creativity interact — revealing new dimensions shaped by both nature and imagination."),
+            h("p", { class: "fb-about-postscript" },
+              "Stay tuned for more behind-the-scenes glimpses, upcoming drops, and a closer look at the art that emerges when science meets molten glass!"),
           ),
           h("figure", { class: "fb-about-intro-photo reveal" },
             h("div", {
@@ -521,11 +523,15 @@
         ),
       ),
 
+      // ---------- Transition header into the bios ----------
+      h("section", { class: "fb-about-transition reveal" },
+        h("h2", { html: `We are so excited to introduce the co-founders and creative minds shaping <em>our studio</em>.` }),
+      ),
+
       // ---------- Caitlin ----------
       bioBlock({
         side: "left",
         photo: "assets/Team/caitlin.JPG",
-        eyebrow: "Co-founder · No. 1",
         firstName: "Caitlin",
         fullName: "Caitlin Koski",
         credits: "BS Biomedical Engineering · MS Biotechnology · PhD Materials Science & Engineering",
@@ -540,7 +546,6 @@
       bioBlock({
         side: "right",
         photo: "assets/Team/gwen.jpg",
-        eyebrow: "Co-founder · No. 2",
         firstName: "Gwen",
         fullName: "Gwen Musial",
         credits: "PhD Biomedical Optics, University of Houston",
@@ -551,15 +556,14 @@
         ],
       }),
 
-      // ---------- Values (kept, lightly updated) ----------
+      // ---------- Values ----------
       h("section", { class: "fb-values" },
         ...[
-          ["i.",   "Slow craft.",  "A 14-hour anneal is the difference between a vessel and a pile of pretty shards. We make as much as the kiln will allow — no more."],
-          ["ii.",  "Open studio.", "We uplift the artistic community, foster collaboration, and empower women in creative and scientific fields. The studio is louder when shared."],
-          ["iii.", "One of one.",  "Every piece in every collection is unrepeatable — the next will be its cousin, never its twin. We sign the pontil and number the year."],
-        ].map(([num, title, body]) =>
+          ["Slow craft.",    "A 14-hour anneal is the difference between a vessel and a pile of pretty shards. We make as much as the kiln will allow."],
+          ["Proudly local.", "We uplift the local Bay Area artistic community — fostering collaboration and empowering women in creative and scientific fields. The studio is louder when shared."],
+          ["One of one.",    "Every piece in every collection is unrepeatable — the next will be its cousin, never its twin."],
+        ].map(([title, body]) =>
           h("div", { class: "v reveal" },
-            h("div", { class: "num" }, num),
             h("h4", {}, title),
             h("p", {}, body),
           )
@@ -578,7 +582,7 @@
       h("figcaption", {}, firstName),
     );
     const textEl = h("div", { class: "fb-bio-text reveal" },
-      h("div", { class: "fb-eyebrow" }, h("span", { class: "rule" }), eyebrow),
+      eyebrow ? h("div", { class: "fb-eyebrow" }, h("span", { class: "rule" }), eyebrow) : null,
       h("h2", { class: "fb-bio-name", html: fullName.replace(firstName, `<em>${firstName}</em>`) }),
       h("div", { class: "fb-bio-credits" },
         h("div", { class: "credits-line" }, credits),
