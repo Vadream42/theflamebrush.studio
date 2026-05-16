@@ -514,7 +514,7 @@
             h("div", {
               class: "photo parallax",
               dataset: { dy: "0.06" },
-              style: { backgroundImage: `url("assets/team/caitlin-and-gwen.jpg")` },
+              style: { backgroundImage: `url("assets/Team/caitlin-and-gwen.JPG")` },
             }),
             h("figcaption", {}, "Caitlin Koski & Gwen Musial · The Flame Brush"),
           ),
@@ -524,7 +524,7 @@
       // ---------- Caitlin ----------
       bioBlock({
         side: "left",
-        photo: "assets/team/caitlin.jpg",
+        photo: "assets/Team/caitlin.JPG",
         eyebrow: "Co-founder · No. 1",
         firstName: "Caitlin",
         fullName: "Caitlin Koski",
@@ -539,7 +539,7 @@
       // ---------- Gwen ----------
       bioBlock({
         side: "right",
-        photo: "assets/team/gwen.jpg",
+        photo: "assets/Team/gwen.jpg",
         eyebrow: "Co-founder · No. 2",
         firstName: "Gwen",
         fullName: "Gwen Musial",
