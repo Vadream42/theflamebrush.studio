@@ -490,12 +490,6 @@ a:hover { background-size: 100% 1px; }
   font-family: var(--font-display); font-style: italic; font-weight: 400;
   font-size: 22px; line-height: 1.6; color: var(--paper-100); margin: 0 0 24px;
 }
-.fb-about-postscript {
-  font-family: var(--font-text); font-size: 15px; line-height: 1.65;
-  color: var(--paper-300); margin: 0; max-width: 460px;
-  padding-top: 24px; border-top: 1px solid var(--line-700);
-}
-
 .fb-about-intro-photo {
   margin: 0; position: relative; overflow: hidden;
   aspect-ratio: 4/5; background: var(--ink-800);
@@ -746,7 +740,6 @@ a:hover { background-size: 100% 1px; }
 
   .fb-about-intro { padding: 56px 0 16px; }
   .fb-about-intro-inner { grid-template-columns: 1fr; gap: 32px; padding: 0 16px; }
-  .fb-about-postscript { max-width: none; }
   .fb-bio, .fb-bio.alt { grid-template-columns: 1fr; gap: 32px; padding: 64px 16px; }
   .fb-bio.alt .fb-bio-photo { order: 0; }
   .fb-bio.alt .fb-bio-text { justify-self: start; }

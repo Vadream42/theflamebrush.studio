@@ -467,12 +467,9 @@
       h("section", { class: "fb-about-intro" },
         h("div", { class: "fb-about-intro-inner" },
           h("div", { class: "fb-about-intro-text reveal" },
-            h("div", { class: "fb-eyebrow" }, h("span", { class: "rule" }), "Meet the makers"),
-            h("h1", { html: `Caitlin <em>&amp;</em> Gwen.<br/>Where curiosity, experimentation,<br/>and creativity <em>collide</em>.` }),
+            h("h1", { html: `Meet the <em>makers</em>.` }),
             h("p", { class: "lede" },
               "Together, Caitlin and Gwen have built The Flame Brush as a space where curiosity, experimentation, and creativity collide. By bridging cutting-edge science with an artist's sensitivity, The Flame Brush invites viewers to see glass not just as a medium, but as a living interface where discovery and creativity interact — revealing new dimensions shaped by both nature and imagination."),
-            h("p", { class: "fb-about-postscript" },
-              "Stay tuned for more behind-the-scenes glimpses, upcoming drops, and a closer look at the art that emerges when science meets molten glass."),
           ),
           h("figure", { class: "fb-about-intro-photo reveal" },
             h("div", {
