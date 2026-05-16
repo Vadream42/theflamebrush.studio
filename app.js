@@ -462,36 +462,97 @@
      ABOUT
      ========================================================= */
   function aboutPage() {
-    const heroPhoto = (COLLECTIONS[0] && COLLECTIONS[0].cover) || "";
     return h("div", {},
-      h("section", { class: "fb-about-hero" },
-        h("div", {},
-          h("div", { class: "fb-eyebrow" }, h("span", { class: "rule" }), "About the studio"),
-          h("h1", { html: `Two pairs of <em>hands</em>.<br/>One open kiln.` }),
-          h("p", { class: "lede" }, "We unite scientific curiosity with artistic innovation to create unique glass art that inspires and connects."),
+      // ---------- Intro / About us ----------
+      h("section", { class: "fb-about-intro" },
+        h("div", { class: "fb-about-intro-inner" },
+          h("div", { class: "fb-about-intro-text reveal" },
+            h("div", { class: "fb-eyebrow" }, h("span", { class: "rule" }), "Meet the makers"),
+            h("h1", { html: `Caitlin <em>&amp;</em> Gwen.<br/>Where curiosity, experimentation,<br/>and creativity <em>collide</em>.` }),
+            h("p", { class: "lede" },
+              "Together, Caitlin and Gwen have built The Flame Brush as a space where curiosity, experimentation, and creativity collide. By bridging cutting-edge science with an artist's sensitivity, The Flame Brush invites viewers to see glass not just as a medium, but as a living interface where discovery and creativity interact — revealing new dimensions shaped by both nature and imagination."),
+            h("p", { class: "fb-about-postscript" },
+              "Stay tuned for more behind-the-scenes glimpses, upcoming drops, and a closer look at the art that emerges when science meets molten glass."),
+          ),
+          h("figure", { class: "fb-about-intro-photo reveal" },
+            h("div", {
+              class: "photo parallax",
+              dataset: { dy: "0.06" },
+              style: { backgroundImage: `url("assets/team/caitlin-and-gwen.jpg")` },
+            }),
+            h("figcaption", {}, "Caitlin Koski & Gwen Musial · The Flame Brush"),
+          ),
         ),
-        h("div", { class: "photo", style: { backgroundImage: heroPhoto ? `url("${heroPhoto}")` : "none" } }),
       ),
-      h("article", { class: "fb-about-body" },
-        h("p", {}, "The Flame Brush is a woman-owned partnership. We met in a chemistry lab and again at a glory hole. The first taught us why glass behaves; the second taught us how to make it sing."),
-        h("p", {}, "Everything in our catalog began as a 2,000°F gather of soda-lime glass on the end of a steel rod. We layer color as ground frit, marver it, blow and shape it at the bench, and finally surrender each piece to a fourteen-hour anneal — the slow part where, if anything is going to crack, it does. Most of the time it doesn't."),
-        h("div", { class: "pull" }, "As a woman-owned partnership, we are dedicated to uplifting the artistic community, fostering collaboration, and empowering women in creative and scientific fields."),
-        h("p", {}, `We are based in a sunlit studio in ${STUDIO.location}. Our doors are open to visitors on Saturdays, and to apprentice glassblowers from local universities all year round. We host workshops, run open-bench nights, and contribute work to fundraisers for women in STEM.`),
-        h("p", {}, "Through our craft, we strive to spark wonder, encourage learning, and build a vibrant, inclusive space where art and science flourish together. We hope you'll come blow a bubble with us sometime."),
-      ),
+
+      // ---------- Caitlin ----------
+      bioBlock({
+        side: "left",
+        photo: "assets/team/caitlin.jpg",
+        eyebrow: "Co-founder · No. 1",
+        firstName: "Caitlin",
+        fullName: "Caitlin Koski",
+        credits: "BS Biomedical Engineering · MS Biotechnology · PhD Materials Science & Engineering",
+        minor: "Minor in Studio Arts — painting & black-and-white film photography",
+        body: [
+          "Caitlin melds scientific innovation with artistic expression through glass. She brings a uniquely multifaceted perspective to The Flame Brush, where every form is a small experiment in precision and intuition.",
+          "Gwen inspired Caitlin to explore the hot shop, where she began her training in 2022 at The Glass Hand Studio in Alameda, California. Her work showcases an eye for contrast and composition, playing on light, color, and shadow with each blown form. Her experimental approach blends scientific precision with artistic abstraction, leading to transformative glass pieces.",
+        ],
+      }),
+
+      // ---------- Gwen ----------
+      bioBlock({
+        side: "right",
+        photo: "assets/team/gwen.jpg",
+        eyebrow: "Co-founder · No. 2",
+        firstName: "Gwen",
+        fullName: "Gwen Musial",
+        credits: "PhD Biomedical Optics, University of Houston",
+        minor: "Years spent living and working in Europe",
+        body: [
+          "Gwen bridges science and art through glass, drawing inspiration from both scientific precision and artistic beauty. Her lifelong fascination with how light transforms materials threads through every piece she makes.",
+          "Gwen discovered glassblowing during lockdown in Cologne, Germany, after watching Blown Away, and began training in 2022 at The Glass Hand Studio in Alameda, California. Her work explores the interplay of light, transparency, and form — reflecting how a single gather can reveal hidden dimensions of beauty.",
+        ],
+      }),
+
+      // ---------- Values (kept, lightly updated) ----------
       h("section", { class: "fb-values" },
         ...[
-          ["i.",   "Slow craft.", "A 14-hour anneal is the difference between a vessel and a pile of pretty shards. We make as much as the kiln will allow — no more."],
-          ["ii.",  "Open studio.", "We host apprentices, workshops, and open-bench nights for women and non-binary makers. The studio is louder when shared."],
+          ["i.",   "Slow craft.",  "A 14-hour anneal is the difference between a vessel and a pile of pretty shards. We make as much as the kiln will allow — no more."],
+          ["ii.",  "Open studio.", "We uplift the artistic community, foster collaboration, and empower women in creative and scientific fields. The studio is louder when shared."],
           ["iii.", "One of one.",  "Every piece in every collection is unrepeatable — the next will be its cousin, never its twin. We sign the pontil and number the year."],
         ].map(([num, title, body]) =>
-          h("div", { class: "v" },
+          h("div", { class: "v reveal" },
             h("div", { class: "num" }, num),
             h("h4", {}, title),
             h("p", {}, body),
           )
         ),
       ),
+    );
+  }
+
+  function bioBlock({ side, photo, eyebrow, firstName, fullName, credits, minor, body }) {
+    const photoEl = h("figure", { class: "fb-bio-photo reveal" },
+      h("div", {
+        class: "photo parallax",
+        dataset: { dy: "0.04" },
+        style: { backgroundImage: `url("${photo}")` },
+      }),
+      h("figcaption", {}, firstName),
+    );
+    const textEl = h("div", { class: "fb-bio-text reveal" },
+      h("div", { class: "fb-eyebrow" }, h("span", { class: "rule" }), eyebrow),
+      h("h2", { class: "fb-bio-name", html: fullName.replace(firstName, `<em>${firstName}</em>`) }),
+      h("div", { class: "fb-bio-credits" },
+        h("div", { class: "credits-line" }, credits),
+        minor ? h("div", { class: "credits-line minor" }, minor) : null,
+      ),
+      ...body.map(p => h("p", {}, p)),
+    );
+    return h("section", { class: `fb-bio ${side === "right" ? "alt" : ""}` },
+      side === "left" ? photoEl : textEl,
+      side === "left" ? textEl : photoEl,
     );
   }
 
@@ -587,6 +648,49 @@
     else if (route.name === "contact") root.append(contactPage(route.piece));
 
     root.append(footer());
+    setupScrollEffects(root);
+  }
+
+  /* =========================================================
+     SCROLL EFFECTS — reveal-on-scroll + soft parallax
+     ========================================================= */
+  let scrollHandlers = [];
+  function setupScrollEffects(root) {
+    // Tear down handlers from the previous page
+    scrollHandlers.forEach(fn => window.removeEventListener("scroll", fn));
+    scrollHandlers = [];
+
+    // 1) Reveal-on-scroll via IntersectionObserver
+    const reveals = root.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window && reveals.length) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add("is-in");
+            io.unobserve(e.target);
+          }
+        });
+      }, { rootMargin: "0px 0px -10% 0px", threshold: 0.08 });
+      reveals.forEach(el => io.observe(el));
+    } else {
+      reveals.forEach(el => el.classList.add("is-in"));
+    }
+
+    // 2) Soft parallax for elements with [data-dy]
+    const parallaxers = root.querySelectorAll(".parallax[data-dy]");
+    if (parallaxers.length) {
+      const onScroll = () => {
+        parallaxers.forEach(el => {
+          const rect = el.getBoundingClientRect();
+          const center = rect.top + rect.height / 2 - window.innerHeight / 2;
+          const dy = parseFloat(el.dataset.dy || "0") * center * -0.4;
+          el.style.transform = `translate3d(0, ${dy.toFixed(2)}px, 0) scale(1.06)`;
+        });
+      };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+      scrollHandlers.push(onScroll);
+    }
   }
 
   document.addEventListener("DOMContentLoaded", render);

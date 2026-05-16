@@ -470,39 +470,111 @@ a:hover { background-size: 100% 1px; }
 }
 
 /* =========================================================
-   About
+   About — intro
    ========================================================= */
-.fb-about-hero {
-  display: grid; grid-template-columns: 5fr 7fr;
+.fb-about-intro {
+  position: relative; overflow: hidden;
+  padding: 96px 0 64px;
+}
+.fb-about-intro-inner {
+  max-width: 1280px; margin: 0 auto; padding: 0 32px;
+  display: grid; grid-template-columns: 6fr 6fr; gap: 80px; align-items: center;
+}
+.fb-about-intro-text h1 {
+  font-family: var(--font-display); font-style: italic; font-weight: 300;
+  font-size: clamp(48px, 5.6vw, 96px); line-height: 1.02; letter-spacing: -0.025em;
+  margin: 0 0 28px; text-wrap: balance;
+}
+.fb-about-intro-text h1 em { color: var(--ember-400); font-style: italic; }
+.fb-about-intro-text .lede {
+  font-family: var(--font-display); font-style: italic; font-weight: 400;
+  font-size: 22px; line-height: 1.6; color: var(--paper-100); margin: 0 0 24px;
+}
+.fb-about-postscript {
+  font-family: var(--font-text); font-size: 15px; line-height: 1.65;
+  color: var(--paper-300); margin: 0; max-width: 460px;
+  padding-top: 24px; border-top: 1px solid var(--line-700);
+}
+
+.fb-about-intro-photo {
+  margin: 0; position: relative; overflow: hidden;
+  aspect-ratio: 4/5; background: var(--ink-800);
+}
+.fb-about-intro-photo .photo {
+  position: absolute; inset: -6%;
+  background-size: cover; background-position: center;
+  will-change: transform;
+}
+.fb-about-intro-photo figcaption {
+  position: absolute; left: 16px; bottom: 16px;
+  background: rgba(34,27,40,0.55);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  color: var(--paper-100); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+  padding: 8px 14px; border-radius: 999px;
+  box-shadow: inset 0 0 0 1px rgba(246,241,231,0.18);
+}
+
+/* =========================================================
+   About — bio blocks (alternating photo / text)
+   ========================================================= */
+.fb-bio {
   max-width: 1280px; margin: 0 auto;
-  padding: 96px 32px 64px; gap: 96px; align-items: center;
+  padding: 96px 32px;
+  display: grid; grid-template-columns: 5fr 7fr; gap: 80px; align-items: center;
 }
-.fb-about-hero h1 {
-  font-family: var(--font-display); font-style: italic; font-weight: 300;
-  font-size: clamp(48px, 6vw, 96px); line-height: 1.02; letter-spacing: -0.025em;
-  margin: 0 0 24px;
-}
-.fb-about-hero h1 em { color: var(--ember-400); }
-.fb-about-hero .lede {
-  font-family: var(--font-display); font-style: italic; font-size: 22px;
-  line-height: 1.55; color: var(--paper-100); margin: 0;
-}
-.fb-about-hero .photo { aspect-ratio: 4/5; background-size: cover; background-position: center; }
+.fb-bio.alt { grid-template-columns: 7fr 5fr; }
 
-.fb-about-body {
-  max-width: 720px; margin: 0 auto; padding: 32px 32px 96px;
-  font-size: 17px; line-height: 1.75; color: var(--paper-200);
+.fb-bio-photo {
+  margin: 0; position: relative; overflow: hidden;
+  aspect-ratio: 4/5; background: var(--ink-800);
 }
-.fb-about-body p { margin: 0 0 24px; }
-.fb-about-body .pull {
-  font-family: var(--font-display); font-style: italic; font-weight: 300;
-  font-size: 36px; line-height: 1.2; color: var(--paper-50);
-  border-left: 1px solid var(--ember-500); padding: 12px 0 12px 28px;
-  margin: 48px 0; max-width: 600px;
+.fb-bio.alt .fb-bio-photo { order: 2; }
+.fb-bio-photo .photo {
+  position: absolute; inset: -6%;
+  background-size: cover; background-position: center;
+  will-change: transform;
+}
+.fb-bio-photo figcaption {
+  position: absolute; left: 18px; bottom: 18px;
+  font-family: var(--font-display); font-style: italic;
+  color: var(--paper-50); font-size: 20px; letter-spacing: -0.01em;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.6);
 }
 
+.fb-bio-text { max-width: 560px; }
+.fb-bio.alt .fb-bio-text { justify-self: end; }
+
+.fb-bio-name {
+  font-family: var(--font-display); font-style: italic; font-weight: 300;
+  font-size: clamp(48px, 6vw, 88px); line-height: 1.02;
+  letter-spacing: -0.025em; margin: 0 0 24px;
+}
+.fb-bio-name em { color: var(--ember-400); font-style: italic; }
+
+.fb-bio-credits {
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 14px 0 22px; margin-bottom: 12px;
+  border-top: 1px solid var(--line-700);
+  border-bottom: 1px solid var(--line-700);
+}
+.fb-bio-credits .credits-line {
+  font-family: var(--font-text); font-size: 12px;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--paper-200);
+}
+.fb-bio-credits .credits-line.minor {
+  text-transform: none; letter-spacing: 0.02em;
+  font-family: var(--font-display); font-style: italic;
+  font-size: 14px; color: var(--paper-300);
+}
+.fb-bio-text p {
+  font-size: 16px; line-height: 1.75; color: var(--paper-200); margin: 0 0 18px;
+}
+
+/* =========================================================
+   Values (kept; spacing tightened for new context)
+   ========================================================= */
 .fb-values {
-  max-width: 1280px; margin: 0 auto; padding: 96px 32px 128px;
+  max-width: 1280px; margin: 64px auto 0; padding: 96px 32px 128px;
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 56px;
   border-top: 1px solid var(--line-700);
 }
@@ -516,6 +588,23 @@ a:hover { background-size: 100% 1px; }
   margin: 0 0 12px; color: var(--paper-50);
 }
 .fb-values .v p { font-size: 14px; line-height: 1.65; color: var(--paper-200); margin: 0; }
+
+/* =========================================================
+   Scroll-reveal utility
+   ========================================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 800ms var(--ease-out-quint),
+    transform 800ms var(--ease-out-quint);
+  will-change: opacity, transform;
+}
+.reveal.is-in { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .parallax { transform: none !important; }
+}
 
 /* =========================================================
    Contact
@@ -636,7 +725,7 @@ a:hover { background-size: 100% 1px; }
   .hero-wall .grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 22vh; }
   .hero-wall .grid > div:nth-child(n+8) { display: none; }
 
-  .fb-collections, .fb-about-hero, .fb-contact {
+  .fb-collections, .fb-contact {
     grid-template-columns: 1fr !important; gap: 32px !important;
   }
   .fb-coll-card { aspect-ratio: 3/4; }
@@ -655,9 +744,14 @@ a:hover { background-size: 100% 1px; }
   .fb-lightbox .arrow.prev { left: 8px; }
   .fb-lightbox .arrow.next { right: 8px; }
 
-  .fb-about-hero { padding: 56px 16px 32px; }
-  .fb-about-body { padding: 24px 16px 64px; font-size: 16px; }
-  .fb-about-body .pull { font-size: 26px; padding-left: 20px; }
+  .fb-about-intro { padding: 56px 0 16px; }
+  .fb-about-intro-inner { grid-template-columns: 1fr; gap: 32px; padding: 0 16px; }
+  .fb-about-postscript { max-width: none; }
+  .fb-bio, .fb-bio.alt { grid-template-columns: 1fr; gap: 32px; padding: 64px 16px; }
+  .fb-bio.alt .fb-bio-photo { order: 0; }
+  .fb-bio.alt .fb-bio-text { justify-self: start; }
+  .fb-bio-text { max-width: none; }
+  .fb-values { margin-top: 32px; padding: 64px 16px 96px; }
   .fb-contact { padding: 56px 16px 96px; }
   .fb-form .row2 { grid-template-columns: 1fr; gap: 28px; }
 }
