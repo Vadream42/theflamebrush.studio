@@ -654,6 +654,37 @@ a:hover { background-size: 100% 1px; }
 /* =========================================================
    Contact
    ========================================================= */
+/* Contact page background — faded vase behind the form */
+.fb-contact-wrap {
+  position: relative;
+  overflow: hidden;
+  --contact-bg: url("images/stillwater/01-stillwater-no-1.jpeg");
+}
+.fb-contact-wrap::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: var(--contact-bg);
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  opacity: 0.22;
+  filter: saturate(1.1);
+  z-index: 0; pointer-events: none;
+}
+.fb-contact-wrap::after {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(90deg,
+      var(--ink-900) 0%,
+      rgba(34,27,40,0.92) 40%,
+      rgba(34,27,40,0.55) 75%,
+      rgba(34,27,40,0.55) 100%),
+    linear-gradient(180deg, transparent 70%, var(--ink-900) 100%);
+  z-index: 0; pointer-events: none;
+}
+.fb-contact-wrap > * { position: relative; z-index: 1; }
+
 .fb-contact {
   max-width: 1280px; margin: 0 auto; padding: 96px 32px 128px;
   display: grid; grid-template-columns: 5fr 7fr; gap: 96px;
@@ -824,4 +855,15 @@ a:hover { background-size: 100% 1px; }
   .fb-values { margin-top: 32px; padding: 64px 16px 96px; }
   .fb-contact { padding: 56px 16px 96px; }
   .fb-form .row2 { grid-template-columns: 1fr; gap: 28px; }
+  .fb-contact-wrap::before {
+    background-position: center top;
+    opacity: 0.16;
+  }
+  .fb-contact-wrap::after {
+    background:
+      linear-gradient(180deg,
+        rgba(34,27,40,0.88) 0%,
+        rgba(34,27,40,0.75) 40%,
+        rgba(34,27,40,0.95) 100%);
+  }
 }

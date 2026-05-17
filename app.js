@@ -12,7 +12,7 @@
     name: "The Flame Brush",
     tagline: "Hand-blown vessels from a two-woman studio.",
     email: "theflamebrush@gmail.com",
-    instagram: "@theflamebrush",
+    instagram: "@the_flame_brush",
     location: "Alameda, CA",
     address: "14 Riverside Drive, Asheville NC 28801",
     hours: "Saturdays 11–4 · or by appointment",
@@ -649,7 +649,7 @@
           h("label", {}, "Your note"),
           h("textarea", {
             name: "message", required: true,
-            placeholder: "Tell us a little about what you're hoping for. Even a sentence is plenty.",
+            placeholder: "Tell us a little about what you're hoping for.",
           }, piecePrefill ? `I'd like to inquire about purchasing "${piecePrefill}".` : ""),
         ),
       );
@@ -658,8 +658,7 @@
         type: "submit", class: "fb-btn fb-btn-primary",
         html: `Send the note ${ICONS["arrow-right"]}`,
       });
-      const helperEl = h("span", { class: "helper" }, "We typically reply within two business days.");
-      form.append(h("div", { class: "submit" }, helperEl, submitBtn));
+      form.append(h("div", { class: "submit" }, submitBtn));
 
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
@@ -682,7 +681,6 @@
 
         submitBtn.disabled = true;
         submitBtn.innerHTML = "Sending…";
-        helperEl.textContent = "";
 
         try {
           const res = await fetch(WEB3FORMS_ENDPOINT, {
@@ -717,7 +715,7 @@
             h("span", { class: "rule" }), "Note received"),
           h("h2", { html: `Thanks for the <em>note</em>.` }),
           h("p", { class: "lede" },
-            "We'll write back within two business days. If it's about a piece you're hoping to purchase, we'll hold it for you while we sort the details."),
+            "We'll write back soon. If it's about a piece you're hoping to purchase, we'll hold it for you while we sort the details."),
           h("button", {
             class: "fb-btn fb-btn-secondary",
             onclick: renderForm,
@@ -747,22 +745,24 @@
 
     renderForm();
 
-    return h("section", { class: "fb-contact" },
-      h("div", { class: "left" },
-        h("div", { class: "fb-eyebrow" }, h("span", { class: "rule" }), "Get in touch"),
-        h("h1", { html: `Let's <em>talk</em>.` }),
-        h("p", { class: "lede" }, "For purchase inquiries, custom commissions, press, workshops, or anything else — we read every note."),
-        h("div", { class: "info" },
-          h("div", { class: "row" }, h("span", { class: "k" }, "Studio"), h("span", { class: "v" }, STUDIO.location)),
-          h("div", { class: "row" }, h("span", { class: "k" }, "Email"),
-            h("span", { class: "v" },
-              h("a", { href: `mailto:${STUDIO.email}` }, STUDIO.email))),
-          h("div", { class: "row" }, h("span", { class: "k" }, "Instagram"),
-            h("span", { class: "v" },
-              h("a", { href: `https://instagram.com/${STUDIO.instagram.replace(/^@/, "")}`, target: "_blank", rel: "noopener" }, STUDIO.instagram))),
+    return h("div", { class: "fb-contact-wrap" },
+      h("section", { class: "fb-contact" },
+        h("div", { class: "left" },
+          h("div", { class: "fb-eyebrow" }, h("span", { class: "rule" }), "Get in touch"),
+          h("h1", { html: `Let's <em>talk</em>.` }),
+          h("p", { class: "lede" }, "For purchase inquiries, custom commissions, press, workshops, or anything else — we read every note."),
+          h("div", { class: "info" },
+            h("div", { class: "row" }, h("span", { class: "k" }, "Studio"), h("span", { class: "v" }, STUDIO.location)),
+            h("div", { class: "row" }, h("span", { class: "k" }, "Email"),
+              h("span", { class: "v" },
+                h("a", { href: `mailto:${STUDIO.email}` }, STUDIO.email))),
+            h("div", { class: "row" }, h("span", { class: "k" }, "Instagram"),
+              h("span", { class: "v" },
+                h("a", { href: `https://instagram.com/${STUDIO.instagram.replace(/^@/, "")}`, target: "_blank", rel: "noopener" }, STUDIO.instagram))),
+          ),
         ),
+        h("div", { class: "right" }, formContainer),
       ),
-      h("div", { class: "right" }, formContainer),
     );
   }
 
