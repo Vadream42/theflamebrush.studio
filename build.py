@@ -47,6 +47,44 @@ OUT_FILE = DATA_DIR / "collections.json"
 
 IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".webp", ".gif"}
 
+# Auto-resize knobs for the gallery view ("thumb" / cover):
+#   gallery tiles render ~400px wide; cover photos render up to ~1280px wide.
+#   1400px on the longest edge at JPEG quality 82 covers both at retina quality
+#   while keeping per-image bytes around 150-300 KB instead of 2-5 MB.
+WEB_MAX_EDGE = 1400
+WEB_QUALITY  = 82
+
+
+def ensure_web_version(src: Path) -> Path | None:
+    """Generate (or refresh) a web-sized JPEG for `src` under <folder>/web/<name>.
+    Returns the path to the web image. Falls back gracefully if Pillow isn't
+    available — in that case the original is used everywhere."""
+    try:
+        from PIL import Image, ImageOps
+    except ImportError:
+        return None
+
+    web_dir = src.parent / "web"
+    web_dir.mkdir(exist_ok=True)
+    # Always save as .jpg regardless of source extension
+    web_path = web_dir / (src.stem + ".jpg")
+
+    # Skip if the web file is up to date with its source
+    if web_path.exists() and web_path.stat().st_mtime >= src.stat().st_mtime:
+        return web_path
+
+    try:
+        img = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
+        w, h = img.size
+        scale = WEB_MAX_EDGE / max(w, h)
+        if scale < 1:
+            img = img.resize((int(w * scale), int(h * scale)), Image.LANCZOS)
+        img.save(web_path, "JPEG", quality=WEB_QUALITY, optimize=True, progressive=True)
+        return web_path
+    except Exception as e:
+        print(f"    ! couldn't generate web version for {src.name}: {e}", file=sys.stderr)
+        return None
+
 
 def titlecase(slug: str) -> str:
     """'coral-burst' -> 'Coral Burst'."""
@@ -93,23 +131,32 @@ def build_collection(folder: Path) -> dict | None:
     order = meta.get("order", 9999)
     piece_meta = meta.get("pieces", {}) or {}
 
-    # cover image
+    # cover image — points at the web-sized version if we can produce one,
+    # otherwise falls back to the original (still works, just slower).
     cover_name = meta.get("cover")
     if cover_name:
         candidate = folder / cover_name
         cover_path = candidate if candidate.exists() else images[0]
     else:
         cover_path = images[0]
-    cover_rel = f"images/{slug}/{cover_path.name}"
+    cover_web = ensure_web_version(cover_path)
+    cover_rel = (
+        f"images/{slug}/web/{cover_web.name}" if cover_web is not None
+        else f"images/{slug}/{cover_path.name}"
+    )
 
     pieces = []
     for idx, img in enumerate(images, start=1):
         pm = piece_meta.get(img.name, {}) if isinstance(piece_meta, dict) else {}
+        # Generate a web-sized thumb for the gallery tile (lightbox still uses original)
+        thumb = ensure_web_version(img)
         piece = {
             "id": f"{slug}-{idx:02d}",
             "title": pm.get("title", piece_title_from_filename(img.name)),
             "photo": f"images/{slug}/{img.name}",
         }
+        if thumb is not None:
+            piece["thumb"] = f"images/{slug}/web/{thumb.name}"
         for k in ("size", "year", "price", "edition", "note", "materials", "process", "sold"):
             if k in pm and pm[k] not in (None, ""):
                 piece[k] = pm[k]

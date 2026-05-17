@@ -408,7 +408,7 @@
         h("button", { class: "tile", onclick: () => openLightbox(collection, i) },
           h("div", { class: "img-wrap" },
             h("span", { class: "num" }, pad2(i + 1)),
-            h("img", { src: p.photo, alt: p.title, loading: "lazy" }),
+            h("img", { src: p.thumb || p.photo, alt: p.title, loading: "lazy", decoding: "async" }),
           ),
           h("div", { class: "meta-row" },
             h("span", { class: "title" }, p.title),

@@ -24,7 +24,10 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Build collections.json from images/
+      - name: Install Pillow (for image resizing)
+        run: pip install pillow
+
+      - name: Build collections.json + web-sized thumbnails
         run: python3 build.py
 
       - name: Upload site artifact

@@ -1,35 +1,194 @@
 {
   "title": "First gather",
   "season": "2025",
-  "tagline": "Our first body of work — twenty-five vessels, every color we had to give.",
-  "blurb": "The first complete year at the bench. We let the studio set the pace — winter's slow anneals into spring's first warm gathers, then the heat of summer when we pulled every pigment we had, and the autumn pieces that came out of the kiln looking like they remembered the leaves outside. Twenty-five vessels — each one a small experiment in heat, color, and patience. Every gather, signed by hand. The first gather.",
+  "tagline": "Our first body of work — every color we had to give.",
+  "blurb": "The first complete year at the bench. We let the studio set the pace — winter's slow anneals into spring's first warm gathers, then the heat of summer when we pulled every pigment we had, and the autumn pieces that came out of the kiln looking like they remembered the leaves outside. Each piece a small experiment in heat, color, and patience. Every gather, signed by hand. The first gather.",
   "cover": "03-tangerine-swirl.jpeg",
   "order": 2,
   "pieces": {
-    "01-cobalt-carrier.jpeg":     { "title": "Cobalt carrier",       "size": "6″ × 4″",      "year": "2025", "price": 240, "edition": "1/1", "sold": true },
-    "02-garnet-and-ash.jpeg":     { "title": "Garnet & ash",         "size": "5½″ × 4″",    "year": "2025", "price": 220, "edition": "1/1", "sold": true },
-    "03-tangerine-swirl.jpeg":    { "title": "Tangerine swirl",      "size": "6″ × 4″",      "year": "2025", "price": 230, "edition": "1/1", "sold": true },
-    "04-stillwater-bloom.jpeg":   { "title": "Stillwater bloom",     "size": "5″ × 4″",      "year": "2025", "price": 200, "edition": "1/1", "sold": true },
-    "05-quiet-aqua.jpeg":         { "title": "Quiet aqua",           "size": "5″ × 4″",      "year": "2025", "price": 195, "edition": "1/1", "sold": true },
-    "06-brushstroke-blue.jpeg":   { "title": "Brushstroke, blue",    "size": "5″ × 4″",      "year": "2025", "price": 195, "edition": "1/1", "sold": true },
-    "07-storm-front.jpeg":        { "title": "Storm front",          "size": "7″ × 4″",      "year": "2025", "price": 285, "edition": "1/1", "sold": true },
-    "08-emerald-gather.jpeg":     { "title": "Emerald gather",       "size": "6″ × 4″",      "year": "2025", "price": 220, "edition": "1/1", "sold": true },
-    "09-sap-green.jpeg":          { "title": "Sap green",            "size": "5″ × 3½″",    "year": "2025", "price": 195, "edition": "1/1", "sold": true },
-    "10-hydrangea-lime.jpeg":     { "title": "Hydrangea, lime",      "size": "4″ × 4″",      "year": "2025", "price": 185, "edition": "1/1", "sold": true },
-    "11-plum-and-cream.jpeg":     { "title": "Plum & cream",         "size": "6″ × 4″",      "year": "2025", "price": 230, "edition": "1/1", "sold": true },
-    "12-plum-well.jpeg":          { "title": "Plum well",            "size": "6″ × 4″",      "year": "2025", "price": 230, "edition": "1/1", "sold": true },
-    "13-deep-tide.jpeg":          { "title": "Deep tide",            "size": "4½″ wide",          "year": "2025", "price": 185, "edition": "1/1", "sold": true },
-    "14-pink-marble-rose.jpeg":   { "title": "Pink marble rose",     "size": "5″ × 4″",      "year": "2025", "price": 195, "edition": "1/1", "sold": true },
-    "15-blush-marble.jpeg":       { "title": "Blush marble",         "size": "4″ × 3½″",    "year": "2025", "price": 165, "edition": "1/1", "sold": true },
-    "16-spring-pair.jpeg":        { "title": "Spring, pair",         "size": "4″ × 4″ each", "year": "2025", "price": 290, "note": "Set of two", "sold": true },
-    "17-aurora.jpeg":             { "title": "Aurora",               "size": "5½″ × 3½″",   "year": "2025", "price": 225, "edition": "1/1", "sold": true },
-    "18-confetti-dish.jpeg":      { "title": "Confetti dish",        "size": "4″ wide",              "year": "2025", "price": 95,  "edition": "1/1", "sold": true },
-    "19-three-pumpkins.jpeg":     { "title": "Three pumpkins",       "size": "3–4″ each",         "year": "2025", "price": 260, "note": "Set of three", "sold": true },
-    "20-smile-set.jpeg":          { "title": "Smile, set of three",  "size": "4″ × 4″ each", "year": "2025", "price": 290, "note": "Set of three", "sold": true },
-    "21-single-coral.jpeg":       { "title": "Single coral",         "size": "4″ × 2½″",    "year": "2025", "price": 135, "note": "Bud vase", "sold": true },
-    "22-three-greens.jpeg":       { "title": "Three greens",         "size": "3–6″ each",         "year": "2025", "price": 385, "note": "Set of three", "sold": true },
-    "23-emerald-pair.jpeg":       { "title": "Emerald, pair",        "size": "4–6″",              "year": "2025", "price": 290, "note": "Set of two", "sold": true },
-    "24-cool-duet.jpeg":          { "title": "Cool duet",            "size": "4–5″",              "year": "2025", "price": 285, "note": "Set of two", "sold": true },
-    "25-plum-pair.jpeg":          { "title": "Plum, pair",           "size": "5″ × 4″ each", "year": "2025", "price": 310, "note": "Set of two", "sold": true }
+    "01-cobalt-carrier.jpeg": {
+      "title": "Cobalt carrier",
+      "size": "6″ × 4″",
+      "year": "2025",
+      "price": 240,
+      "edition": "1/1",
+      "sold": true
+    },
+    "02-garnet-and-ash.jpeg": {
+      "title": "Garnet & ash",
+      "size": "5½″ × 4″",
+      "year": "2025",
+      "price": 220,
+      "edition": "1/1",
+      "sold": true
+    },
+    "03-tangerine-swirl.jpeg": {
+      "title": "Tangerine swirl",
+      "size": "6″ × 4″",
+      "year": "2025",
+      "price": 230,
+      "edition": "1/1",
+      "sold": true
+    },
+    "04-stillwater-bloom.jpeg": {
+      "title": "Stillwater bloom",
+      "size": "5″ × 4″",
+      "year": "2025",
+      "price": 200,
+      "edition": "1/1",
+      "sold": true
+    },
+    "05-quiet-aqua.jpeg": {
+      "title": "Quiet aqua",
+      "size": "5″ × 4″",
+      "year": "2025",
+      "price": 195,
+      "edition": "1/1",
+      "sold": true
+    },
+    "06-brushstroke-blue.jpeg": {
+      "title": "Brushstroke, blue",
+      "size": "5″ × 4″",
+      "year": "2025",
+      "price": 195,
+      "edition": "1/1",
+      "sold": true
+    },
+    "07-storm-front.jpeg": {
+      "title": "Storm front",
+      "size": "7″ × 4″",
+      "year": "2025",
+      "price": 285,
+      "edition": "1/1",
+      "sold": true
+    },
+    "08-emerald-gather.jpeg": {
+      "title": "Emerald gather",
+      "size": "6″ × 4″",
+      "year": "2025",
+      "price": 220,
+      "edition": "1/1",
+      "sold": true
+    },
+    "09-sap-green.jpeg": {
+      "title": "Sap green",
+      "size": "5″ × 3½″",
+      "year": "2025",
+      "price": 195,
+      "edition": "1/1",
+      "sold": true
+    },
+    "10-hydrangea-lime.jpeg": {
+      "title": "Hydrangea, lime",
+      "size": "4″ × 4″",
+      "year": "2025",
+      "price": 185,
+      "edition": "1/1",
+      "sold": true
+    },
+    "11-plum-and-cream.jpeg": {
+      "title": "Plum & cream",
+      "size": "6″ × 4″",
+      "year": "2025",
+      "price": 230,
+      "edition": "1/1",
+      "sold": true
+    },
+    "12-plum-well.jpeg": {
+      "title": "Plum well",
+      "size": "6″ × 4″",
+      "year": "2025",
+      "price": 230,
+      "edition": "1/1",
+      "sold": true
+    },
+    "13-deep-tide.jpeg": {
+      "title": "Deep tide",
+      "size": "4½″ wide",
+      "year": "2025",
+      "price": 185,
+      "edition": "1/1",
+      "sold": true
+    },
+    "14-pink-marble-rose.jpeg": {
+      "title": "Pink marble rose",
+      "size": "5″ × 4″",
+      "year": "2025",
+      "price": 195,
+      "edition": "1/1",
+      "sold": true
+    },
+    "15-blush-marble.jpeg": {
+      "title": "Blush marble",
+      "size": "4″ × 3½″",
+      "year": "2025",
+      "price": 165,
+      "edition": "1/1",
+      "sold": true
+    },
+    "16-spring-pair.jpeg": {
+      "title": "Spring, pair",
+      "size": "4″ × 4″ each",
+      "year": "2025",
+      "price": 290,
+      "note": "Set of two",
+      "sold": true
+    },
+    "17-aurora.jpeg": {
+      "title": "Aurora",
+      "size": "5½″ × 3½″",
+      "year": "2025",
+      "price": 225,
+      "edition": "1/1",
+      "sold": true
+    },
+    "18-confetti-dish.jpeg": {
+      "title": "Confetti dish",
+      "size": "4″ wide",
+      "year": "2025",
+      "price": 95,
+      "edition": "1/1",
+      "sold": true
+    },
+    "21-single-coral.jpeg": {
+      "title": "Single coral",
+      "size": "4″ × 2½″",
+      "year": "2025",
+      "price": 135,
+      "note": "Bud vase",
+      "sold": true
+    },
+    "22-three-greens.jpeg": {
+      "title": "Three greens",
+      "size": "3–6″ each",
+      "year": "2025",
+      "price": 385,
+      "note": "Set of three",
+      "sold": true
+    },
+    "23-emerald-pair.jpeg": {
+      "title": "Emerald, pair",
+      "size": "4–6″",
+      "year": "2025",
+      "price": 290,
+      "note": "Set of two",
+      "sold": true
+    },
+    "24-cool-duet.jpeg": {
+      "title": "Cool duet",
+      "size": "4–5″",
+      "year": "2025",
+      "price": 285,
+      "note": "Set of two",
+      "sold": true
+    },
+    "25-plum-pair.jpeg": {
+      "title": "Plum, pair",
+      "size": "5″ × 4″ each",
+      "year": "2025",
+      "price": 310,
+      "note": "Set of two",
+      "sold": true
+    }
   }
 }
