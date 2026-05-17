@@ -632,7 +632,6 @@
                 ["general", "A general hello"],
                 ["purchase", "Inquiring about a piece"],
                 ["commission", "Custom commission"],
-                ["workshop", "Workshop / open studio"],
                 ["press", "Press / collaboration"],
               ].forEach(([v, t]) => sel.append(h("option", {
                 value: v, selected: piecePrefill && v === "purchase",
@@ -750,7 +749,7 @@
         h("div", { class: "left" },
           h("div", { class: "fb-eyebrow" }, h("span", { class: "rule" }), "Get in touch"),
           h("h1", { html: `Let's <em>talk</em>.` }),
-          h("p", { class: "lede" }, "For purchase inquiries, custom commissions, press, workshops, or anything else — we read every note."),
+          h("p", { class: "lede" }, "For purchase inquiries, custom commissions, press, or anything else — we read every note."),
           h("div", { class: "info" },
             h("div", { class: "row" }, h("span", { class: "k" }, "Studio"), h("span", { class: "v" }, STUDIO.location)),
             h("div", { class: "row" }, h("span", { class: "k" }, "Email"),

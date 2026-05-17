@@ -667,7 +667,7 @@ a:hover { background-size: 100% 1px; }
   background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;
-  opacity: 0.22;
+  opacity: 0.37;
   filter: saturate(1.1);
   z-index: 0; pointer-events: none;
 }
@@ -677,9 +677,9 @@ a:hover { background-size: 100% 1px; }
   background:
     linear-gradient(90deg,
       var(--ink-900) 0%,
-      rgba(34,27,40,0.92) 40%,
-      rgba(34,27,40,0.55) 75%,
-      rgba(34,27,40,0.55) 100%),
+      rgba(34,27,40,0.88) 40%,
+      rgba(34,27,40,0.40) 75%,
+      rgba(34,27,40,0.40) 100%),
     linear-gradient(180deg, transparent 70%, var(--ink-900) 100%);
   z-index: 0; pointer-events: none;
 }
@@ -701,16 +701,19 @@ a:hover { background-size: 100% 1px; }
   margin: 0 0 48px; max-width: 380px;
 }
 .fb-contact .left .info {
-  display: flex; flex-direction: column; gap: 24px;
+  display: flex; flex-direction: column; gap: 28px;
   padding-top: 32px; border-top: 1px solid var(--line-700);
 }
-.fb-contact .left .info .row { display: flex; flex-direction: column; gap: 6px; }
+.fb-contact .left .info .row { display: flex; flex-direction: column; gap: 8px; }
 .fb-contact .left .info .row .k {
-  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--paper-300);
+  font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ember-400); font-weight: 500;
 }
-.fb-contact .left .info .row .v {
-  font-size: 16px; color: var(--paper-50);
+.fb-contact .left .info .row .v,
+.fb-contact .left .info .row .v a {
+  font-size: 22px; color: var(--paper-50);
   font-family: var(--font-display); font-style: italic;
+  line-height: 1.25;
 }
 
 /* Post-submit hand-off state ("hit send in your email app") */
@@ -857,13 +860,13 @@ a:hover { background-size: 100% 1px; }
   .fb-form .row2 { grid-template-columns: 1fr; gap: 28px; }
   .fb-contact-wrap::before {
     background-position: center top;
-    opacity: 0.16;
+    opacity: 0.30;
   }
   .fb-contact-wrap::after {
     background:
       linear-gradient(180deg,
-        rgba(34,27,40,0.88) 0%,
-        rgba(34,27,40,0.75) 40%,
-        rgba(34,27,40,0.95) 100%);
+        rgba(34,27,40,0.82) 0%,
+        rgba(34,27,40,0.62) 40%,
+        rgba(34,27,40,0.92) 100%);
   }
 }
