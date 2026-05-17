@@ -784,9 +784,12 @@ a:hover { background-size: 100% 1px; }
   .fb-about-intro { padding: 56px 0 16px; }
   .fb-about-intro-inner { grid-template-columns: 1fr; gap: 32px; padding: 0 16px; }
   .fb-bio, .fb-bio.alt { grid-template-columns: 1fr; gap: 32px; padding: 64px 16px; }
-  /* On mobile, every bio block puts the photo first, then the text */
-  .fb-bio .fb-bio-photo { order: 1; }
-  .fb-bio .fb-bio-text  { order: 2; justify-self: start; }
+  /* On mobile, every bio block puts the photo first, then the text.
+     Selectors are repeated with .alt to match desktop specificity. */
+  .fb-bio .fb-bio-photo,
+  .fb-bio.alt .fb-bio-photo { order: 1; }
+  .fb-bio .fb-bio-text,
+  .fb-bio.alt .fb-bio-text  { order: 2; justify-self: start; }
   .fb-bio-text { max-width: none; }
 
   /* Tighter transition header on mobile */
