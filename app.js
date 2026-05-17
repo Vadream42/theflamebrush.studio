@@ -154,7 +154,7 @@
             h("span", { html: `The <span class="amp">Flame</span> Brush` }),
           ),
           h("p", { class: "colophon" },
-            `A woman-owned glass-art partnership. Hand-blown vessels, ring dishes, and small sculptural objects from a sunlit studio in ${STUDIO.location}.`),
+            `A woman-owned glass-art partnership. Hand-blown vases, vessels, and sculptural objects from a sunlit studio in ${STUDIO.location}.`),
         ),
         h("div", {},
           h("h5", {}, "Studio"),
@@ -249,7 +249,7 @@
       h("div", { class: "content" },
         h("h1", { html: `Glass,<br/>caught <em>mid-breath</em>.` }),
         h("p", { class: "lede" },
-          `A two-woman studio uniting scientific curiosity with artistic innovation. Every piece is hand-blown, annealed overnight, and signed by hand.`),
+          `A two-woman studio uniting scientific curiosity with artistic innovation. Every piece is hand-blown, annealed overnight, and carefully curated.`),
         h("div", { class: "actions" },
           h("button", {
             class: "fb-btn fb-btn-primary",
@@ -319,7 +319,7 @@
     return h("section", { class: "fb-section" },
       h("div", { class: "fb-eyebrow" },
         h("span", { class: "rule" }), "The collections"),
-      h("h2", { html: `Two seasons of work,<br/>one body of practice.`, style: { fontSize: "clamp(48px, 5.5vw, 80px)", lineHeight: "1.04", margin: "0 0 64px", maxWidth: "880px" } }),
+      h("h2", { html: `Two groups of work,<br/>one body of practice.`, style: { fontSize: "clamp(48px, 5.5vw, 80px)", lineHeight: "1.04", margin: "0 0 64px", maxWidth: "880px" } }),
       collectionsGrid(),
     );
   }

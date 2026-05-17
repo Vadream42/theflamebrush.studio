@@ -4,8 +4,8 @@
       "id": "open-palette",
       "title": "Open palette",
       "season": "2026",
-      "tagline": "Year two — cobalt to coral, the slow and the loud.",
-      "blurb": "Year two at the bench, with the palette wide open. The cool half was made through January and February in a studio that never got above 58°F — slow kilns, patient frit, cobalt and pearl over a clear core. The warm half came in the height of August heat, when we pulled colors we don't normally trust ourselves with — ruby, amber, hot pink, emerald speckle — and let them argue. One collection, two temperatures.",
+      "tagline": "Our second body of work — cobalt to coral, the slow and the loud.",
+      "blurb": "Soft structure, organic movement — this group of work was shaped slowly at the bench, letting the color and pattern form naturally in the heat. Each piece holds its own rhythm — meant to live with flowers, light, and every day moments. One piece at a time.",
       "cover": "images/open-palette/web/01-coral-burst-no-1.jpg",
       "order": 1,
       "pieces": [
@@ -155,8 +155,8 @@
       "id": "first-gather",
       "title": "First gather",
       "season": "2025",
-      "tagline": "Our first body of work — every color we had to give.",
-      "blurb": "The first complete year at the bench. We let the studio set the pace — winter's slow anneals into spring's first warm gathers, then the heat of summer when we pulled every pigment we had, and the autumn pieces that came out of the kiln looking like they remembered the leaves outside. Each piece a small experiment in heat, color, and patience. Every gather, signed by hand. The first gather.",
+      "tagline": "Our first body of work — swirls of every color.",
+      "blurb": "The first complete group of work. Inspired by abstract brush strokes, each vase is unique and crafted with a mixture of colors applied via swirled bit of colored glass — giving the impression of a painter's brush. Our first gather.",
       "cover": "images/first-gather/web/03-tangerine-swirl.jpg",
       "order": 2,
       "pieces": [
@@ -327,7 +327,7 @@
         },
         {
           "id": "first-gather-16",
-          "title": "Spring, pair",
+          "title": "Elphaba and Glinda",
           "photo": "images/first-gather/16-spring-pair.jpeg",
           "thumb": "images/first-gather/web/16-spring-pair.jpg",
           "size": "4″ × 4″ each",
@@ -372,7 +372,7 @@
         },
         {
           "id": "first-gather-21",
-          "title": "Single coral",
+          "title": "Single teal",
           "photo": "images/first-gather/21-single-coral.jpeg",
           "thumb": "images/first-gather/web/21-single-coral.jpg",
           "size": "4″ × 2½″",
@@ -383,7 +383,7 @@
         },
         {
           "id": "first-gather-22",
-          "title": "Three greens",
+          "title": "Green Melody",
           "photo": "images/first-gather/22-three-greens.jpeg",
           "thumb": "images/first-gather/web/22-three-greens.jpg",
           "size": "3–6″ each",
