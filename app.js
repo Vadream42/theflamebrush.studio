@@ -597,7 +597,7 @@
   /* =========================================================
      CONTACT — submits to Formsubmit.co (no backend, no signup)
      ========================================================= */
-  const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${STUDIO.email}`;
+  const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${encodeURIComponent(STUDIO.email)}`;
 
   function contactPage(piecePrefill) {
     const formContainer = h("div", { class: "fb-form-wrap" });
@@ -665,12 +665,15 @@
         if (honeypot.value) return; // bot caught
         const fd = new FormData(form);
 
-        // Pretty subject + plain-text fallback shape
-        const inquiry = fd.get("inquiry") || "general";
-        const subject = `[${inquiry}] inquiry from ${fd.get("name") || "a friend"}`;
-        fd.append("_subject", subject);
-        fd.append("_template", "table");
-        fd.append("_captcha", "false");
+        // Build a JSON payload — Formsubmit's AJAX endpoint expects JSON,
+        // not multipart/form-data.
+        const payload = {};
+        fd.forEach((value, key) => { payload[key] = value; });
+
+        const inquiry = payload.inquiry || "general";
+        payload._subject  = `[${inquiry}] inquiry from ${payload.name || "a friend"}`;
+        payload._template = "table";
+        payload._captcha  = "false";
 
         submitBtn.disabled = true;
         submitBtn.innerHTML = `Sending…`;
@@ -679,16 +682,21 @@
         try {
           const res = await fetch(FORMSUBMIT_ENDPOINT, {
             method: "POST",
-            headers: { "Accept": "application/json" },
-            body: fd,
+            headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json",
+            },
+            body: JSON.stringify(payload),
           });
           const data = await res.json().catch(() => ({}));
           if (res.ok && (data.success === "true" || data.success === true)) {
             renderSuccess();
           } else {
-            renderError(data.message || "Something went wrong sending the note.");
+            console.warn("Formsubmit response", res.status, data);
+            renderError(data.message || `The form service returned an error (HTTP ${res.status}). Try again, or email us directly.`);
           }
         } catch (err) {
+          console.error("Formsubmit fetch failed", err);
           renderError("Couldn't reach the form service. Check your connection and try again — or email us directly.");
         }
       });
