@@ -11,7 +11,7 @@
       "pieces": [
         {
           "id": "open-palette-01",
-          "title": "Coral Burst, no. 1",
+          "title": "Coral Burst",
           "photo": "images/open-palette/01-coral-burst-no-1.jpeg",
           "thumb": "images/open-palette/web/01-coral-burst-no-1.jpg",
           "size": "6″ × 4″",
@@ -21,7 +21,7 @@
         },
         {
           "id": "open-palette-02",
-          "title": "Stillwater, no. 1",
+          "title": "Stillwater",
           "photo": "images/open-palette/01-stillwater-no-1.jpeg",
           "thumb": "images/open-palette/web/01-stillwater-no-1.jpg",
           "size": "6½″ × 4″",
@@ -31,7 +31,7 @@
         },
         {
           "id": "open-palette-03",
-          "title": "Confetti Pair",
+          "title": "Emerald Lake",
           "photo": "images/open-palette/02-confetti-pair.jpeg",
           "thumb": "images/open-palette/web/02-confetti-pair.jpg",
           "size": "4″ × 4″",
@@ -41,7 +41,7 @@
         },
         {
           "id": "open-palette-04",
-          "title": "Stillwater, no. 2",
+          "title": "Cobalt Burst",
           "photo": "images/open-palette/02-stillwater-no-2.jpeg",
           "thumb": "images/open-palette/web/02-stillwater-no-2.jpg",
           "size": "5″ × 3½″",
@@ -51,7 +51,7 @@
         },
         {
           "id": "open-palette-05",
-          "title": "Field Study (emerald)",
+          "title": "Plum Petals",
           "photo": "images/open-palette/03-field-study-emerald.jpeg",
           "thumb": "images/open-palette/web/03-field-study-emerald.jpg",
           "size": "7″ × 4″",
@@ -61,7 +61,7 @@
         },
         {
           "id": "open-palette-06",
-          "title": "Hydrangea (cobalt)",
+          "title": "Green Godess",
           "photo": "images/open-palette/03-hydrangea-cobalt.jpeg",
           "thumb": "images/open-palette/web/03-hydrangea-cobalt.jpg",
           "size": "5″ × 4″",
@@ -71,7 +71,7 @@
         },
         {
           "id": "open-palette-07",
-          "title": "Long Dusk",
+          "title": "Mardi Gras",
           "photo": "images/open-palette/04-long-dusk.jpeg",
           "thumb": "images/open-palette/web/04-long-dusk.jpg",
           "size": "7″ × 4″",
@@ -81,7 +81,7 @@
         },
         {
           "id": "open-palette-08",
-          "title": "Petal Static",
+          "title": "Violet Moment",
           "photo": "images/open-palette/04-petal-static.jpeg",
           "thumb": "images/open-palette/web/04-petal-static.jpg",
           "size": "5½″ × 4″",
@@ -91,7 +91,7 @@
         },
         {
           "id": "open-palette-09",
-          "title": "Ruby Hydrangea",
+          "title": "Frozenwater",
           "photo": "images/open-palette/05-ruby-hydrangea.jpeg",
           "thumb": "images/open-palette/web/05-ruby-hydrangea.jpg",
           "size": "5″ × 3½″",
@@ -111,7 +111,7 @@
         },
         {
           "id": "open-palette-11",
-          "title": "Amethyst Ring Dish",
+          "title": "Evening Lavender",
           "photo": "images/open-palette/06-amethyst-ring-dish.jpeg",
           "thumb": "images/open-palette/web/06-amethyst-ring-dish.jpg",
           "size": "4″ wide",
@@ -121,7 +121,7 @@
         },
         {
           "id": "open-palette-12",
-          "title": "Ash Carrier",
+          "title": "Confetti Pair",
           "photo": "images/open-palette/06-ash-carrier.jpeg",
           "thumb": "images/open-palette/web/06-ash-carrier.jpg",
           "size": "6″ × 4″",
@@ -131,7 +131,7 @@
         },
         {
           "id": "open-palette-13",
-          "title": "Heat Mirage",
+          "title": "Cool Mirage",
           "photo": "images/open-palette/07-heat-mirage.jpeg",
           "thumb": "images/open-palette/web/07-heat-mirage.jpg",
           "size": "6″ × 4″",
@@ -141,7 +141,7 @@
         },
         {
           "id": "open-palette-14",
-          "title": "Marbled Quiet",
+          "title": "Calm Lake",
           "photo": "images/open-palette/07-marbled-quiet.jpeg",
           "thumb": "images/open-palette/web/07-marbled-quiet.jpg",
           "size": "5½″ × 4″",
