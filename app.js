@@ -521,8 +521,7 @@
           ),
           h("figure", { class: "fb-about-intro-photo reveal" },
             h("div", {
-              class: "photo parallax",
-              dataset: { dy: "0.06" },
+              class: "photo",
               style: { backgroundImage: `url("assets/Team/caitlin-and-gwen.JPG")` },
             }),
             h("figcaption", {}, "Caitlin Koski & Gwen Musial · The Flame Brush"),
@@ -582,8 +581,7 @@
   function bioBlock({ side, photo, eyebrow, firstName, fullName, credits, minor, body }) {
     const photoEl = h("figure", { class: "fb-bio-photo reveal" },
       h("div", {
-        class: "photo parallax",
-        dataset: { dy: "0.04" },
+        class: "photo",
         style: { backgroundImage: `url("${photo}")` },
       }),
       h("figcaption", {}, firstName),

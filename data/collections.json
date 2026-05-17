@@ -6,14 +6,14 @@
       "season": "2026",
       "tagline": "Our second body of work — cobalt to coral, the slow and the loud.",
       "blurb": "Soft structure, organic movement — this group of work was shaped slowly at the bench, letting the color and pattern form naturally in the heat. Each piece holds its own rhythm — meant to live with flowers, light, and every day moments. One piece at a time.",
-      "cover": "images/open-palette/web/01-coral-burst-no-1.jpg",
+      "cover": "images/open-palette/web/01-coral-burst.jpg",
       "order": 1,
       "pieces": [
         {
           "id": "open-palette-01",
           "title": "Coral Burst",
-          "photo": "images/open-palette/01-coral-burst-no-1.jpeg",
-          "thumb": "images/open-palette/web/01-coral-burst-no-1.jpg",
+          "photo": "images/open-palette/01-coral-burst.jpeg",
+          "thumb": "images/open-palette/web/01-coral-burst.jpg",
           "size": "6″ × 4″",
           "year": "2026",
           "price": 240,
@@ -22,8 +22,8 @@
         {
           "id": "open-palette-02",
           "title": "Stillwater",
-          "photo": "images/open-palette/01-stillwater-no-1.jpeg",
-          "thumb": "images/open-palette/web/01-stillwater-no-1.jpg",
+          "photo": "images/open-palette/02-stillwater.jpeg",
+          "thumb": "images/open-palette/web/02-stillwater.jpg",
           "size": "6½″ × 4″",
           "year": "2026",
           "price": 240,
@@ -32,8 +32,8 @@
         {
           "id": "open-palette-03",
           "title": "Emerald Lake",
-          "photo": "images/open-palette/02-confetti-pair.jpeg",
-          "thumb": "images/open-palette/web/02-confetti-pair.jpg",
+          "photo": "images/open-palette/03-emerald-lake.jpeg",
+          "thumb": "images/open-palette/web/03-emerald-lake.jpg",
           "size": "4″ × 4″",
           "year": "2026",
           "price": 320,
@@ -42,8 +42,8 @@
         {
           "id": "open-palette-04",
           "title": "Cobalt Burst",
-          "photo": "images/open-palette/02-stillwater-no-2.jpeg",
-          "thumb": "images/open-palette/web/02-stillwater-no-2.jpg",
+          "photo": "images/open-palette/04-cobalt-burst.jpeg",
+          "thumb": "images/open-palette/web/04-cobalt-burst.jpg",
           "size": "5″ × 3½″",
           "year": "2026",
           "price": 195,
@@ -52,8 +52,8 @@
         {
           "id": "open-palette-05",
           "title": "Plum Petals",
-          "photo": "images/open-palette/03-field-study-emerald.jpeg",
-          "thumb": "images/open-palette/web/03-field-study-emerald.jpg",
+          "photo": "images/open-palette/05-plum-petals.jpeg",
+          "thumb": "images/open-palette/web/05-plum-petals.jpg",
           "size": "7″ × 4″",
           "year": "2026",
           "price": 285,
@@ -61,9 +61,9 @@
         },
         {
           "id": "open-palette-06",
-          "title": "Green Godess",
-          "photo": "images/open-palette/03-hydrangea-cobalt.jpeg",
-          "thumb": "images/open-palette/web/03-hydrangea-cobalt.jpg",
+          "title": "Green Goddess",
+          "photo": "images/open-palette/06-green-goddess.jpeg",
+          "thumb": "images/open-palette/web/06-green-goddess.jpg",
           "size": "5″ × 4″",
           "year": "2026",
           "price": 210,
@@ -72,8 +72,8 @@
         {
           "id": "open-palette-07",
           "title": "Mardi Gras",
-          "photo": "images/open-palette/04-long-dusk.jpeg",
-          "thumb": "images/open-palette/web/04-long-dusk.jpg",
+          "photo": "images/open-palette/07-mardi-gras.jpeg",
+          "thumb": "images/open-palette/web/07-mardi-gras.jpg",
           "size": "7″ × 4″",
           "year": "2026",
           "price": 285,
@@ -82,8 +82,8 @@
         {
           "id": "open-palette-08",
           "title": "Violet Moment",
-          "photo": "images/open-palette/04-petal-static.jpeg",
-          "thumb": "images/open-palette/web/04-petal-static.jpg",
+          "photo": "images/open-palette/08-violet-moment.jpeg",
+          "thumb": "images/open-palette/web/08-violet-moment.jpg",
           "size": "5½″ × 4″",
           "year": "2026",
           "price": 210,
@@ -92,8 +92,8 @@
         {
           "id": "open-palette-09",
           "title": "Frozenwater",
-          "photo": "images/open-palette/05-ruby-hydrangea.jpeg",
-          "thumb": "images/open-palette/web/05-ruby-hydrangea.jpg",
+          "photo": "images/open-palette/09-frozenwater.jpeg",
+          "thumb": "images/open-palette/web/09-frozenwater.jpg",
           "size": "5″ × 3½″",
           "year": "2026",
           "price": 195,
@@ -102,8 +102,8 @@
         {
           "id": "open-palette-10",
           "title": "Tide Pool, pair",
-          "photo": "images/open-palette/05-tide-pool-pair.jpeg",
-          "thumb": "images/open-palette/web/05-tide-pool-pair.jpg",
+          "photo": "images/open-palette/10-tide-pool-pair.jpeg",
+          "thumb": "images/open-palette/web/10-tide-pool-pair.jpg",
           "size": "3″ × 3″",
           "year": "2026",
           "price": 145,
@@ -112,8 +112,8 @@
         {
           "id": "open-palette-11",
           "title": "Evening Lavender",
-          "photo": "images/open-palette/06-amethyst-ring-dish.jpeg",
-          "thumb": "images/open-palette/web/06-amethyst-ring-dish.jpg",
+          "photo": "images/open-palette/11-evening-lavender.jpeg",
+          "thumb": "images/open-palette/web/11-evening-lavender.jpg",
           "size": "4″ wide",
           "year": "2026",
           "price": 95,
@@ -122,8 +122,8 @@
         {
           "id": "open-palette-12",
           "title": "Confetti Pair",
-          "photo": "images/open-palette/06-ash-carrier.jpeg",
-          "thumb": "images/open-palette/web/06-ash-carrier.jpg",
+          "photo": "images/open-palette/12-confetti-pair.jpeg",
+          "thumb": "images/open-palette/web/12-confetti-pair.jpg",
           "size": "6″ × 4″",
           "year": "2026",
           "price": 230,
@@ -132,8 +132,8 @@
         {
           "id": "open-palette-13",
           "title": "Cool Mirage",
-          "photo": "images/open-palette/07-heat-mirage.jpeg",
-          "thumb": "images/open-palette/web/07-heat-mirage.jpg",
+          "photo": "images/open-palette/13-cool-mirage.jpeg",
+          "thumb": "images/open-palette/web/13-cool-mirage.jpg",
           "size": "6″ × 4″",
           "year": "2026",
           "price": 240,
@@ -142,8 +142,8 @@
         {
           "id": "open-palette-14",
           "title": "Calm Lake",
-          "photo": "images/open-palette/07-marbled-quiet.jpeg",
-          "thumb": "images/open-palette/web/07-marbled-quiet.jpg",
+          "photo": "images/open-palette/14-calm-lake.jpeg",
+          "thumb": "images/open-palette/web/14-calm-lake.jpg",
           "size": "5½″ × 4″",
           "year": "2026",
           "price": 210,
@@ -155,8 +155,8 @@
       "id": "first-gather",
       "title": "First gather",
       "season": "2025",
-      "tagline": "Our first body of work — swirls of every color.",
-      "blurb": "The first complete group of work. Inspired by abstract brush strokes, each vase is unique and crafted with a mixture of colors applied via swirled bit of colored glass — giving the impression of a painter's brush. Our first gather.",
+      "tagline": "Our first body of work — every color we had to give.",
+      "blurb": "The first complete year at the bench. We let the studio set the pace — winter's slow anneals into spring's first warm gathers, then the heat of summer when we pulled every pigment we had, and the autumn pieces that came out of the kiln looking like they remembered the leaves outside. Each piece a small experiment in heat, color, and patience. Every gather, signed by hand. The first gather.",
       "cover": "images/first-gather/web/03-tangerine-swirl.jpg",
       "order": 2,
       "pieces": [
@@ -327,7 +327,7 @@
         },
         {
           "id": "first-gather-16",
-          "title": "Elphaba and Glinda",
+          "title": "Spring, pair",
           "photo": "images/first-gather/16-spring-pair.jpeg",
           "thumb": "images/first-gather/web/16-spring-pair.jpg",
           "size": "4″ × 4″ each",
@@ -360,19 +360,7 @@
         },
         {
           "id": "first-gather-19",
-          "title": "Three Pumpkins",
-          "photo": "images/first-gather/19-three-pumpkins.jpeg",
-          "thumb": "images/first-gather/web/19-three-pumpkins.jpg"
-        },
-        {
-          "id": "first-gather-20",
-          "title": "Smile Set",
-          "photo": "images/first-gather/20-smile-set.jpeg",
-          "thumb": "images/first-gather/web/20-smile-set.jpg"
-        },
-        {
-          "id": "first-gather-21",
-          "title": "Single teal",
+          "title": "Single coral",
           "photo": "images/first-gather/21-single-coral.jpeg",
           "thumb": "images/first-gather/web/21-single-coral.jpg",
           "size": "4″ × 2½″",
@@ -382,8 +370,8 @@
           "sold": true
         },
         {
-          "id": "first-gather-22",
-          "title": "Green Melody",
+          "id": "first-gather-20",
+          "title": "Three greens",
           "photo": "images/first-gather/22-three-greens.jpeg",
           "thumb": "images/first-gather/web/22-three-greens.jpg",
           "size": "3–6″ each",
@@ -393,7 +381,7 @@
           "sold": true
         },
         {
-          "id": "first-gather-23",
+          "id": "first-gather-21",
           "title": "Emerald, pair",
           "photo": "images/first-gather/23-emerald-pair.jpeg",
           "thumb": "images/first-gather/web/23-emerald-pair.jpg",
@@ -404,7 +392,7 @@
           "sold": true
         },
         {
-          "id": "first-gather-24",
+          "id": "first-gather-22",
           "title": "Cool duet",
           "photo": "images/first-gather/24-cool-duet.jpeg",
           "thumb": "images/first-gather/web/24-cool-duet.jpg",
@@ -415,7 +403,7 @@
           "sold": true
         },
         {
-          "id": "first-gather-25",
+          "id": "first-gather-23",
           "title": "Plum, pair",
           "photo": "images/first-gather/25-plum-pair.jpeg",
           "thumb": "images/first-gather/web/25-plum-pair.jpg",
