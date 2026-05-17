@@ -682,6 +682,27 @@ a:hover { background-size: 100% 1px; }
   font-family: var(--font-display); font-style: italic;
 }
 
+/* Success / error states for the contact form */
+.fb-form-wrap { min-height: 320px; }
+.fb-form-success {
+  padding: 16px 0;
+}
+.fb-form-success h2 {
+  font-family: var(--font-display); font-style: italic; font-weight: 300;
+  font-size: clamp(36px, 4.5vw, 56px); line-height: 1.05;
+  letter-spacing: -0.02em; margin: 12px 0 16px; color: var(--paper-50);
+}
+.fb-form-success h2 em { color: var(--ember-400); }
+.fb-form-success p.lede {
+  color: var(--paper-100); max-width: 460px;
+}
+.fb-form-error {
+  padding: 16px 0; color: var(--paper-100);
+}
+.fb-form-error p { font-size: 15px; line-height: 1.6; }
+.fb-form-error a { color: var(--ember-300); }
+.fb-form-error .fb-btn { margin-top: 16px; }
+
 .fb-form { display: flex; flex-direction: column; gap: 28px; }
 .fb-form .field { display: flex; flex-direction: column; gap: 8px; }
 .fb-form .field label {

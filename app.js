@@ -11,7 +11,7 @@
   const STUDIO = {
     name: "The Flame Brush",
     tagline: "Hand-blown vessels from a two-woman studio.",
-    email: "hello@theflamebrush.studio",
+    email: "theflamebrush@gmail.com",
     instagram: "@theflamebrush",
     location: "Alameda, CA",
     address: "14 Riverside Drive, Asheville NC 28801",
@@ -595,60 +595,138 @@
   }
 
   /* =========================================================
-     CONTACT — uses mailto: (no backend required)
+     CONTACT — submits to Formsubmit.co (no backend, no signup)
      ========================================================= */
-  function contactPage(piecePrefill) {
-    const form = h("form", { class: "fb-form", onsubmit: (e) => {
-      e.preventDefault();
-      const fd = new FormData(form);
-      const subject = encodeURIComponent(`[${fd.get("inquiry") || "general"}] note from ${fd.get("name") || "a friend"}`);
-      const lines = [
-        `From: ${fd.get("name")} <${fd.get("email")}>`,
-        fd.get("piece") ? `Piece: ${fd.get("piece")}` : null,
-        `Inquiry: ${fd.get("inquiry")}`,
-        "",
-        fd.get("message"),
-      ].filter(Boolean).join("\n");
-      window.location.href = `mailto:${STUDIO.email}?subject=${subject}&body=${encodeURIComponent(lines)}`;
-    }});
+  const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${STUDIO.email}`;
 
-    form.append(
-      h("div", { class: "row2" },
-        h("div", { class: "field" }, h("label", {}, "Your name"), h("input", { type: "text", name: "name", required: true })),
-        h("div", { class: "field" }, h("label", {}, "Email"), h("input", { type: "email", name: "email", required: true })),
-      ),
-      h("div", { class: "row2" },
-        h("div", { class: "field" },
-          h("label", {}, "What's this about"),
-          (() => {
-            const sel = h("select", { name: "inquiry" });
-            [
-              ["general", "A general hello"],
-              ["purchase", "Inquiring about a piece"],
-              ["commission", "Custom commission"],
-              ["workshop", "Workshop / open studio"],
-              ["press", "Press / collaboration"],
-            ].forEach(([v, t]) => sel.append(h("option", { value: v, selected: piecePrefill && v === "purchase" }, t)));
-            return sel;
-          })(),
+  function contactPage(piecePrefill) {
+    const formContainer = h("div", { class: "fb-form-wrap" });
+
+    const renderForm = () => {
+      formContainer.innerHTML = "";
+
+      const form = h("form", { class: "fb-form" });
+
+      // Honeypot (Formsubmit ignores any submission where _honey is filled)
+      const honeypot = h("input", {
+        type: "text", name: "_honey",
+        style: { display: "none" },
+        tabindex: "-1", "aria-hidden": "true", autocomplete: "off",
+      });
+
+      form.append(
+        honeypot,
+        h("div", { class: "row2" },
+          h("div", { class: "field" }, h("label", {}, "Your name"),
+            h("input", { type: "text", name: "name", required: true, autocomplete: "name" })),
+          h("div", { class: "field" }, h("label", {}, "Email"),
+            h("input", { type: "email", name: "email", required: true, autocomplete: "email" })),
+        ),
+        h("div", { class: "row2" },
+          h("div", { class: "field" },
+            h("label", {}, "What's this about"),
+            (() => {
+              const sel = h("select", { name: "inquiry" });
+              [
+                ["general", "A general hello"],
+                ["purchase", "Inquiring about a piece"],
+                ["commission", "Custom commission"],
+                ["workshop", "Workshop / open studio"],
+                ["press", "Press / collaboration"],
+              ].forEach(([v, t]) => sel.append(h("option", {
+                value: v, selected: piecePrefill && v === "purchase",
+              }, t)));
+              return sel;
+            })(),
+          ),
+          h("div", { class: "field" },
+            h("label", {}, "Piece (optional)"),
+            h("input", { type: "text", name: "piece", placeholder: "e.g. Stillwater, no. 2", value: piecePrefill || "" }),
+          ),
         ),
         h("div", { class: "field" },
-          h("label", {}, "Piece (optional)"),
-          h("input", { type: "text", name: "piece", placeholder: "e.g. Stillwater, no. 2", value: piecePrefill || "" }),
+          h("label", {}, "Your note"),
+          h("textarea", {
+            name: "message", required: true,
+            placeholder: "Tell us a little about what you're hoping for. Even a sentence is plenty.",
+          }, piecePrefill ? `I'd like to inquire about purchasing "${piecePrefill}".` : ""),
         ),
-      ),
-      h("div", { class: "field" },
-        h("label", {}, "Your note"),
-        h("textarea", {
-          name: "message", required: true,
-          placeholder: "Tell us a little about what you're hoping for. Even a sentence is plenty.",
-        }, piecePrefill ? `I'd like to inquire about purchasing "${piecePrefill}".` : ""),
-      ),
-      h("div", { class: "submit" },
-        h("span", { class: "helper" }, "We typically reply within two business days."),
-        h("button", { type: "submit", class: "fb-btn fb-btn-primary", html: `Send the note ${ICONS["arrow-right"]}` }),
-      ),
-    );
+      );
+
+      const submitBtn = h("button", {
+        type: "submit", class: "fb-btn fb-btn-primary",
+        html: `Send the note ${ICONS["arrow-right"]}`,
+      });
+      const helperEl = h("span", { class: "helper" }, "We typically reply within two business days.");
+      form.append(h("div", { class: "submit" }, helperEl, submitBtn));
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        if (honeypot.value) return; // bot caught
+        const fd = new FormData(form);
+
+        // Pretty subject + plain-text fallback shape
+        const inquiry = fd.get("inquiry") || "general";
+        const subject = `[${inquiry}] inquiry from ${fd.get("name") || "a friend"}`;
+        fd.append("_subject", subject);
+        fd.append("_template", "table");
+        fd.append("_captcha", "false");
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `Sending…`;
+        helperEl.textContent = "";
+
+        try {
+          const res = await fetch(FORMSUBMIT_ENDPOINT, {
+            method: "POST",
+            headers: { "Accept": "application/json" },
+            body: fd,
+          });
+          const data = await res.json().catch(() => ({}));
+          if (res.ok && (data.success === "true" || data.success === true)) {
+            renderSuccess();
+          } else {
+            renderError(data.message || "Something went wrong sending the note.");
+          }
+        } catch (err) {
+          renderError("Couldn't reach the form service. Check your connection and try again — or email us directly.");
+        }
+      });
+
+      formContainer.append(form);
+    };
+
+    const renderSuccess = () => {
+      formContainer.innerHTML = "";
+      formContainer.append(
+        h("div", { class: "fb-form-success reveal is-in" },
+          h("div", { class: "fb-eyebrow", style: { color: "var(--ember-400)" } },
+            h("span", { class: "rule" }), "Note received"),
+          h("h2", { html: `Thanks for the <em>note</em>.` }),
+          h("p", { class: "lede" },
+            "We'll write back within two business days. If it's about a piece you're hoping to purchase, we'll hold it for you while we sort the details."),
+        ),
+      );
+    };
+
+    const renderError = (msg) => {
+      formContainer.innerHTML = "";
+      formContainer.append(
+        h("div", { class: "fb-form-error" },
+          h("p", {}, msg),
+          h("p", {},
+            "You can also email us directly at ",
+            h("a", { href: `mailto:${STUDIO.email}` }, STUDIO.email),
+            "."),
+          h("button", {
+            class: "fb-btn fb-btn-secondary",
+            onclick: renderForm,
+          }, "Try again"),
+        ),
+      );
+    };
+
+    renderForm();
 
     return h("section", { class: "fb-contact" },
       h("div", { class: "left" },
@@ -656,13 +734,16 @@
         h("h1", { html: `Let's <em>talk</em>.` }),
         h("p", { class: "lede" }, "For purchase inquiries, custom commissions, press, workshops, or anything else — we read every note."),
         h("div", { class: "info" },
-          h("div", { class: "row" }, h("span", { class: "k" }, "Studio"), h("span", { class: "v" }, STUDIO.address)),
-          h("div", { class: "row" }, h("span", { class: "k" }, "Email"), h("span", { class: "v" }, STUDIO.email)),
-          h("div", { class: "row" }, h("span", { class: "k" }, "Open"), h("span", { class: "v" }, STUDIO.hours)),
-          h("div", { class: "row" }, h("span", { class: "k" }, "Instagram"), h("span", { class: "v" }, STUDIO.instagram)),
+          h("div", { class: "row" }, h("span", { class: "k" }, "Studio"), h("span", { class: "v" }, STUDIO.location)),
+          h("div", { class: "row" }, h("span", { class: "k" }, "Email"),
+            h("span", { class: "v" },
+              h("a", { href: `mailto:${STUDIO.email}` }, STUDIO.email))),
+          h("div", { class: "row" }, h("span", { class: "k" }, "Instagram"),
+            h("span", { class: "v" },
+              h("a", { href: `https://instagram.com/${STUDIO.instagram.replace(/^@/, "")}`, target: "_blank", rel: "noopener" }, STUDIO.instagram))),
         ),
       ),
-      h("div", { class: "right" }, form),
+      h("div", { class: "right" }, formContainer),
     );
   }
 
