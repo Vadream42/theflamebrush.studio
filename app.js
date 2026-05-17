@@ -58,6 +58,7 @@
     if (parts[0] === "collections" && parts[1]) return { name: "collection", id: parts[1] };
     if (parts[0] === "collections") return { name: "collections" };
     if (parts[0] === "about") return { name: "about" };
+    if (parts[0] === "thank-you") return { name: "thank-you" };
     if (parts[0] === "contact") {
       const q = new URLSearchParams(raw.split("?")[1] || "");
       return { name: "contact", piece: q.get("piece") };
@@ -595,146 +596,84 @@
   }
 
   /* =========================================================
-     CONTACT — submits to Formsubmit.co (no backend, no signup)
+     CONTACT — uses Formsubmit's classic endpoint (no JS, no CORS).
+     Form POSTs natively; Formsubmit redirects to /#/thank-you.
      ========================================================= */
-  const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${encodeURIComponent(STUDIO.email)}`;
+  const FORMSUBMIT_ACTION = `https://formsubmit.co/${STUDIO.email}`;
+  const THANK_YOU_URL = `${window.location.origin}${window.location.pathname}#/thank-you`;
 
   function contactPage(piecePrefill) {
-    const formContainer = h("div", { class: "fb-form-wrap" });
+    const form = h("form", {
+      class: "fb-form",
+      action: FORMSUBMIT_ACTION,
+      method: "POST",
+      enctype: "multipart/form-data",
+    });
 
-    const renderForm = () => {
-      formContainer.innerHTML = "";
-
-      const form = h("form", { class: "fb-form" });
-
-      // Honeypot (Formsubmit ignores any submission where _honey is filled)
-      const honeypot = h("input", {
+    // Hidden control fields for Formsubmit
+    const subjectInput = h("input", { type: "hidden", name: "_subject", value: "New inquiry from theflamebrush.studio" });
+    form.append(
+      subjectInput,
+      h("input", { type: "hidden", name: "_template", value: "table" }),
+      h("input", { type: "hidden", name: "_captcha", value: "false" }),
+      h("input", { type: "hidden", name: "_next", value: THANK_YOU_URL }),
+      // Honeypot — bots fill this; humans don't see it; Formsubmit drops the message
+      h("input", {
         type: "text", name: "_honey",
-        style: { display: "none" },
-        tabindex: "-1", "aria-hidden": "true", autocomplete: "off",
-      });
+        style: { display: "none" }, tabindex: "-1", "aria-hidden": "true", autocomplete: "off",
+      }),
+    );
 
-      form.append(
-        honeypot,
-        h("div", { class: "row2" },
-          h("div", { class: "field" }, h("label", {}, "Your name"),
-            h("input", { type: "text", name: "name", required: true, autocomplete: "name" })),
-          h("div", { class: "field" }, h("label", {}, "Email"),
-            h("input", { type: "email", name: "email", required: true, autocomplete: "email" })),
-        ),
-        h("div", { class: "row2" },
-          h("div", { class: "field" },
-            h("label", {}, "What's this about"),
-            (() => {
-              const sel = h("select", { name: "inquiry" });
-              [
-                ["general", "A general hello"],
-                ["purchase", "Inquiring about a piece"],
-                ["commission", "Custom commission"],
-                ["workshop", "Workshop / open studio"],
-                ["press", "Press / collaboration"],
-              ].forEach(([v, t]) => sel.append(h("option", {
-                value: v, selected: piecePrefill && v === "purchase",
-              }, t)));
-              return sel;
-            })(),
-          ),
-          h("div", { class: "field" },
-            h("label", {}, "Piece (optional)"),
-            h("input", { type: "text", name: "piece", placeholder: "e.g. Stillwater, no. 2", value: piecePrefill || "" }),
-          ),
+    form.append(
+      h("div", { class: "row2" },
+        h("div", { class: "field" }, h("label", {}, "Your name"),
+          h("input", { type: "text", name: "name", required: true, autocomplete: "name" })),
+        h("div", { class: "field" }, h("label", {}, "Email"),
+          h("input", { type: "email", name: "email", required: true, autocomplete: "email" })),
+      ),
+      h("div", { class: "row2" },
+        h("div", { class: "field" },
+          h("label", {}, "What's this about"),
+          (() => {
+            const sel = h("select", { name: "inquiry" });
+            [
+              ["general", "A general hello"],
+              ["purchase", "Inquiring about a piece"],
+              ["commission", "Custom commission"],
+              ["workshop", "Workshop / open studio"],
+              ["press", "Press / collaboration"],
+            ].forEach(([v, t]) => sel.append(h("option", {
+              value: v, selected: piecePrefill && v === "purchase",
+            }, t)));
+            return sel;
+          })(),
         ),
         h("div", { class: "field" },
-          h("label", {}, "Your note"),
-          h("textarea", {
-            name: "message", required: true,
-            placeholder: "Tell us a little about what you're hoping for. Even a sentence is plenty.",
-          }, piecePrefill ? `I'd like to inquire about purchasing "${piecePrefill}".` : ""),
+          h("label", {}, "Piece (optional)"),
+          h("input", { type: "text", name: "piece", placeholder: "e.g. Stillwater, no. 2", value: piecePrefill || "" }),
         ),
-      );
+      ),
+      h("div", { class: "field" },
+        h("label", {}, "Your note"),
+        h("textarea", {
+          name: "message", required: true,
+          placeholder: "Tell us a little about what you're hoping for. Even a sentence is plenty.",
+        }, piecePrefill ? `I'd like to inquire about purchasing "${piecePrefill}".` : ""),
+      ),
+      h("div", { class: "submit" },
+        h("span", { class: "helper" }, "We typically reply within two business days."),
+        h("button", { type: "submit", class: "fb-btn fb-btn-primary",
+          html: `Send the note ${ICONS["arrow-right"]}` }),
+      ),
+    );
 
-      const submitBtn = h("button", {
-        type: "submit", class: "fb-btn fb-btn-primary",
-        html: `Send the note ${ICONS["arrow-right"]}`,
-      });
-      const helperEl = h("span", { class: "helper" }, "We typically reply within two business days.");
-      form.append(h("div", { class: "submit" }, helperEl, submitBtn));
-
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        if (honeypot.value) return; // bot caught
-        const fd = new FormData(form);
-
-        // Build a JSON payload — Formsubmit's AJAX endpoint expects JSON,
-        // not multipart/form-data.
-        const payload = {};
-        fd.forEach((value, key) => { payload[key] = value; });
-
-        const inquiry = payload.inquiry || "general";
-        payload._subject  = `[${inquiry}] inquiry from ${payload.name || "a friend"}`;
-        payload._template = "table";
-        payload._captcha  = "false";
-
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = `Sending…`;
-        helperEl.textContent = "";
-
-        try {
-          const res = await fetch(FORMSUBMIT_ENDPOINT, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              "Accept": "application/json",
-            },
-            body: JSON.stringify(payload),
-          });
-          const data = await res.json().catch(() => ({}));
-          if (res.ok && (data.success === "true" || data.success === true)) {
-            renderSuccess();
-          } else {
-            console.warn("Formsubmit response", res.status, data);
-            renderError(data.message || `The form service returned an error (HTTP ${res.status}). Try again, or email us directly.`);
-          }
-        } catch (err) {
-          console.error("Formsubmit fetch failed", err);
-          renderError("Couldn't reach the form service. Check your connection and try again — or email us directly.");
-        }
-      });
-
-      formContainer.append(form);
-    };
-
-    const renderSuccess = () => {
-      formContainer.innerHTML = "";
-      formContainer.append(
-        h("div", { class: "fb-form-success reveal is-in" },
-          h("div", { class: "fb-eyebrow", style: { color: "var(--ember-400)" } },
-            h("span", { class: "rule" }), "Note received"),
-          h("h2", { html: `Thanks for the <em>note</em>.` }),
-          h("p", { class: "lede" },
-            "We'll write back within two business days. If it's about a piece you're hoping to purchase, we'll hold it for you while we sort the details."),
-        ),
-      );
-    };
-
-    const renderError = (msg) => {
-      formContainer.innerHTML = "";
-      formContainer.append(
-        h("div", { class: "fb-form-error" },
-          h("p", {}, msg),
-          h("p", {},
-            "You can also email us directly at ",
-            h("a", { href: `mailto:${STUDIO.email}` }, STUDIO.email),
-            "."),
-          h("button", {
-            class: "fb-btn fb-btn-secondary",
-            onclick: renderForm,
-          }, "Try again"),
-        ),
-      );
-    };
-
-    renderForm();
+    // On submit, set a descriptive subject from the current values (then let the form submit normally)
+    form.addEventListener("submit", () => {
+      const fd = new FormData(form);
+      const inquiry = fd.get("inquiry") || "general";
+      const name = (fd.get("name") || "").toString().trim() || "a friend";
+      subjectInput.value = `[${inquiry}] inquiry from ${name} — theflamebrush.studio`;
+    });
 
     return h("section", { class: "fb-contact" },
       h("div", { class: "left" },
@@ -751,7 +690,30 @@
               h("a", { href: `https://instagram.com/${STUDIO.instagram.replace(/^@/, "")}`, target: "_blank", rel: "noopener" }, STUDIO.instagram))),
         ),
       ),
-      h("div", { class: "right" }, formContainer),
+      h("div", { class: "right" }, form),
+    );
+  }
+
+  /* =========================================================
+     THANK YOU — destination after Formsubmit redirects back
+     ========================================================= */
+  function thankYouPage() {
+    return h("section", { class: "fb-thank-you" },
+      h("div", { class: "fb-thank-you-inner reveal" },
+        h("div", { class: "fb-eyebrow", style: { justifyContent: "center", color: "var(--ember-400)" } },
+          h("span", { class: "rule" }), "Note received", h("span", { class: "rule" }),
+        ),
+        h("h1", { html: `Thanks for the <em>note</em>.` }),
+        h("p", { class: "lede" },
+          "We'll write back within two business days. If it's about a piece you're hoping to purchase, we'll hold it for you while we sort the details."),
+        h("div", { class: "actions" },
+          h("button", { class: "fb-btn fb-btn-primary",
+            onclick: () => go("/"),
+            html: `Back to the studio ${ICONS["arrow-right"]}` }),
+          h("button", { class: "fb-btn fb-btn-secondary",
+            onclick: () => go("/collections") }, "Browse collections"),
+        ),
+      ),
     );
   }
 
@@ -773,6 +735,7 @@
     else if (route.name === "collection") root.append(collectionDetail(route.id));
     else if (route.name === "about") root.append(aboutPage());
     else if (route.name === "contact") root.append(contactPage(route.piece));
+    else if (route.name === "thank-you") root.append(thankYouPage());
 
     root.append(footer());
     setupScrollEffects(root);
