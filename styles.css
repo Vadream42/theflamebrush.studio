@@ -159,8 +159,16 @@ a:hover { background-size: 100% 1px; }
 .fb-strip {
   background: var(--ink-800); color: var(--paper-200);
   font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
-  padding: 10px 32px; display: flex; justify-content: space-between; gap: 16px;
+  padding: 10px 32px;
+  display: flex; justify-content: center; align-items: center; gap: 28px;
   border-bottom: 1px solid var(--line-700);
+}
+.fb-strip > div { display: flex; align-items: center; position: relative; }
+.fb-strip > div + div { padding-left: 28px; }
+.fb-strip > div + div::before {
+  content: "";
+  position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+  width: 1px; height: 12px; background: var(--line-700);
 }
 .fb-strip .dot { color: var(--ember-400); margin-right: 6px; }
 
@@ -745,8 +753,8 @@ a:hover { background-size: 100% 1px; }
    Responsive
    ========================================================= */
 @media (max-width: 880px) {
-  .fb-strip { font-size: 10px; padding: 8px 16px; }
-  .fb-strip > div:nth-child(2) { display: none; }
+  .fb-strip { font-size: 9px; padding: 8px 12px; gap: 14px; letter-spacing: 0.14em; }
+  .fb-strip > div + div { padding-left: 14px; }
   .fb-nav-inner { padding: 14px 16px; grid-template-columns: 1fr auto; }
   .fb-nav ul { display: none; position: absolute; left: 0; right: 0; top: 100%;
     flex-direction: column; gap: 0; background: var(--ink-800);

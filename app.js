@@ -13,12 +13,11 @@
     tagline: "Hand-blown vessels from a two-woman studio.",
     email: "hello@theflamebrush.studio",
     instagram: "@theflamebrush",
-    location: "Asheville, NC",
+    location: "Alameda, CA",
     address: "14 Riverside Drive, Asheville NC 28801",
     hours: "Saturdays 11–4 · or by appointment",
-    estYear: "2019",
-    openLine: "Open studio · Saturdays 11–4",
-    bookingLine: "Custom orders · booking March",
+    estYear: "2025",
+    bookingLine: "Custom orders",
   };
 
   /* ---------- helpers ------------------------------------- */
@@ -99,9 +98,8 @@
      ========================================================= */
   function studioStrip() {
     return h("div", { class: "fb-strip" },
-      h("div", {}, h("span", { class: "dot" }, "● "), STUDIO.openLine),
-      h("div", { class: "hide-narrow" }, STUDIO.bookingLine),
-      h("div", {}, `${STUDIO.location} · est. ${STUDIO.estYear}`),
+      h("div", {}, STUDIO.bookingLine),
+      h("div", {}, `${STUDIO.location} · Est. ${STUDIO.estYear}`),
     );
   }
 
@@ -561,7 +559,7 @@
         ...[
           ["Slow craft.",    "A 14-hour anneal is the difference between a vessel and a pile of pretty shards. We make as much as the kiln will allow."],
           ["Proudly local.", "We uplift the local Bay Area artistic community — fostering collaboration and empowering women in creative and scientific fields. The studio is louder when shared."],
-          ["One of one.",    "Every piece in every collection is unrepeatable — the next will be its cousin, never its twin."],
+          ["One of one.",    "Every piece in every collection is unrepeatable, each work is one of one."],
         ].map(([title, body]) =>
           h("div", { class: "v reveal" },
             h("h4", {}, title),
