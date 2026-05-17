@@ -595,9 +595,12 @@
   }
 
   /* =========================================================
-     CONTACT — opens visitor's email client with prefilled message
-     (mailto:). No third-party dependency, works offline.
+     CONTACT — submits to Web3Forms (AJAX, no backend, no signup
+     beyond getting the access key once).
      ========================================================= */
+  const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
+  const WEB3FORMS_KEY      = "a4fe1e69-4a20-4147-904d-60e325be8c88";
+
   function contactPage(piecePrefill) {
     const formContainer = h("div", { class: "fb-form-wrap" });
 
@@ -605,7 +608,15 @@
       formContainer.innerHTML = "";
       const form = h("form", { class: "fb-form" });
 
+      // Honeypot — bots fill this; humans don't see it.
+      const honeypot = h("input", {
+        type: "checkbox", name: "botcheck",
+        style: { display: "none" },
+        tabindex: "-1", "aria-hidden": "true",
+      });
+
       form.append(
+        honeypot,
         h("div", { class: "row2" },
           h("div", { class: "field" }, h("label", {}, "Your name"),
             h("input", { type: "text", name: "name", required: true, autocomplete: "name" })),
@@ -641,53 +652,95 @@
             placeholder: "Tell us a little about what you're hoping for. Even a sentence is plenty.",
           }, piecePrefill ? `I'd like to inquire about purchasing "${piecePrefill}".` : ""),
         ),
-        h("div", { class: "submit" },
-          h("span", { class: "helper" }, "Opens in your email app — hit send there to finish."),
-          h("button", { type: "submit", class: "fb-btn fb-btn-primary",
-            html: `Send the note ${ICONS["arrow-right"]}` }),
-        ),
       );
 
-      form.addEventListener("submit", (e) => {
+      const submitBtn = h("button", {
+        type: "submit", class: "fb-btn fb-btn-primary",
+        html: `Send the note ${ICONS["arrow-right"]}`,
+      });
+      const helperEl = h("span", { class: "helper" }, "We typically reply within two business days.");
+      form.append(h("div", { class: "submit" }, helperEl, submitBtn));
+
+      form.addEventListener("submit", async (e) => {
         e.preventDefault();
+        if (honeypot.checked) return; // bot caught
+
         const fd = new FormData(form);
         const inquiry = (fd.get("inquiry") || "general").toString();
         const name = (fd.get("name") || "a friend").toString().trim();
-        const piece = (fd.get("piece") || "").toString().trim();
-        const subject = `[${inquiry}] inquiry from ${name} — theflamebrush.studio`;
-        const lines = [
-          `From: ${name} <${fd.get("email")}>`,
-          piece ? `Piece: ${piece}` : null,
-          `Inquiry type: ${inquiry}`,
-          "",
-          (fd.get("message") || "").toString(),
-        ].filter(line => line !== null).join("\n");
-        const mailto = `mailto:${STUDIO.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines)}`;
-        window.location.href = mailto;
-        setTimeout(renderEmailOpened, 600);
+
+        const payload = {
+          access_key: WEB3FORMS_KEY,
+          subject: `[${inquiry}] inquiry from ${name} — theflamebrush.studio`,
+          from_name: `${name} via theflamebrush.studio`,
+          name: name,
+          email: fd.get("email"),
+          inquiry: inquiry,
+          piece: (fd.get("piece") || "").toString().trim(),
+          message: (fd.get("message") || "").toString(),
+        };
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = "Sending…";
+        helperEl.textContent = "";
+
+        try {
+          const res = await fetch(WEB3FORMS_ENDPOINT, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json",
+            },
+            body: JSON.stringify(payload),
+          });
+          const data = await res.json().catch(() => ({}));
+          if (res.ok && data.success) {
+            renderSuccess();
+          } else {
+            console.warn("Web3Forms response", res.status, data);
+            renderError(data.message || `The form service returned an error (HTTP ${res.status}). Try again, or email us directly.`);
+          }
+        } catch (err) {
+          console.error("Web3Forms fetch failed", err);
+          renderError("Couldn't reach the form service. Check your connection and try again — or email us directly.");
+        }
       });
 
       formContainer.append(form);
     };
 
-    const renderEmailOpened = () => {
+    const renderSuccess = () => {
       formContainer.innerHTML = "";
       formContainer.append(
         h("div", { class: "fb-form-handoff reveal is-in" },
           h("div", { class: "fb-eyebrow", style: { color: "var(--ember-400)" } },
-            h("span", { class: "rule" }), "Almost there"),
-          h("h2", { html: `Hit <em>send</em> in your email app.` }),
+            h("span", { class: "rule" }), "Note received"),
+          h("h2", { html: `Thanks for the <em>note</em>.` }),
           h("p", { class: "lede" },
-            "We just opened your email composer with the note pre-filled. Hit Send there to deliver it — we'll reply within two business days."),
+            "We'll write back within two business days. If it's about a piece you're hoping to purchase, we'll hold it for you while we sort the details."),
+          h("button", {
+            class: "fb-btn fb-btn-secondary",
+            onclick: renderForm,
+            style: { marginTop: "24px" },
+          }, "Send another note"),
+        ),
+      );
+    };
+
+    const renderError = (msg) => {
+      formContainer.innerHTML = "";
+      formContainer.append(
+        h("div", { class: "fb-form-handoff" },
+          h("p", { class: "lede", style: { color: "var(--paper-100)" } }, msg),
           h("p", { class: "fb-form-handoff-fallback" },
-            "Didn't see anything open? You can also email us directly at ",
+            "You can also email us directly at ",
             h("a", { href: `mailto:${STUDIO.email}` }, STUDIO.email),
             "."),
           h("button", {
             class: "fb-btn fb-btn-secondary",
             onclick: renderForm,
             style: { marginTop: "24px" },
-          }, "Write another note"),
+          }, "Try again"),
         ),
       );
     };
