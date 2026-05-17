@@ -682,24 +682,24 @@ a:hover { background-size: 100% 1px; }
   font-family: var(--font-display); font-style: italic;
 }
 
-/* Thank-you destination page */
-.fb-thank-you {
-  max-width: 720px; margin: 0 auto;
-  padding: 160px 32px 192px; text-align: center;
-}
-.fb-thank-you-inner .fb-eyebrow { justify-content: center; }
-.fb-thank-you h1 {
+/* Post-submit hand-off state ("hit send in your email app") */
+.fb-form-wrap { min-height: 320px; }
+.fb-form-handoff { padding: 16px 0; }
+.fb-form-handoff h2 {
   font-family: var(--font-display); font-style: italic; font-weight: 300;
-  font-size: clamp(56px, 7vw, 112px); line-height: 1.0;
-  letter-spacing: -0.025em; margin: 24px 0;
+  font-size: clamp(36px, 4.5vw, 56px); line-height: 1.05;
+  letter-spacing: -0.02em; margin: 12px 0 16px; color: var(--paper-50);
 }
-.fb-thank-you h1 em { color: var(--ember-400); }
-.fb-thank-you .lede {
-  color: var(--paper-100); max-width: 480px; margin: 0 auto 48px;
+.fb-form-handoff h2 em { color: var(--ember-400); }
+.fb-form-handoff p.lede { color: var(--paper-100); max-width: 460px; }
+.fb-form-handoff-fallback {
+  color: var(--paper-300); font-size: 13px; line-height: 1.6;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line-700);
+  max-width: 460px;
 }
-.fb-thank-you .actions {
-  display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;
-}
+.fb-form-handoff-fallback a { color: var(--ember-300); }
 
 .fb-form { display: flex; flex-direction: column; gap: 28px; }
 .fb-form .field { display: flex; flex-direction: column; gap: 8px; }
@@ -824,5 +824,4 @@ a:hover { background-size: 100% 1px; }
   .fb-values { margin-top: 32px; padding: 64px 16px 96px; }
   .fb-contact { padding: 56px 16px 96px; }
   .fb-form .row2 { grid-template-columns: 1fr; gap: 28px; }
-  .fb-thank-you { padding: 96px 16px 128px; }
 }
