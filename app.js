@@ -75,6 +75,7 @@
      ========================================================= */
   let COLLECTIONS = [];
   let ALL_PIECES = [];
+  let STUDIO_WALL = [];
 
   async function loadData() {
     try {
@@ -86,10 +87,12 @@
         pieces: c.pieces || [],
       }));
       ALL_PIECES = COLLECTIONS.flatMap(c => c.pieces.map(p => ({ ...p, collectionId: c.id, season: c.season })));
+      STUDIO_WALL = data.studioWall || [];
     } catch (err) {
       console.warn(err);
       COLLECTIONS = [];
       ALL_PIECES = [];
+      STUDIO_WALL = [];
     }
   }
 
@@ -190,7 +193,11 @@
   }
 
   function heroWall() {
-    const photos = ALL_PIECES.map(p => p.photo).filter(Boolean);
+    // Prefer the dedicated studio-wall folder (small, web-sized photos).
+    // Fall back to full-res collection photos if the wall folder is empty.
+    const photos = (STUDIO_WALL && STUDIO_WALL.length > 0)
+      ? STUDIO_WALL
+      : ALL_PIECES.map(p => p.photo).filter(Boolean);
     const tileRecipe = [
       { col: "1 / 3", row: "1", colStart: 1, dy: 0.30 },
       { col: "3 / 5", row: "1", colStart: 3, dy: 0.10 },

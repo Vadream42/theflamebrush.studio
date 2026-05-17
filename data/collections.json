@@ -3,83 +3,245 @@
     {
       "id": "stillwater",
       "title": "Stillwater",
-      "season": "Winter 2025",
-      "tagline": "Cobalt, ash, and the long blue dusk.",
-      "blurb": "A study in patience. Cobalt and pearl over a clear core, frit laid down slowly, kiln cycles run long. The pieces in this collection were made through January and February in a studio that never got above 58°F — a quiet body of work for a quiet time of year.",
-      "cover": "images/stillwater/01-stillwater-no-1.jpeg",
+      "season": "2026",
+      "tagline": "A year at the bench — patience, breath, and every color we owned.",
+      "blurb": "Our 2026 collection. We let the studio set the pace this year — winter's slow anneals into spring's first warm gathers, then the heat of summer when we pulled every pigment we had, and the autumn pieces that came out of the kiln looking like they remembered the leaves outside. Twenty-five vessels — each one a small experiment in heat, color, and patience. Every gather, signed by hand.",
+      "cover": "images/stillwater/01-cobalt-carrier.jpeg",
       "order": 1,
       "pieces": [
         {
           "id": "stillwater-01",
-          "title": "Stillwater, no. 1",
-          "photo": "images/stillwater/01-stillwater-no-1.jpeg",
-          "size": "6½″ × 4″",
-          "year": "2025",
+          "title": "Cobalt carrier",
+          "photo": "images/stillwater/01-cobalt-carrier.jpeg",
+          "size": "6″ × 4″",
+          "year": "2026",
           "price": 240,
           "edition": "1/1"
         },
         {
           "id": "stillwater-02",
-          "title": "Stillwater, no. 2",
-          "photo": "images/stillwater/02-stillwater-no-2.jpeg",
-          "size": "5″ × 3½″",
-          "year": "2025",
-          "price": 195,
+          "title": "Garnet & ash",
+          "photo": "images/stillwater/02-garnet-and-ash.jpeg",
+          "size": "5½″ × 4″",
+          "year": "2026",
+          "price": 220,
           "edition": "1/1"
         },
         {
           "id": "stillwater-03",
-          "title": "Hydrangea (cobalt)",
-          "photo": "images/stillwater/03-hydrangea-cobalt.jpeg",
-          "size": "5″ × 4″",
-          "year": "2025",
-          "price": 210,
-          "edition": "1/1"
-        },
-        {
-          "id": "stillwater-04",
-          "title": "Long Dusk",
-          "photo": "images/stillwater/04-long-dusk.jpeg",
-          "size": "7″ × 4″",
-          "year": "2025",
-          "price": 285,
-          "edition": "1/1"
-        },
-        {
-          "id": "stillwater-05",
-          "title": "Tide Pool, pair",
-          "photo": "images/stillwater/05-tide-pool-pair.jpeg",
-          "size": "3″ × 3″",
-          "year": "2025",
-          "price": 145,
-          "note": "Set of two"
-        },
-        {
-          "id": "stillwater-06",
-          "title": "Ash Carrier",
-          "photo": "images/stillwater/06-ash-carrier.jpeg",
+          "title": "Tangerine swirl",
+          "photo": "images/stillwater/03-tangerine-swirl.jpeg",
           "size": "6″ × 4″",
-          "year": "2025",
+          "year": "2026",
           "price": 230,
           "edition": "1/1"
         },
         {
-          "id": "stillwater-07",
-          "title": "Marbled Quiet",
-          "photo": "images/stillwater/07-marbled-quiet.jpeg",
-          "size": "5½″ × 4″",
-          "year": "2025",
-          "price": 210,
+          "id": "stillwater-04",
+          "title": "Stillwater bloom",
+          "photo": "images/stillwater/04-stillwater-bloom.jpeg",
+          "size": "5″ × 4″",
+          "year": "2026",
+          "price": 200,
           "edition": "1/1"
+        },
+        {
+          "id": "stillwater-05",
+          "title": "Quiet aqua",
+          "photo": "images/stillwater/05-quiet-aqua.jpeg",
+          "size": "5″ × 4″",
+          "year": "2026",
+          "price": 195,
+          "edition": "1/1"
+        },
+        {
+          "id": "stillwater-06",
+          "title": "Brushstroke, blue",
+          "photo": "images/stillwater/06-brushstroke-blue.jpeg",
+          "size": "5″ × 4″",
+          "year": "2026",
+          "price": 195,
+          "edition": "1/1"
+        },
+        {
+          "id": "stillwater-07",
+          "title": "Storm front",
+          "photo": "images/stillwater/07-storm-front.jpeg",
+          "size": "7″ × 4″",
+          "year": "2026",
+          "price": 285,
+          "edition": "1/1"
+        },
+        {
+          "id": "stillwater-08",
+          "title": "Emerald gather",
+          "photo": "images/stillwater/08-emerald-gather.jpeg",
+          "size": "6″ × 4″",
+          "year": "2026",
+          "price": 220,
+          "edition": "1/1"
+        },
+        {
+          "id": "stillwater-09",
+          "title": "Sap green",
+          "photo": "images/stillwater/09-sap-green.jpeg",
+          "size": "5″ × 3½″",
+          "year": "2026",
+          "price": 195,
+          "edition": "1/1"
+        },
+        {
+          "id": "stillwater-10",
+          "title": "Hydrangea, lime",
+          "photo": "images/stillwater/10-hydrangea-lime.jpeg",
+          "size": "4″ × 4″",
+          "year": "2026",
+          "price": 185,
+          "edition": "1/1"
+        },
+        {
+          "id": "stillwater-11",
+          "title": "Plum & cream",
+          "photo": "images/stillwater/11-plum-and-cream.jpeg",
+          "size": "6″ × 4″",
+          "year": "2026",
+          "price": 230,
+          "edition": "1/1"
+        },
+        {
+          "id": "stillwater-12",
+          "title": "Plum well",
+          "photo": "images/stillwater/12-plum-well.jpeg",
+          "size": "6″ × 4″",
+          "year": "2026",
+          "price": 230,
+          "edition": "1/1"
+        },
+        {
+          "id": "stillwater-13",
+          "title": "Deep tide",
+          "photo": "images/stillwater/13-deep-tide.jpeg",
+          "size": "4½″ wide",
+          "year": "2026",
+          "price": 185,
+          "edition": "1/1"
+        },
+        {
+          "id": "stillwater-14",
+          "title": "Pink marble rose",
+          "photo": "images/stillwater/14-pink-marble-rose.jpeg",
+          "size": "5″ × 4″",
+          "year": "2026",
+          "price": 195,
+          "edition": "1/1"
+        },
+        {
+          "id": "stillwater-15",
+          "title": "Blush marble",
+          "photo": "images/stillwater/15-blush-marble.jpeg",
+          "size": "4″ × 3½″",
+          "year": "2026",
+          "price": 165,
+          "edition": "1/1"
+        },
+        {
+          "id": "stillwater-16",
+          "title": "Spring, pair",
+          "photo": "images/stillwater/16-spring-pair.jpeg",
+          "size": "4″ × 4″ each",
+          "year": "2026",
+          "price": 290,
+          "note": "Set of two"
+        },
+        {
+          "id": "stillwater-17",
+          "title": "Aurora",
+          "photo": "images/stillwater/17-aurora.jpeg",
+          "size": "5½″ × 3½″",
+          "year": "2026",
+          "price": 225,
+          "edition": "1/1"
+        },
+        {
+          "id": "stillwater-18",
+          "title": "Confetti dish",
+          "photo": "images/stillwater/18-confetti-dish.jpeg",
+          "size": "4″ wide",
+          "year": "2026",
+          "price": 95,
+          "edition": "1/1"
+        },
+        {
+          "id": "stillwater-19",
+          "title": "Three pumpkins",
+          "photo": "images/stillwater/19-three-pumpkins.jpeg",
+          "size": "3–4″ each",
+          "year": "2026",
+          "price": 260,
+          "note": "Set of three"
+        },
+        {
+          "id": "stillwater-20",
+          "title": "Smile, set of three",
+          "photo": "images/stillwater/20-smile-set.jpeg",
+          "size": "4″ × 4″ each",
+          "year": "2026",
+          "price": 290,
+          "note": "Set of three"
+        },
+        {
+          "id": "stillwater-21",
+          "title": "Single coral",
+          "photo": "images/stillwater/21-single-coral.jpeg",
+          "size": "4″ × 2½″",
+          "year": "2026",
+          "price": 135,
+          "note": "Bud vase"
+        },
+        {
+          "id": "stillwater-22",
+          "title": "Three greens",
+          "photo": "images/stillwater/22-three-greens.jpeg",
+          "size": "3–6″ each",
+          "year": "2026",
+          "price": 385,
+          "note": "Set of three"
+        },
+        {
+          "id": "stillwater-23",
+          "title": "Emerald, pair",
+          "photo": "images/stillwater/23-emerald-pair.jpeg",
+          "size": "4–6″",
+          "year": "2026",
+          "price": 290,
+          "note": "Set of two"
+        },
+        {
+          "id": "stillwater-24",
+          "title": "Cool duet",
+          "photo": "images/stillwater/24-cool-duet.jpeg",
+          "size": "4–5″",
+          "year": "2026",
+          "price": 285,
+          "note": "Set of two"
+        },
+        {
+          "id": "stillwater-25",
+          "title": "Plum, pair",
+          "photo": "images/stillwater/25-plum-pair.jpeg",
+          "size": "5″ × 4″ each",
+          "year": "2026",
+          "price": 310,
+          "note": "Set of two"
         }
       ]
     },
     {
       "id": "coral-burst",
       "title": "Coral Burst",
-      "season": "Summer 2026",
-      "tagline": "Loud color, fast hands, the height of the season.",
-      "blurb": "Made in the height of August heat. We pulled colors we don't normally trust ourselves with — ruby, amber, hot pink, emerald speckle — and let them argue. Most of the pieces in this collection took less than a week from gather to anneal. You can feel it.",
+      "season": "2025",
+      "tagline": "Our first complete year — cobalt to coral, the slow and the loud.",
+      "blurb": "Our 2025 body of work. The cool half was made through January and February in a studio that never got above 58°F — slow kilns, patient frit, cobalt and pearl over a clear core. The warm half came in the height of August heat, when we pulled colors we don't normally trust ourselves with — ruby, amber, hot pink, emerald speckle — and let them argue. One collection, two temperatures.",
       "cover": "images/coral-burst/01-coral-burst-no-1.jpeg",
       "order": 2,
       "pieces": [
@@ -88,65 +250,144 @@
           "title": "Coral Burst, no. 1",
           "photo": "images/coral-burst/01-coral-burst-no-1.jpeg",
           "size": "6″ × 4″",
-          "year": "2026",
+          "year": "2025",
           "price": 240,
           "edition": "1/1"
         },
         {
           "id": "coral-burst-02",
+          "title": "Stillwater, no. 1",
+          "photo": "images/coral-burst/01-stillwater-no-1.jpeg",
+          "size": "6½″ × 4″",
+          "year": "2025",
+          "price": 240,
+          "edition": "1/1"
+        },
+        {
+          "id": "coral-burst-03",
           "title": "Confetti Pair",
           "photo": "images/coral-burst/02-confetti-pair.jpeg",
           "size": "4″ × 4″",
-          "year": "2026",
+          "year": "2025",
           "price": 320,
           "note": "Set of two"
         },
         {
-          "id": "coral-burst-03",
-          "title": "Field Study (emerald)",
-          "photo": "images/coral-burst/03-field-study-emerald.jpeg",
-          "size": "7″ × 4″",
-          "year": "2026",
-          "price": 285,
-          "edition": "1/1"
-        },
-        {
           "id": "coral-burst-04",
-          "title": "Petal Static",
-          "photo": "images/coral-burst/04-petal-static.jpeg",
-          "size": "5½″ × 4″",
-          "year": "2026",
-          "price": 210,
-          "edition": "1/1"
-        },
-        {
-          "id": "coral-burst-05",
-          "title": "Ruby Hydrangea",
-          "photo": "images/coral-burst/05-ruby-hydrangea.jpeg",
+          "title": "Stillwater, no. 2",
+          "photo": "images/coral-burst/02-stillwater-no-2.jpeg",
           "size": "5″ × 3½″",
-          "year": "2026",
+          "year": "2025",
           "price": 195,
           "edition": "1/1"
         },
         {
+          "id": "coral-burst-05",
+          "title": "Field Study (emerald)",
+          "photo": "images/coral-burst/03-field-study-emerald.jpeg",
+          "size": "7″ × 4″",
+          "year": "2025",
+          "price": 285,
+          "edition": "1/1"
+        },
+        {
           "id": "coral-burst-06",
-          "title": "Amethyst Ring Dish",
-          "photo": "images/coral-burst/06-amethyst-ring-dish.jpeg",
-          "size": "4″ wide",
-          "year": "2026",
-          "price": 95,
+          "title": "Hydrangea (cobalt)",
+          "photo": "images/coral-burst/03-hydrangea-cobalt.jpeg",
+          "size": "5″ × 4″",
+          "year": "2025",
+          "price": 210,
           "edition": "1/1"
         },
         {
           "id": "coral-burst-07",
+          "title": "Long Dusk",
+          "photo": "images/coral-burst/04-long-dusk.jpeg",
+          "size": "7″ × 4″",
+          "year": "2025",
+          "price": 285,
+          "edition": "1/1"
+        },
+        {
+          "id": "coral-burst-08",
+          "title": "Petal Static",
+          "photo": "images/coral-burst/04-petal-static.jpeg",
+          "size": "5½″ × 4″",
+          "year": "2025",
+          "price": 210,
+          "edition": "1/1"
+        },
+        {
+          "id": "coral-burst-09",
+          "title": "Ruby Hydrangea",
+          "photo": "images/coral-burst/05-ruby-hydrangea.jpeg",
+          "size": "5″ × 3½″",
+          "year": "2025",
+          "price": 195,
+          "edition": "1/1"
+        },
+        {
+          "id": "coral-burst-10",
+          "title": "Tide Pool, pair",
+          "photo": "images/coral-burst/05-tide-pool-pair.jpeg",
+          "size": "3″ × 3″",
+          "year": "2025",
+          "price": 145,
+          "note": "Set of two"
+        },
+        {
+          "id": "coral-burst-11",
+          "title": "Amethyst Ring Dish",
+          "photo": "images/coral-burst/06-amethyst-ring-dish.jpeg",
+          "size": "4″ wide",
+          "year": "2025",
+          "price": 95,
+          "edition": "1/1"
+        },
+        {
+          "id": "coral-burst-12",
+          "title": "Ash Carrier",
+          "photo": "images/coral-burst/06-ash-carrier.jpeg",
+          "size": "6″ × 4″",
+          "year": "2025",
+          "price": 230,
+          "edition": "1/1"
+        },
+        {
+          "id": "coral-burst-13",
           "title": "Heat Mirage",
           "photo": "images/coral-burst/07-heat-mirage.jpeg",
           "size": "6″ × 4″",
-          "year": "2026",
+          "year": "2025",
           "price": 240,
+          "edition": "1/1"
+        },
+        {
+          "id": "coral-burst-14",
+          "title": "Marbled Quiet",
+          "photo": "images/coral-burst/07-marbled-quiet.jpeg",
+          "size": "5½″ × 4″",
+          "year": "2025",
+          "price": 210,
           "edition": "1/1"
         }
       ]
     }
+  ],
+  "studioWall": [
+    "assets/studio-wall/coral-burst--01-coral-burst-no-1.jpg",
+    "assets/studio-wall/coral-burst--02-confetti-pair.jpg",
+    "assets/studio-wall/coral-burst--03-field-study-emerald.jpg",
+    "assets/studio-wall/coral-burst--04-petal-static.jpg",
+    "assets/studio-wall/coral-burst--05-ruby-hydrangea.jpg",
+    "assets/studio-wall/coral-burst--06-amethyst-ring-dish.jpg",
+    "assets/studio-wall/coral-burst--07-heat-mirage.jpg",
+    "assets/studio-wall/stillwater--01-stillwater-no-1.jpg",
+    "assets/studio-wall/stillwater--02-stillwater-no-2.jpg",
+    "assets/studio-wall/stillwater--03-hydrangea-cobalt.jpg",
+    "assets/studio-wall/stillwater--04-long-dusk.jpg",
+    "assets/studio-wall/stillwater--05-tide-pool-pair.jpg",
+    "assets/studio-wall/stillwater--06-ash-carrier.jpg",
+    "assets/studio-wall/stillwater--07-marbled-quiet.jpg"
   ]
 }

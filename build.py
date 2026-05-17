@@ -41,6 +41,7 @@ from pathlib import Path
 # ------------------------------------------------------------------
 ROOT = Path(__file__).resolve().parent
 IMAGES_DIR = ROOT / "images"
+STUDIO_WALL_DIR = ROOT / "assets" / "studio-wall"
 DATA_DIR = ROOT / "data"
 OUT_FILE = DATA_DIR / "collections.json"
 
@@ -146,8 +147,20 @@ def main() -> int:
     # sort by `order` then title
     collections.sort(key=lambda c: (c.get("order", 9999), c.get("title", "")))
 
+    # Studio-wall: small web-sized images shown in the homepage hero only.
+    # Keep these separate from full-res gallery photos so the homepage stays fast.
+    studio_wall: list[str] = []
+    if STUDIO_WALL_DIR.exists():
+        wall_files = sorted(
+            (p for p in STUDIO_WALL_DIR.iterdir()
+             if p.is_file() and p.suffix.lower() in IMAGE_EXTS and not p.name.startswith(".")),
+            key=lambda p: p.name.lower(),
+        )
+        studio_wall = [f"assets/studio-wall/{p.name}" for p in wall_files]
+        print(f"\nStudio wall: {len(studio_wall)} photo(s)")
+
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    payload = {"collections": collections}
+    payload = {"collections": collections, "studioWall": studio_wall}
     OUT_FILE.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
     print(f"\nWrote {len(collections)} collection(s) to {OUT_FILE.relative_to(ROOT)}")
