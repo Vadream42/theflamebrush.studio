@@ -110,7 +110,7 @@ def build_collection(folder: Path) -> dict | None:
             "title": pm.get("title", piece_title_from_filename(img.name)),
             "photo": f"images/{slug}/{img.name}",
         }
-        for k in ("size", "year", "price", "edition", "note", "materials", "process"):
+        for k in ("size", "year", "price", "edition", "note", "materials", "process", "sold"):
             if k in pm and pm[k] not in (None, ""):
                 piece[k] = pm[k]
         pieces.append(piece)

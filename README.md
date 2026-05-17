@@ -8,13 +8,13 @@ Drop image files (`.jpg`, `.png`, `.webp`) into a subfolder of `images/`. Each s
 
 ```
 images/
-  stillwater/
-    01-stillwater-no-1.jpg
-    02-stillwater-no-2.jpg
+  open-palette/
+    01-cobalt-carrier.jpeg
+    02-garnet-and-ash.jpeg
     meta.json          ← optional
-  coral-burst/
-    01-coral-burst.jpg
-    02-confetti-pair.jpg
+  first-gather/
+    01-coral-burst-no-1.jpeg
+    01-stillwater-no-1.jpeg
     meta.json
 ```
 

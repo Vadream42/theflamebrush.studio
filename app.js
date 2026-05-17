@@ -412,7 +412,7 @@
           ),
           h("div", { class: "meta-row" },
             h("span", { class: "title" }, p.title),
-            p.size ? h("span", { class: "size" }, p.size) : null,
+            p.sold ? h("span", { class: "size sold-tag" }, "Sold") : null,
           ),
         ),
       );
@@ -478,15 +478,18 @@
         h("div", { class: "info" },
           collection.season ? h("div", { class: "season" }, collection.season) : null,
           h("h2", {}, piece.title),
-          piece.note || piece.edition ? h("div", {
+          piece.note ? h("div", {
             style: { fontSize: "14px", color: "var(--paper-300)", letterSpacing: "0.04em" },
-          }, piece.note || `Edition ${piece.edition}`) : null,
+          }, piece.note) : null,
           h("div", { class: "spec" },
-            piece.size ? h("div", { class: "k" }, "Dimensions") : null, piece.size ? h("div", { class: "v" }, piece.size) : null,
             piece.year ? h("div", { class: "k" }, "Year") : null, piece.year ? h("div", { class: "v" }, piece.year) : null,
             piece.materials ? h("div", { class: "k" }, "Materials") : null, piece.materials ? h("div", { class: "v" }, piece.materials) : null,
             piece.process ? h("div", { class: "k" }, "Process") : null, piece.process ? h("div", { class: "v" }, piece.process) : null,
-            piece.price ? h("div", { class: "k" }, "Inquire") : null, piece.price ? h("div", { class: "v" }, `$${piece.price} · one of one`) : null,
+            // Status row — "Sold" if marked sold, otherwise the price
+            h("div", { class: "k" }, "Inquire"),
+            piece.sold
+              ? h("div", { class: "v sold-tag" }, "Sold")
+              : (piece.price ? h("div", { class: "v" }, `$${piece.price}`) : h("div", { class: "v" }, "Inquire for pricing")),
           ),
           h("div", { class: "actions" },
             h("button", {
