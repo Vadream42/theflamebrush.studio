@@ -117,8 +117,8 @@
           href: "#/",
           onclick: (e) => { e.preventDefault(); go("/"); },
         },
-          h("img", { src: "assets/logo-mark.svg", alt: "" }),
-          h("span", { html: `The Flame <span class="amp">&amp;</span> Brush` }),
+          h("img", { src: "assets/logo-64.png", alt: "", class: "fb-logo-mark" }),
+          h("span", { html: `The <span class="amp">Flame</span> Brush` }),
         ),
         h("ul", {},
           ...items.map(([k, label, href]) =>
@@ -147,8 +147,8 @@
       h("div", { class: "fb-footer-inner" },
         h("div", {},
           h("div", { class: "brand" },
-            h("img", { src: "assets/logo-mark.svg", alt: "" }),
-            h("span", { html: `The Flame <span class="amp">&amp;</span> Brush` }),
+            h("img", { src: "assets/logo-64.png", alt: "", class: "fb-logo-mark" }),
+            h("span", { html: `The <span class="amp">Flame</span> Brush` }),
           ),
           h("p", { class: "colophon" },
             `A woman-owned glass-art partnership. Hand-blown vessels, ring dishes, and small sculptural objects from a sunlit studio in ${STUDIO.location}.`),
@@ -158,7 +158,6 @@
           h("ul", {},
             h("li", { onclick: () => go("/about") }, "About"),
             h("li", { onclick: () => go("/collections") }, "Collections"),
-            h("li", { onclick: () => go("/contact") }, "Visit"),
           ),
         ),
         h("div", {},
@@ -166,7 +165,6 @@
           h("ul", {},
             h("li", { onclick: () => go("/collections") }, "All works"),
             h("li", { onclick: () => go("/contact") }, "Commissions"),
-            h("li", { onclick: () => go("/contact") }, "Care guide"),
           ),
         ),
         h("div", {},
@@ -174,7 +172,6 @@
           h("ul", {},
             h("li", {}, h("a", { href: `https://instagram.com/${STUDIO.instagram.replace(/^@/, "")}`, target: "_blank", rel: "noopener" }, "Instagram ↗")),
             h("li", {}, h("a", { href: `mailto:${STUDIO.email}` }, STUDIO.email)),
-            h("li", { onclick: () => go("/contact") }, "Newsletter"),
           ),
         ),
       ),
@@ -278,12 +275,14 @@
       setTimeout(markReady, 2500);
     }
 
-    // Parallax — applies to the tile (parent), reveal animations target the inner <img>
+    // Parallax — applies to the tile (parent), reveal animations target the inner <img>.
+    // Mobile gets a much gentler factor so drifting tiles don't expose dark gaps.
     const onScroll = () => {
       const y = window.scrollY;
+      const factor = window.matchMedia("(max-width: 880px)").matches ? 0.13 : 0.4;
       section.querySelectorAll("[data-dy]").forEach(el => {
         const dy = parseFloat(el.dataset.dy || "0");
-        el.style.setProperty("--parallax-y", `${(y * dy * 0.4).toFixed(2)}px`);
+        el.style.setProperty("--parallax-y", `${(y * dy * factor).toFixed(2)}px`);
       });
     };
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -546,8 +545,8 @@
         photo: "assets/Team/gwen.jpg",
         firstName: "Gwen",
         fullName: "Gwen Musial",
-        credits: "PhD Biomedical Optics, University of Houston",
-        minor: "Years spent living and working in Europe",
+        credits: "BS Biomedical Engineering · PhD Biomedical Optics, University of Houston",
+        minor: "7 Years spent living and working in Europe",
         body: [
           "Gwen bridges science and art through glass, drawing inspiration from both scientific precision and artistic beauty. Her lifelong fascination with how light transforms materials threads through every piece she makes.",
           "Gwen discovered glassblowing during lockdown in Cologne, Germany, after watching Blown Away, and began training in 2022 at The Glass Hand Studio in Alameda, California. Her work explores the interplay of light, transparency, and form — reflecting how a single gather can reveal hidden dimensions of beauty.",
