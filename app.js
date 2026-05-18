@@ -622,7 +622,7 @@
 
     const renderForm = () => {
       formContainer.innerHTML = "";
-      const form = h("form", { class: "fb-form" });
+      const form = h("form", { class: "fb-form", novalidate: "" });
 
       // Honeypot — bots fill this; humans don't see it.
       const honeypot = h("input", {
@@ -634,10 +634,14 @@
       form.append(
         honeypot,
         h("div", { class: "row2" },
-          h("div", { class: "field" }, h("label", {}, "Your name"),
-            h("input", { type: "text", name: "name", required: true, autocomplete: "name" })),
-          h("div", { class: "field" }, h("label", {}, "Email"),
-            h("input", { type: "email", name: "email", required: true, autocomplete: "email" })),
+          h("div", { class: "field" },
+            h("label", {}, "Your name", h("span", { class: "required-star" }, "*")),
+            h("input", { type: "text", name: "name", required: true, autocomplete: "name" }),
+          ),
+          h("div", { class: "field" },
+            h("label", {}, "Email", h("span", { class: "required-star" }, "*")),
+            h("input", { type: "email", name: "email", required: true, autocomplete: "email" }),
+          ),
         ),
         h("div", { class: "row2" },
           h("div", { class: "field" },
@@ -663,7 +667,7 @@
           ),
         ),
         h("div", { class: "field" },
-          h("label", {}, "Your note"),
+          h("label", {}, "Your note", h("span", { class: "required-star" }, "*")),
           h("textarea", {
             name: "message", required: true,
             placeholder: "Tell us a little about what you're hoping for.",
@@ -679,11 +683,38 @@
         type: "submit", class: "fb-btn fb-btn-primary",
         html: `Send the note ${ICONS["arrow-right"]}`,
       });
-      form.append(h("div", { class: "submit" }, submitBtn));
+      const errorEl = h("div", { class: "fb-form-validation-error", style: { display: "none" } });
+      form.append(errorEl, h("div", { class: "submit" }, submitBtn));
+
+      // Clear a field's error highlight as soon as the user starts typing in it
+      form.querySelectorAll("[required]").forEach(field => {
+        field.addEventListener("input", () => {
+          if (field.value.trim()) field.classList.remove("field-error");
+        });
+      });
 
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
         if (honeypot.checked) return; // bot caught
+
+        // Custom required-field validation — highlight empties, focus first one
+        const requiredFields = form.querySelectorAll("[required]");
+        let firstEmpty = null;
+        requiredFields.forEach(f => f.classList.remove("field-error"));
+        requiredFields.forEach(f => {
+          if (!String(f.value || "").trim()) {
+            f.classList.add("field-error");
+            if (!firstEmpty) firstEmpty = f;
+          }
+        });
+        if (firstEmpty) {
+          errorEl.textContent = "Please fill in the highlighted fields before sending.";
+          errorEl.style.display = "";
+          firstEmpty.focus();
+          return;
+        }
+        errorEl.style.display = "none";
+        errorEl.textContent = "";
 
         const fd = new FormData(form);
         const inquiry = (fd.get("inquiry") || "general").toString();

@@ -791,6 +791,31 @@ a:hover { background-size: 100% 1px; }
 }
 .fb-form-handoff-fallback a { color: var(--ember-300); }
 
+/* Orange asterisk next to required-field labels */
+.fb-form .field label .required-star {
+  color: var(--ember-500);
+  margin-left: 4px;
+  font-weight: 600;
+}
+/* Field-level error highlight — ember underline that stays after first blur */
+.fb-form .field input.field-error,
+.fb-form .field textarea.field-error,
+.fb-form .field select.field-error {
+  border-bottom-color: var(--ember-500);
+  box-shadow: 0 1px 0 0 var(--ember-500);
+}
+/* Inline validation error message above the submit button */
+.fb-form-validation-error {
+  color: var(--ember-300);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  padding: 10px 16px;
+  margin-bottom: -8px;
+  background: rgba(232, 90, 42, 0.10);
+  border-left: 2px solid var(--ember-500);
+  border-radius: 2px;
+}
+
 .fb-form { display: flex; flex-direction: column; gap: 28px; }
 .fb-form .field { display: flex; flex-direction: column; gap: 8px; }
 .fb-form .field label {
