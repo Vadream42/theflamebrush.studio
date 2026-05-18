@@ -162,6 +162,7 @@ a:hover { background-size: 100% 1px; }
   padding: 10px 32px;
   display: flex; justify-content: center; align-items: center; gap: 28px;
   border-bottom: 1px solid var(--line-700);
+  position: relative; z-index: 2;
 }
 .fb-strip > div { display: flex; align-items: center; position: relative; }
 .fb-strip > div + div { padding-left: 28px; }
@@ -538,23 +539,37 @@ a:hover { background-size: 100% 1px; }
 }
 
 /* =========================================================
-   About — page background (Emerald Lake vase, fixed behind sections)
-   Uses background-attachment: fixed on the wrap directly so the bg is
-   contained to the about-wrap's bounds (doesn't bleed into the footer).
+   About — page background (Sap green, viewport-fixed)
+   Uses position:fixed pseudo-elements (instead of background-attachment:
+   fixed which iOS Safari breaks on long pages). Image is always sized to
+   the visible viewport, not the entire tall page.
    ========================================================= */
 .fb-about-wrap {
   position: relative;
-  background-image:
+  isolation: isolate; /* contains the negative-z pseudos so the footer isn't affected */
+}
+.fb-about-wrap::before,
+.fb-about-wrap::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+.fb-about-wrap::before {
+  background-image: url("images/first-gather/web/09-sap-green.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+.fb-about-wrap::after {
+  background:
     linear-gradient(180deg,
       rgba(34, 27, 40, 0.88) 0%,
       rgba(34, 27, 40, 0.78) 35%,
       rgba(34, 27, 40, 0.84) 70%,
-      rgba(34, 27, 40, 0.94) 100%),
-    url("images/first-gather/web/09-sap-green.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+      rgba(34, 27, 40, 0.94) 100%);
+  z-index: -1;
 }
 
 /* =========================================================
@@ -854,7 +869,8 @@ a:hover { background-size: 100% 1px; }
    Footer
    ========================================================= */
 .fb-footer { background: var(--ink-800); border-top: 1px solid var(--line-700);
-  padding: 96px 32px 32px; }
+  padding: 96px 32px 32px;
+  position: relative; z-index: 2; }
 .fb-footer-inner { max-width: 1280px; margin: 0 auto;
   display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 64px; }
 .fb-footer h5 {
