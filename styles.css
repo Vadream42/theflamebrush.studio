@@ -901,6 +901,15 @@ a:hover { background-size: 100% 1px; }
   display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
   font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--paper-300);
 }
+/* Desktop: copyright and "all pieces…" inline, separated by " · " */
+.fb-footer-bottom .fb-bottom-left {
+  display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
+}
+.fb-footer-bottom .fb-bottom-left span + span::before {
+  content: "·";
+  margin-right: 16px;
+  color: var(--paper-300);
+}
 
 /* =========================================================
    Responsive
@@ -956,7 +965,41 @@ a:hover { background-size: 100% 1px; }
   .fb-coll-card .meta { left: 20px; right: 20px; bottom: 20px; }
   .fb-gallery { grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 48px 16px 96px; }
   .fb-footer { padding: 64px 16px 24px; }
-  .fb-footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .fb-footer-inner {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 12px;
+  }
+  /* Brand spans full width on top so the paragraph extends to the right edge */
+  .fb-footer-inner > div:first-child {
+    grid-column: 1 / -1;
+    margin-bottom: 4px;
+  }
+  /* Logo above text in the brand mark */
+  .fb-footer .brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 26px;
+  }
+  /* Paragraph no longer constrained by a narrow column */
+  .fb-footer .colophon { max-width: none; }
+  /* Tighter link columns so 3 fit at mobile width */
+  .fb-footer h5 { font-size: 10px; letter-spacing: 0.18em; }
+  .fb-footer ul li, .fb-footer ul li a { font-size: 13px; }
+
+  /* Bottom strip: stack everything vertically, no awkward mid-phrase wrap */
+  .fb-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 48px;
+  }
+  .fb-footer-bottom .fb-bottom-left {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+  .fb-footer-bottom .fb-bottom-left span + span::before { display: none; }
   .fb-values { grid-template-columns: 1fr; gap: 32px; padding: 64px 16px 96px; }
   .fb-coll-hero { height: 56vh; min-height: 360px; }
   .fb-coll-hero .content { padding: 0 16px; bottom: 32px; }

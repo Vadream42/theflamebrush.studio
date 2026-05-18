@@ -182,7 +182,10 @@
         ),
       ),
       h("div", { class: "fb-footer-bottom" },
-        h("span", {}, `© ${new Date().getFullYear()} ${STUDIO.name} · all pieces one of one`),
+        h("div", { class: "fb-bottom-left" },
+          h("span", {}, `© ${new Date().getFullYear()} ${STUDIO.name}`),
+          h("span", {}, "all pieces one of one"),
+        ),
         h("span", {}, `Made with care in ${STUDIO.location}`),
       ),
     );
