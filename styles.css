@@ -543,11 +543,11 @@ a:hover { background-size: 100% 1px; }
   position: relative;
   background-image:
     linear-gradient(180deg,
-      rgba(34, 27, 40, 0.80) 0%,
-      rgba(34, 27, 40, 0.66) 35%,
-      rgba(34, 27, 40, 0.74) 70%,
-      rgba(34, 27, 40, 0.90) 100%),
-    url("images/open-palette/web/03-emerald-lake.jpg");
+      rgba(34, 27, 40, 0.88) 0%,
+      rgba(34, 27, 40, 0.78) 35%,
+      rgba(34, 27, 40, 0.84) 70%,
+      rgba(34, 27, 40, 0.94) 100%),
+    url("assets/about-bg.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -577,7 +577,7 @@ a:hover { background-size: 100% 1px; }
 }
 .fb-about-postscript {
   font-family: var(--font-text); font-size: 15px; line-height: 1.65;
-  color: var(--paper-300); margin: 0; max-width: 460px;
+  color: var(--paper-100); margin: 0; max-width: 460px;
   padding-top: 24px; border-top: 1px solid var(--line-700);
 }
 
@@ -659,15 +659,15 @@ a:hover { background-size: 100% 1px; }
 }
 .fb-bio-credits .credits-line {
   font-family: var(--font-text); font-size: 12px;
-  letter-spacing: 0.12em; text-transform: uppercase; color: var(--paper-200);
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--paper-100);
 }
 .fb-bio-credits .credits-line.minor {
   text-transform: none; letter-spacing: 0.02em;
   font-family: var(--font-display); font-style: italic;
-  font-size: 14px; color: var(--paper-300);
+  font-size: 14px; color: var(--paper-200);
 }
 .fb-bio-text p {
-  font-size: 16px; line-height: 1.75; color: var(--paper-200); margin: 0 0 18px;
+  font-size: 16px; line-height: 1.75; color: var(--paper-100); margin: 0 0 18px;
 }
 
 /* =========================================================
@@ -684,7 +684,7 @@ a:hover { background-size: 100% 1px; }
   margin: 0 0 14px; color: var(--ember-400);
 }
 .fb-values .v p {
-  font-size: 14px; line-height: 1.7; color: var(--paper-200); margin: 0;
+  font-size: 14px; line-height: 1.7; color: var(--paper-100); margin: 0;
 }
 
 /* =========================================================
