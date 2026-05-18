@@ -596,7 +596,7 @@ a:hover { background-size: 100% 1px; }
 
 .fb-about-intro-photo {
   margin: 0; position: relative; overflow: hidden;
-  aspect-ratio: 4/5; background: var(--ink-800);
+  aspect-ratio: 4/5;
 }
 .fb-about-intro-photo .photo {
   position: absolute; inset: 0;
@@ -631,7 +631,7 @@ a:hover { background-size: 100% 1px; }
 
 .fb-bio-photo {
   margin: 0; position: relative; overflow: hidden;
-  aspect-ratio: 4/5; background: var(--ink-800);
+  aspect-ratio: 4/5;
 }
 .fb-bio.alt .fb-bio-photo { order: 2; }
 .fb-bio-photo .photo {
