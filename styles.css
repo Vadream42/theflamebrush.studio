@@ -479,15 +479,30 @@ a:hover { background-size: 100% 1px; }
 .fb-lightbox .arrow.next { right: 24px; top: 50%; transform: translateY(-50%); }
 .fb-lightbox .arrow svg { width: 28px; height: 28px; }
 .fb-lightbox .stage {
-  display: grid; grid-template-columns: 1fr 360px; gap: 48px;
-  max-width: 1400px; max-height: 88vh; padding: 32px; align-items: stretch;
+  display: grid;
+  /* Photo cell flexes to fill remaining space; info cell is a slim sidebar.
+     The minmax(0, 1fr) prevents the photo from getting pushed out by long spec rows. */
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 32px;
+  /* Stage uses nearly the entire viewport so the photo can render as large as possible. */
+  width: calc(100vw - 64px);
+  height: calc(100vh - 56px);
+  max-width: 1800px;
+  padding: 16px;
+  align-items: stretch;
+  box-sizing: border-box;
 }
 .fb-lightbox .stage .photo {
-  background-size: contain; background-position: center; background-repeat: no-repeat;
-  min-height: 60vh; min-width: 50vw;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%; height: 100%;
   animation: fadeIn 360ms var(--ease-out-quint);
 }
-.fb-lightbox .stage .info { align-self: end; color: var(--paper-50); padding: 32px 0; }
+.fb-lightbox .stage .info {
+  align-self: center; color: var(--paper-50); padding: 16px 0;
+  overflow-y: auto; max-height: 100%;
+}
 .fb-lightbox .stage .info .season {
   font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
   color: var(--paper-300); margin-bottom: 16px;
@@ -884,11 +899,29 @@ a:hover { background-size: 100% 1px; }
   .fb-coll-hero .content { padding: 0 16px; bottom: 32px; }
   .fb-coll-blurb { padding: 48px 16px; }
 
-  .fb-lightbox .stage { grid-template-columns: 1fr; gap: 16px; padding: 16px; }
-  .fb-lightbox .stage .photo { min-width: 90vw; min-height: 50vh; }
+  /* Mobile lightbox: photo gets the whole screen; info is a slim strip at the bottom */
+  .fb-lightbox .stage {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(0, 1fr) auto;
+    width: 100vw; height: 100vh; max-width: 100vw;
+    gap: 8px; padding: 8px;
+  }
+  .fb-lightbox .stage .photo {
+    width: 100%; height: 100%;
+    min-width: 0; min-height: 0;
+  }
+  .fb-lightbox .stage .info {
+    align-self: end; padding: 0;
+    max-height: 30vh;
+  }
+  .fb-lightbox .stage .info h2 { font-size: 28px; margin-bottom: 8px; }
+  .fb-lightbox .stage .info .spec { padding: 12px 0; margin-top: 8px; gap: 4px 16px; }
+  .fb-lightbox .stage .info .actions { margin-top: 16px; }
   .fb-lightbox .arrow { width: 44px; height: 44px; }
   .fb-lightbox .arrow.prev { left: 8px; }
   .fb-lightbox .arrow.next { right: 8px; }
+  .fb-lightbox .counter { top: 12px; left: 12px; font-size: 11px; }
+  .fb-lightbox .close { top: 12px; right: 12px; }
 
   .fb-about-intro { padding: 56px 0 16px; }
   .fb-about-intro-inner { grid-template-columns: 1fr; gap: 32px; padding: 0 16px; }
