@@ -60,7 +60,7 @@
     if (parts[0] === "about") return { name: "about" };
     if (parts[0] === "contact") {
       const q = new URLSearchParams(raw.split("?")[1] || "");
-      return { name: "contact", piece: q.get("piece") };
+      return { name: "contact", piece: q.get("piece"), inquiryType: q.get("type") };
     }
     return { name: "home" };
   }
@@ -492,11 +492,17 @@
               : (piece.price ? h("div", { class: "v" }, `$${piece.price}`) : h("div", { class: "v" }, "Inquire for pricing")),
           ),
           h("div", { class: "actions" },
-            h("button", {
-              class: "fb-btn fb-btn-primary",
-              onclick: () => { closeLightbox(); go(`/contact?piece=${encodeURIComponent(piece.title)}`); },
-              html: `Inquire to purchase ${ICONS["arrow-right"]}`,
-            }),
+            piece.sold
+              ? h("button", {
+                  class: "fb-btn fb-btn-primary",
+                  onclick: () => { closeLightbox(); go(`/contact?piece=${encodeURIComponent(piece.title)}&type=commission`); },
+                  html: `Inquire about a similar commission ${ICONS["arrow-right"]}`,
+                })
+              : h("button", {
+                  class: "fb-btn fb-btn-primary",
+                  onclick: () => { closeLightbox(); go(`/contact?piece=${encodeURIComponent(piece.title)}`); },
+                  html: `Inquire to purchase ${ICONS["arrow-right"]}`,
+                }),
             h("button", { class: "fb-btn fb-btn-ghost", onclick: closeLightbox }, "Close"),
           ),
         ),
@@ -508,7 +514,7 @@
      ABOUT
      ========================================================= */
   function aboutPage() {
-    return h("div", {},
+    return h("div", { class: "fb-about-wrap" },
       // ---------- Intro / About us ----------
       h("section", { class: "fb-about-intro" },
         h("div", { class: "fb-about-intro-inner" },
@@ -608,7 +614,7 @@
   const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
   const WEB3FORMS_KEY      = "a4fe1e69-4a20-4147-904d-60e325be8c88";
 
-  function contactPage(piecePrefill) {
+  function contactPage(piecePrefill, inquiryType) {
     const formContainer = h("div", { class: "fb-form-wrap" });
 
     const renderForm = () => {
@@ -641,7 +647,9 @@
                 ["commission", "Custom commission"],
                 ["press", "Press / collaboration"],
               ].forEach(([v, t]) => sel.append(h("option", {
-                value: v, selected: piecePrefill && v === "purchase",
+                value: v, selected:
+                  (inquiryType === "commission" && v === "commission") ||
+                  (!inquiryType && piecePrefill && v === "purchase"),
               }, t)));
               return sel;
             })(),
@@ -656,7 +664,11 @@
           h("textarea", {
             name: "message", required: true,
             placeholder: "Tell us a little about what you're hoping for.",
-          }, piecePrefill ? `I'd like to inquire about purchasing "${piecePrefill}".` : ""),
+          }, piecePrefill
+              ? (inquiryType === "commission"
+                  ? `I'd love to inquire about a commission similar to "${piecePrefill}".`
+                  : `I'd like to inquire about purchasing "${piecePrefill}".`)
+              : ""),
         ),
       );
 
@@ -789,7 +801,7 @@
     else if (route.name === "collections") root.append(collectionsIndex());
     else if (route.name === "collection") root.append(collectionDetail(route.id));
     else if (route.name === "about") root.append(aboutPage());
-    else if (route.name === "contact") root.append(contactPage(route.piece));
+    else if (route.name === "contact") root.append(contactPage(route.piece, route.inquiryType));
 
     root.append(footer());
     setupScrollEffects(root);

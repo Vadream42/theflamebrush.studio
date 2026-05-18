@@ -535,6 +535,39 @@ a:hover { background-size: 100% 1px; }
 }
 
 /* =========================================================
+   About — page background (Mardi Gras vase, fixed behind all sections)
+   ========================================================= */
+.fb-about-wrap {
+  position: relative;
+  isolation: isolate; /* contains the negative z-indexed pseudos */
+}
+.fb-about-wrap::before,
+.fb-about-wrap::after {
+  content: "";
+  position: fixed;          /* stays put while the page scrolls — true full-page background */
+  inset: 0;
+  pointer-events: none;
+}
+.fb-about-wrap::before {
+  background-image: url("images/open-palette/07-mardi-gras.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: saturate(1.05);
+  opacity: 0.32;
+  z-index: -2;
+}
+.fb-about-wrap::after {
+  background:
+    linear-gradient(180deg,
+      rgba(34, 27, 40, 0.78) 0%,
+      rgba(34, 27, 40, 0.62) 35%,
+      rgba(34, 27, 40, 0.72) 70%,
+      rgba(34, 27, 40, 0.88) 100%);
+  z-index: -1;
+}
+
+/* =========================================================
    About — intro
    ========================================================= */
 .fb-about-intro {
