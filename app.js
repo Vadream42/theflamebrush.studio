@@ -484,16 +484,7 @@
           piece.note ? h("div", {
             style: { fontSize: "14px", color: "var(--paper-300)", letterSpacing: "0.04em" },
           }, piece.note) : null,
-          h("div", { class: "spec" },
-            piece.year ? h("div", { class: "k" }, "Year") : null, piece.year ? h("div", { class: "v" }, piece.year) : null,
-            piece.materials ? h("div", { class: "k" }, "Materials") : null, piece.materials ? h("div", { class: "v" }, piece.materials) : null,
-            piece.process ? h("div", { class: "k" }, "Process") : null, piece.process ? h("div", { class: "v" }, piece.process) : null,
-            // Status row — "Sold" if marked sold, otherwise the price
-            h("div", { class: "k" }, "Inquire"),
-            piece.sold
-              ? h("div", { class: "v sold-tag" }, "Sold")
-              : (piece.price ? h("div", { class: "v" }, `$${piece.price}`) : h("div", { class: "v" }, "Inquire for pricing")),
-          ),
+          // Primary action right under the title — easy to reach on mobile
           h("div", { class: "actions" },
             piece.sold
               ? h("button", {
@@ -507,6 +498,16 @@
                   html: `Inquire to purchase ${ICONS["arrow-right"]}`,
                 }),
             h("button", { class: "fb-btn fb-btn-ghost", onclick: closeLightbox }, "Close"),
+          ),
+          h("div", { class: "spec" },
+            piece.year ? h("div", { class: "k" }, "Year") : null, piece.year ? h("div", { class: "v" }, piece.year) : null,
+            piece.materials ? h("div", { class: "k" }, "Materials") : null, piece.materials ? h("div", { class: "v" }, piece.materials) : null,
+            piece.process ? h("div", { class: "k" }, "Process") : null, piece.process ? h("div", { class: "v" }, piece.process) : null,
+            // Status row — "Sold" if marked sold, otherwise the price
+            h("div", { class: "k" }, "Inquire"),
+            piece.sold
+              ? h("div", { class: "v sold-tag" }, "Sold")
+              : (piece.price ? h("div", { class: "v" }, `$${piece.price}`) : h("div", { class: "v" }, "Inquire for pricing")),
           ),
         ),
       ),
