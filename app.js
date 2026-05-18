@@ -53,13 +53,16 @@
      ========================================================= */
   function parseRoute() {
     const raw = (window.location.hash || "#/").replace(/^#/, "");
-    const parts = raw.split("/").filter(Boolean);
+    // Split path from query string FIRST so a slug like "contact?piece=..."
+    // doesn't get treated as one path segment.
+    const [rawPath, rawQuery] = raw.split("?");
+    const parts = rawPath.split("/").filter(Boolean);
+    const q = new URLSearchParams(rawQuery || "");
     if (parts.length === 0) return { name: "home" };
     if (parts[0] === "collections" && parts[1]) return { name: "collection", id: parts[1] };
     if (parts[0] === "collections") return { name: "collections" };
     if (parts[0] === "about") return { name: "about" };
     if (parts[0] === "contact") {
-      const q = new URLSearchParams(raw.split("?")[1] || "");
       return { name: "contact", piece: q.get("piece"), inquiryType: q.get("type") };
     }
     return { name: "home" };
