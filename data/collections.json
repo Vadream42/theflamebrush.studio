@@ -155,8 +155,8 @@
       "id": "first-gather",
       "title": "First gather",
       "season": "2025",
-      "tagline": "Our first body of work — every color we had to give.",
-      "blurb": "The first complete year at the bench. We let the studio set the pace — winter's slow anneals into spring's first warm gathers, then the heat of summer when we pulled every pigment we had, and the autumn pieces that came out of the kiln looking like they remembered the leaves outside. Each piece a small experiment in heat, color, and patience. Every gather, signed by hand. The first gather.",
+      "tagline": "Our first body of work — swirls of color.",
+      "blurb": "Our first gather. Inspired by abstract brushstrokes, each piece is unique and crafted with a mixture of colors applied via swirled bits of colored glass — giving the impression of a painter's brush.",
       "cover": "images/first-gather/web/03-tangerine-swirl.jpg",
       "order": 2,
       "pieces": [
@@ -327,7 +327,7 @@
         },
         {
           "id": "first-gather-16",
-          "title": "Spring, pair",
+          "title": "Elphaba and Glinda",
           "photo": "images/first-gather/16-spring-pair.jpeg",
           "thumb": "images/first-gather/web/16-spring-pair.jpg",
           "size": "4″ × 4″ each",
@@ -360,7 +360,7 @@
         },
         {
           "id": "first-gather-19",
-          "title": "Single coral",
+          "title": "Tidal Wave",
           "photo": "images/first-gather/21-single-coral.jpeg",
           "thumb": "images/first-gather/web/21-single-coral.jpg",
           "size": "4″ × 2½″",
