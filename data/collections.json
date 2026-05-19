@@ -16,7 +16,7 @@
           "thumb": "images/open-palette/web/01-coral-burst.jpg",
           "size": "6″ × 4″",
           "year": "2026",
-          "price": 240,
+          "price": 85,
           "edition": "1/1"
         },
         {
@@ -26,7 +26,7 @@
           "thumb": "images/open-palette/web/02-stillwater.jpg",
           "size": "6½″ × 4″",
           "year": "2026",
-          "price": 240,
+          "price": 95,
           "edition": "1/1"
         },
         {
@@ -36,8 +36,8 @@
           "thumb": "images/open-palette/web/03-emerald-lake.jpg",
           "size": "4″ × 4″",
           "year": "2026",
-          "price": 320,
-          "note": "Set of two"
+          "price": 85,
+          "edition": "1/1"
         },
         {
           "id": "open-palette-04",
@@ -46,7 +46,7 @@
           "thumb": "images/open-palette/web/04-cobalt-burst.jpg",
           "size": "5″ × 3½″",
           "year": "2026",
-          "price": 195,
+          "price": 85,
           "edition": "1/1"
         },
         {
@@ -56,8 +56,9 @@
           "thumb": "images/open-palette/web/05-plum-petals.jpg",
           "size": "7″ × 4″",
           "year": "2026",
-          "price": 285,
-          "edition": "1/1"
+          "price": 120,
+          "note": "Pieces available individually",
+          "set": true
         },
         {
           "id": "open-palette-06",
@@ -66,8 +67,9 @@
           "thumb": "images/open-palette/web/06-green-goddess.jpg",
           "size": "5″ × 4″",
           "year": "2026",
-          "price": 210,
-          "edition": "1/1"
+          "price": 160,
+          "note": "Pieces available individually",
+          "set": true
         },
         {
           "id": "open-palette-07",
@@ -76,7 +78,7 @@
           "thumb": "images/open-palette/web/07-mardi-gras.jpg",
           "size": "7″ × 4″",
           "year": "2026",
-          "price": 285,
+          "price": 85,
           "edition": "1/1"
         },
         {
@@ -86,7 +88,7 @@
           "thumb": "images/open-palette/web/08-violet-moment.jpg",
           "size": "5½″ × 4″",
           "year": "2026",
-          "price": 210,
+          "price": 35,
           "edition": "1/1"
         },
         {
@@ -96,7 +98,7 @@
           "thumb": "images/open-palette/web/09-frozenwater.jpg",
           "size": "5″ × 3½″",
           "year": "2026",
-          "price": 195,
+          "price": 95,
           "edition": "1/1"
         },
         {
@@ -106,8 +108,9 @@
           "thumb": "images/open-palette/web/10-tide-pool-pair.jpg",
           "size": "3″ × 3″",
           "year": "2026",
-          "price": 145,
-          "note": "Set of two"
+          "price": 100,
+          "note": "Pieces available individually",
+          "set": true
         },
         {
           "id": "open-palette-11",
@@ -116,7 +119,7 @@
           "thumb": "images/open-palette/web/11-evening-lavender.jpg",
           "size": "4″ wide",
           "year": "2026",
-          "price": 95,
+          "price": 85,
           "edition": "1/1"
         },
         {
@@ -126,8 +129,9 @@
           "thumb": "images/open-palette/web/12-confetti-pair.jpg",
           "size": "6″ × 4″",
           "year": "2026",
-          "price": 230,
-          "edition": "1/1"
+          "price": 60,
+          "note": "Pieces available individually",
+          "set": true
         },
         {
           "id": "open-palette-13",
@@ -136,8 +140,9 @@
           "thumb": "images/open-palette/web/13-cool-mirage.jpg",
           "size": "6″ × 4″",
           "year": "2026",
-          "price": 240,
-          "edition": "1/1"
+          "price": 60,
+          "note": "Pieces available individually",
+          "set": true
         },
         {
           "id": "open-palette-14",
@@ -146,7 +151,7 @@
           "thumb": "images/open-palette/web/14-calm-lake.jpg",
           "size": "5½″ × 4″",
           "year": "2026",
-          "price": 210,
+          "price": 85,
           "edition": "1/1"
         }
       ]

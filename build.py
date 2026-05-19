@@ -157,7 +157,7 @@ def build_collection(folder: Path) -> dict | None:
         }
         if thumb is not None:
             piece["thumb"] = f"images/{slug}/web/{thumb.name}"
-        for k in ("size", "year", "price", "edition", "note", "materials", "process", "sold"):
+        for k in ("size", "year", "price", "edition", "note", "materials", "process", "sold", "set"):
             if k in pm and pm[k] not in (None, ""):
                 piece[k] = pm[k]
         pieces.append(piece)

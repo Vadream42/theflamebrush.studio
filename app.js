@@ -507,10 +507,13 @@
             piece.materials ? h("div", { class: "k" }, "Materials") : null, piece.materials ? h("div", { class: "v" }, piece.materials) : null,
             piece.process ? h("div", { class: "k" }, "Process") : null, piece.process ? h("div", { class: "v" }, piece.process) : null,
             // Status row — "Sold" if marked sold, otherwise the price
+            // Sets show "$X · Set" so the set price is unambiguous
             h("div", { class: "k" }, "Inquire"),
             piece.sold
               ? h("div", { class: "v sold-tag" }, "Sold")
-              : (piece.price ? h("div", { class: "v" }, `$${piece.price}`) : h("div", { class: "v" }, "Inquire for pricing")),
+              : (piece.price
+                  ? h("div", { class: "v" }, piece.set ? `$${piece.price} · Set` : `$${piece.price}`)
+                  : h("div", { class: "v" }, "Inquire for pricing")),
           ),
         ),
       ),

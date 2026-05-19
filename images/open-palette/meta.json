@@ -6,19 +6,19 @@
   "cover": "01-coral-burst.jpeg",
   "order": 1,
   "pieces": {
-    "01-coral-burst.jpeg":       { "title": "Coral Burst",      "size": "6″ × 4″",   "year": "2026", "price": 240, "edition": "1/1" },
-    "02-stillwater.jpeg":        { "title": "Stillwater",       "size": "6½″ × 4″", "year": "2026", "price": 240, "edition": "1/1" },
-    "03-emerald-lake.jpeg":      { "title": "Emerald Lake",     "size": "4″ × 4″",   "year": "2026", "price": 320, "note": "Set of two" },
-    "04-cobalt-burst.jpeg":      { "title": "Cobalt Burst",     "size": "5″ × 3½″", "year": "2026", "price": 195, "edition": "1/1" },
-    "05-plum-petals.jpeg":       { "title": "Plum Petals",      "size": "7″ × 4″",   "year": "2026", "price": 285, "edition": "1/1" },
-    "06-green-goddess.jpeg":     { "title": "Green Goddess",    "size": "5″ × 4″",   "year": "2026", "price": 210, "edition": "1/1" },
-    "07-mardi-gras.jpeg":        { "title": "Mardi Gras",       "size": "7″ × 4″",   "year": "2026", "price": 285, "edition": "1/1" },
-    "08-violet-moment.jpeg":     { "title": "Violet Moment",    "size": "5½″ × 4″", "year": "2026", "price": 210, "edition": "1/1" },
-    "09-frozenwater.jpeg":       { "title": "Frozenwater",      "size": "5″ × 3½″", "year": "2026", "price": 195, "edition": "1/1" },
-    "10-tide-pool-pair.jpeg":    { "title": "Tide Pool, pair",  "size": "3″ × 3″",   "year": "2026", "price": 145, "note": "Set of two" },
-    "11-evening-lavender.jpeg":  { "title": "Evening Lavender", "size": "4″ wide",          "year": "2026", "price": 95,  "edition": "1/1" },
-    "12-confetti-pair.jpeg":     { "title": "Confetti Pair",    "size": "6″ × 4″",   "year": "2026", "price": 230, "edition": "1/1" },
-    "13-cool-mirage.jpeg":       { "title": "Cool Mirage",      "size": "6″ × 4″",   "year": "2026", "price": 240, "edition": "1/1" },
-    "14-calm-lake.jpeg":         { "title": "Calm Lake",        "size": "5½″ × 4″", "year": "2026", "price": 210, "edition": "1/1" }
+    "01-coral-burst.jpeg":       { "title": "Coral Burst",      "size": "6″ × 4″",   "year": "2026", "price": 85,  "edition": "1/1" },
+    "02-stillwater.jpeg":        { "title": "Stillwater",       "size": "6½″ × 4″", "year": "2026", "price": 95,  "edition": "1/1" },
+    "03-emerald-lake.jpeg":      { "title": "Emerald Lake",     "size": "4″ × 4″",   "year": "2026", "price": 85,  "edition": "1/1" },
+    "04-cobalt-burst.jpeg":      { "title": "Cobalt Burst",     "size": "5″ × 3½″", "year": "2026", "price": 85,  "edition": "1/1" },
+    "05-plum-petals.jpeg":       { "title": "Plum Petals",      "size": "7″ × 4″",   "year": "2026", "price": 120, "set": true, "note": "Pieces available individually" },
+    "06-green-goddess.jpeg":     { "title": "Green Goddess",    "size": "5″ × 4″",   "year": "2026", "price": 160, "set": true, "note": "Pieces available individually" },
+    "07-mardi-gras.jpeg":        { "title": "Mardi Gras",       "size": "7″ × 4″",   "year": "2026", "price": 85,  "edition": "1/1" },
+    "08-violet-moment.jpeg":     { "title": "Violet Moment",    "size": "5½″ × 4″", "year": "2026", "price": 35,  "edition": "1/1" },
+    "09-frozenwater.jpeg":       { "title": "Frozenwater",      "size": "5″ × 3½″", "year": "2026", "price": 95,  "edition": "1/1" },
+    "10-tide-pool-pair.jpeg":    { "title": "Tide Pool, pair",  "size": "3″ × 3″",   "year": "2026", "price": 100, "set": true, "note": "Pieces available individually" },
+    "11-evening-lavender.jpeg":  { "title": "Evening Lavender", "size": "4″ wide",          "year": "2026", "price": 85,  "edition": "1/1" },
+    "12-confetti-pair.jpeg":     { "title": "Confetti Pair",    "size": "6″ × 4″",   "year": "2026", "price": 60,  "set": true, "note": "Pieces available individually" },
+    "13-cool-mirage.jpeg":       { "title": "Cool Mirage",      "size": "6″ × 4″",   "year": "2026", "price": 60,  "set": true, "note": "Pieces available individually" },
+    "14-calm-lake.jpeg":         { "title": "Calm Lake",        "size": "5½″ × 4″", "year": "2026", "price": 85,  "edition": "1/1" }
   }
 }
