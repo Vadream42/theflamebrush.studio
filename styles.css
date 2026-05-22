@@ -462,12 +462,10 @@ a:hover { background-size: 100% 1px; }
 .fb-coll-back .fb-btn { text-transform: uppercase; }
 .fb-coll-back .fb-btn-secondary:hover,
 .fb-coll-back .fb-btn-secondary:active {
-  box-shadow: inset 0 0 0 1px var(--ember-400), 0 0 28px rgba(244, 120, 66, 0.3);
-  background: rgba(244, 120, 66, 0.07);
+  box-shadow: inset 0 0 0 1px var(--ember-400);
   color: var(--ember-300);
 }
 .fb-coll-back .fb-btn-secondary:active {
-  background: rgba(244, 120, 66, 0.16);
   transform: scale(0.97);
 }
 
