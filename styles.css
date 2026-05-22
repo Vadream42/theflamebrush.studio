@@ -455,6 +455,12 @@ a:hover { background-size: 100% 1px; }
 }
 .fb-gallery .tile .meta-row .size { font-family: var(--font-mono); }
 
+.fb-coll-back {
+  display: flex; justify-content: center;
+  padding: 0 32px 128px;
+}
+.fb-coll-back .fb-btn { text-transform: uppercase; }
+
 /* =========================================================
    Lightbox
    ========================================================= */
@@ -964,6 +970,7 @@ a:hover { background-size: 100% 1px; }
   .fb-coll-card { aspect-ratio: 3/4; }
   .fb-coll-card .meta { left: 20px; right: 20px; bottom: 20px; }
   .fb-gallery { grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 48px 16px 96px; }
+  .fb-coll-back { padding: 0 16px 96px; }
   .fb-footer { padding: 64px 16px 24px; }
   .fb-footer-inner {
     grid-template-columns: repeat(3, 1fr);

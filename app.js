@@ -365,11 +365,11 @@
       h("section", { class: "fb-section tight", style: { paddingBottom: "32px" } },
         h("div", { class: "fb-eyebrow" }, h("span", { class: "rule" }), "Collections"),
         h("h1", {
-          html: `Every piece is one of one.<br/><em style="color:var(--ember-400)">The collections</em> are how we mark time.`,
+          html: `Each piece is one of one -<br/>grouped by shared movement, process, and form into <em style="color:var(--ember-400)">our collections</em>.`,
           style: { fontSize: "clamp(56px, 7vw, 112px)", lineHeight: "1.0", margin: "0 0 24px", maxWidth: "1000px" },
         }),
         h("p", {
-          html: "We organize our work by season because the studio behaves differently in each one — colder kilns in winter, longer days in summer, and the choices that follow.",
+          html: "We organize our work by shared themes and the decisions that shape them.",
           style: { fontFamily: "var(--font-display)", fontStyle: "italic", fontSize: "22px", color: "var(--paper-100)", maxWidth: "640px", margin: "0 0 64px", lineHeight: "1.55" },
         }),
       ),
@@ -424,6 +424,16 @@
       );
     });
     wrap.append(gallery);
+
+    wrap.append(
+      h("div", { class: "fb-coll-back" },
+        h("button", {
+          class: "fb-btn fb-btn-secondary",
+          onclick: () => go("/collections"),
+          html: `${ICONS["arrow-left"]} All collections`,
+        }),
+      ),
+    );
 
     return wrap;
   }
