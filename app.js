@@ -365,7 +365,7 @@
       h("section", { class: "fb-section tight fb-coll-index-hero", style: { paddingBottom: "32px" } },
         h("div", { class: "fb-eyebrow" }, h("span", { class: "rule" }), "Collections"),
         h("h1", {
-          html: `Each piece is one of one -<br/>grouped by shared movement, process, and form into <em style="color:var(--ember-400)">our collections</em>.`,
+          html: `Each piece is one of one -<br/>grouped by shared movement, process, and form.`,
           style: { fontSize: "clamp(56px, 7vw, 112px)", lineHeight: "1.0", margin: "0 0 24px", maxWidth: "1000px" },
         }),
         h("p", {
