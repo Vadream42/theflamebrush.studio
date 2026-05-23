@@ -341,15 +341,31 @@
       return grid;
     }
     COLLECTIONS.forEach(c => {
+      const count = c.pieces.length;
+      // Price line reflects what's still available to buy.
+      const unsold = c.pieces.filter(p => !p.sold);
+      let priceEl = null;
+      if (unsold.length === 0) {
+        priceEl = h("span", { class: "coll-price sold-out" }, "Sold out");
+      } else {
+        const prices = unsold.map(p => p.price).filter(n => typeof n === "number");
+        if (prices.length) {
+          const min = Math.min(...prices), max = Math.max(...prices);
+          priceEl = h("span", { class: "coll-price" }, min === max ? `$${min}` : `$${min} – $${max}`);
+        }
+      }
       grid.append(
         h("article", { class: "fb-coll-card", onclick: () => go(`/collections/${c.id}`) },
           h("div", { class: "img", style: { backgroundImage: `url("${c.cover}")` } }),
           h("div", { class: "scrim" }),
-          h("span", { class: "pieces-count" }, `${c.pieces.length} ${c.pieces.length === 1 ? "piece" : "pieces"}`),
+          h("span", { class: "pieces-count" }, `${count} ${count === 1 ? "piece" : "pieces"}`),
           h("div", { class: "meta" },
-            c.season ? h("div", { class: "season" }, c.season) : null,
-            h("h3", {}, c.title),
-            c.tagline ? h("div", { class: "tagline" }, c.tagline) : null,
+            h("div", { class: "meta-text" },
+              c.season ? h("div", { class: "season" }, c.season) : null,
+              h("h3", {}, c.title),
+              c.tagline ? h("div", { class: "tagline" }, c.tagline) : null,
+            ),
+            priceEl,
           ),
         ),
       );
@@ -418,7 +434,11 @@
           ),
           h("div", { class: "meta-row" },
             h("span", { class: "title" }, p.title),
-            p.sold ? h("span", { class: "size sold-tag" }, "Sold") : null,
+            p.sold
+              ? h("span", { class: "size sold-tag" }, "Sold")
+              : (p.price != null
+                  ? h("span", { class: "size" }, p.set ? `$${p.price} · Set` : `$${p.price}`)
+                  : null),
           ),
         ),
       );
