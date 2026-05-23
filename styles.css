@@ -333,6 +333,41 @@ a:hover { background-size: 100% 1px; }
 }
 .fb-home-blurb .quote em { color: var(--ember-500); }
 
+/* Collections index — faded Plum Petals vase behind the hero heading.
+   To swap pieces, change the URL to any image in images/<collection>/web/. */
+.fb-coll-index-hero {
+  position: relative;
+  overflow: hidden;
+}
+.fb-coll-index-hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: url("images/open-palette/web/05-plum-petals.jpg");
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  filter: saturate(1.1);
+  z-index: 0; pointer-events: none;
+}
+.fb-coll-index-hero::after {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(90deg,
+      var(--ink-900) 0%,
+      rgba(34,27,40,0.88) 38%,
+      rgba(34,27,40,0.42) 74%,
+      var(--ink-900) 100%),
+    linear-gradient(180deg,
+      var(--ink-900) 0%,
+      transparent 24%,
+      transparent 60%,
+      var(--ink-900) 100%);
+  z-index: 0; pointer-events: none;
+}
+.fb-coll-index-hero > * { position: relative; z-index: 1; }
+
 .fb-collections {
   display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
 }

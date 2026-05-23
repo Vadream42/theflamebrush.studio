@@ -362,7 +362,7 @@
      ========================================================= */
   function collectionsIndex() {
     return h("div", {},
-      h("section", { class: "fb-section tight", style: { paddingBottom: "32px" } },
+      h("section", { class: "fb-section tight fb-coll-index-hero", style: { paddingBottom: "32px" } },
         h("div", { class: "fb-eyebrow" }, h("span", { class: "rule" }), "Collections"),
         h("h1", {
           html: `Each piece is one of one -<br/>grouped by shared movement, process, and form into <em style="color:var(--ember-400)">our collections</em>.`,
