@@ -17,7 +17,8 @@
           "size": "6″ × 4″",
           "year": "2026",
           "price": 85,
-          "edition": "1/1"
+          "edition": "1/1",
+          "sold": true
         },
         {
           "id": "open-palette-02",
@@ -47,7 +48,8 @@
           "size": "5″ × 3½″",
           "year": "2026",
           "price": 85,
-          "edition": "1/1"
+          "edition": "1/1",
+          "sold": true
         },
         {
           "id": "open-palette-05",
