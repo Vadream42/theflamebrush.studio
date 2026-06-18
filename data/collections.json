@@ -37,7 +37,7 @@
           "thumb": "images/open-palette/web/03-emerald-lake.jpg",
           "size": "4″ × 4″",
           "year": "2026",
-          "price": 85,
+          "price": 125,
           "edition": "1/1"
         },
         {
@@ -58,8 +58,9 @@
           "thumb": "images/open-palette/web/05-plum-petals.jpg",
           "size": "7″ × 4″",
           "year": "2026",
-          "price": 120,
+          "price": 150,
           "note": "Pieces available individually",
+          "sold": true,
           "set": true
         },
         {
@@ -69,7 +70,7 @@
           "thumb": "images/open-palette/web/06-green-goddess.jpg",
           "size": "5″ × 4″",
           "year": "2026",
-          "price": 160,
+          "price": 175,
           "note": "Pieces available individually",
           "set": true
         },
@@ -80,7 +81,7 @@
           "thumb": "images/open-palette/web/07-mardi-gras.jpg",
           "size": "7″ × 4″",
           "year": "2026",
-          "price": 85,
+          "price": 125,
           "edition": "1/1"
         },
         {
@@ -328,9 +329,8 @@
           "thumb": "images/first-gather/web/16-spring-pair.jpg",
           "size": "4″ × 4″ each",
           "year": "2025",
-          "price": 290,
-          "note": "Set of two",
-          "sold": true
+          "price": 200,
+          "note": "Set of two"
         },
         {
           "id": "first-gather-16",
