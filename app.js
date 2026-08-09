@@ -325,7 +325,7 @@
     return h("section", { class: "fb-section" },
       h("div", { class: "fb-eyebrow" },
         h("span", { class: "rule" }), "The collections"),
-      h("h2", { html: `Two groups of work,<br/>one body of practice.`, style: { fontSize: "clamp(48px, 5.5vw, 80px)", lineHeight: "1.04", margin: "0 0 64px", maxWidth: "880px" } }),
+      h("h2", { html: `Three groups of work,<br/>one body of practice.`, style: { fontSize: "clamp(48px, 5.5vw, 80px)", lineHeight: "1.04", margin: "0 0 64px", maxWidth: "880px" } }),
       collectionsGrid(),
     );
   }
