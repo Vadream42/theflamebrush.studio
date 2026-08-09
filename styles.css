@@ -368,9 +368,11 @@ a:hover { background-size: 100% 1px; }
 }
 .fb-coll-index-hero > * { position: relative; z-index: 1; }
 
+.fb-collections-wrap { display: flex; flex-direction: column; gap: 32px; }
 .fb-collections {
   display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
 }
+.fb-collections-solo { width: calc(50% - 16px); margin: 0 auto; }
 .fb-coll-card {
   position: relative; display: block; cursor: pointer; overflow: hidden;
   background: var(--ink-800); aspect-ratio: 4/5;
@@ -1019,6 +1021,7 @@ a:hover { background-size: 100% 1px; }
   .fb-collections, .fb-contact {
     grid-template-columns: 1fr !important; gap: 32px !important;
   }
+  .fb-collections-solo { width: 100%; }
   .fb-coll-card { aspect-ratio: 3/4; }
   .fb-coll-card .meta { left: 20px; right: 20px; bottom: 20px; }
   .fb-coll-card .pieces-count { top: 20px; right: 20px; }
