@@ -605,9 +605,19 @@ a:hover { background-size: 100% 1px; }
   align-items: flex-start;
 }
 .fb-lightbox .stage .info .actions.actions-stack .fb-btn-primary {
+  /* Switch off the flex row for this button: with a long, wrapping label the
+     flex-shrunk icon item could get squeezed past the button's right edge.
+     Block + centered text lets the icon flow as a normal inline glyph right
+     after the last word, so it wraps together with the text and always stays
+     inside the button's padding box. */
+  display: block;
   width: 100%;
-  justify-content: center;
   text-align: center;
+}
+.fb-lightbox .stage .info .actions.actions-stack .fb-btn-primary svg {
+  display: inline-block;
+  vertical-align: -2px;
+  margin-left: 8px;
 }
 .fb-lightbox .counter {
   position: absolute; top: 32px; left: 32px;
