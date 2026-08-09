@@ -74,7 +74,8 @@
           "photo": "images/pumpkin-patch/08-midnight-cobalt.jpeg",
           "thumb": "images/pumpkin-patch/web/08-midnight-cobalt.jpg",
           "year": "2026",
-          "price": 50
+          "price": 50,
+          "sold": true
         },
         {
           "id": "pumpkin-patch-09",
@@ -83,7 +84,7 @@
           "thumb": "images/pumpkin-patch/web/09-emerald-forest.jpg",
           "year": "2026",
           "price": 50,
-          "sold": true
+          "sold": false
         },
         {
           "id": "pumpkin-patch-10",
@@ -91,7 +92,8 @@
           "photo": "images/pumpkin-patch/10-wicked-plum.jpeg",
           "thumb": "images/pumpkin-patch/web/10-wicked-plum.jpg",
           "year": "2026",
-          "price": 50
+          "price": 50,
+          "sold": true
         },
         {
           "id": "pumpkin-patch-11",
@@ -110,7 +112,7 @@
           "thumb": "images/pumpkin-patch/web/12-carnival-glass.jpg",
           "year": "2026",
           "price": 50,
-          "sold": true
+          "sold": false
         },
         {
           "id": "pumpkin-patch-13",

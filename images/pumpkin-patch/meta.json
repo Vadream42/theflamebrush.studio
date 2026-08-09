@@ -47,18 +47,20 @@
     "08-midnight-cobalt.jpeg": {
       "title": "Midnight Cobalt",
       "year": "2026",
-      "price": 50
+      "price": 50,
+      "sold": true
     },
     "09-emerald-forest.jpeg": {
       "title": "Emerald Forest",
       "year": "2026",
       "price": 50,
-      "sold": true
+      "sold": false
     },
     "10-wicked-plum.jpeg": {
       "title": "Wicked Plum",
       "year": "2026",
-      "price": 50
+      "price": 50,
+      "sold": true
     },
     "11-classic-pair.jpeg": {
       "title": "Classic, pair",
@@ -71,7 +73,7 @@
       "title": "Carnival Glass",
       "year": "2026",
       "price": 50,
-      "sold": true
+      "sold": false
     },
     "13-tide-pool-quartet.jpeg": {
       "title": "Tide Pool, quartet",
