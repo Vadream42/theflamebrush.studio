@@ -410,6 +410,134 @@
           "sold": true
         }
       ]
+    },
+    {
+      "id": "pumpkin-patch",
+      "title": "Pumpkin Patch",
+      "season": "2026",
+      "tagline": "Our third body of work — hand-blown pumpkins, gathered for the season.",
+      "blurb": "A seasonal gather. Each pumpkin is hand-blown to order at the bench — no molds, no two alike — with its own hand-pulled, twisted stem. A few were photographed together as a patch, but every pumpkin goes home on its own.",
+      "cover": "images/pumpkin-patch/web/13-tide-pool-quartet.jpg",
+      "order": 3,
+      "pieces": [
+        {
+          "id": "pumpkin-patch-01",
+          "title": "Robin's Egg",
+          "photo": "images/pumpkin-patch/01-robins-egg.jpeg",
+          "thumb": "images/pumpkin-patch/web/01-robins-egg.jpg",
+          "year": "2026",
+          "price": 50
+        },
+        {
+          "id": "pumpkin-patch-02",
+          "title": "Quiet Lagoon",
+          "photo": "images/pumpkin-patch/02-quiet-lagoon.jpeg",
+          "thumb": "images/pumpkin-patch/web/02-quiet-lagoon.jpg",
+          "year": "2026",
+          "price": 50
+        },
+        {
+          "id": "pumpkin-patch-03",
+          "title": "Azure Curl",
+          "photo": "images/pumpkin-patch/03-azure-curl.jpeg",
+          "thumb": "images/pumpkin-patch/web/03-azure-curl.jpg",
+          "year": "2026",
+          "price": 50
+        },
+        {
+          "id": "pumpkin-patch-04",
+          "title": "Smoked Garnet",
+          "photo": "images/pumpkin-patch/04-smoked-garnet.jpeg",
+          "thumb": "images/pumpkin-patch/web/04-smoked-garnet.jpg",
+          "year": "2026",
+          "price": 50
+        },
+        {
+          "id": "pumpkin-patch-05",
+          "title": "Violet Marble",
+          "photo": "images/pumpkin-patch/05-violet-marble.jpeg",
+          "thumb": "images/pumpkin-patch/web/05-violet-marble.jpg",
+          "year": "2026",
+          "price": 50
+        },
+        {
+          "id": "pumpkin-patch-06",
+          "title": "Harvest, duo",
+          "photo": "images/pumpkin-patch/06-harvest-duo.jpeg",
+          "thumb": "images/pumpkin-patch/web/06-harvest-duo.jpg",
+          "year": "2026",
+          "price": 50,
+          "note": "Sold separately, $50 each"
+        },
+        {
+          "id": "pumpkin-patch-07",
+          "title": "Harvest Trio, no. 1",
+          "photo": "images/pumpkin-patch/07-harvest-trio-1.jpeg",
+          "thumb": "images/pumpkin-patch/web/07-harvest-trio-1.jpg",
+          "year": "2026",
+          "price": 50,
+          "note": "Sold separately, $50 each"
+        },
+        {
+          "id": "pumpkin-patch-08",
+          "title": "Midnight Cobalt",
+          "photo": "images/pumpkin-patch/08-midnight-cobalt.jpeg",
+          "thumb": "images/pumpkin-patch/web/08-midnight-cobalt.jpg",
+          "year": "2026",
+          "price": 50
+        },
+        {
+          "id": "pumpkin-patch-09",
+          "title": "Emerald Forest",
+          "photo": "images/pumpkin-patch/09-emerald-forest.jpeg",
+          "thumb": "images/pumpkin-patch/web/09-emerald-forest.jpg",
+          "year": "2026",
+          "price": 50
+        },
+        {
+          "id": "pumpkin-patch-10",
+          "title": "Wicked Plum",
+          "photo": "images/pumpkin-patch/10-wicked-plum.jpeg",
+          "thumb": "images/pumpkin-patch/web/10-wicked-plum.jpg",
+          "year": "2026",
+          "price": 50
+        },
+        {
+          "id": "pumpkin-patch-11",
+          "title": "Classic, pair",
+          "photo": "images/pumpkin-patch/11-classic-pair.jpeg",
+          "thumb": "images/pumpkin-patch/web/11-classic-pair.jpg",
+          "year": "2026",
+          "price": 50,
+          "note": "Sold separately, $50 each"
+        },
+        {
+          "id": "pumpkin-patch-12",
+          "title": "Carnival Glass",
+          "photo": "images/pumpkin-patch/12-carnival-glass.jpeg",
+          "thumb": "images/pumpkin-patch/web/12-carnival-glass.jpg",
+          "year": "2026",
+          "price": 50
+        },
+        {
+          "id": "pumpkin-patch-13",
+          "title": "Tide Pool, quartet",
+          "photo": "images/pumpkin-patch/13-tide-pool-quartet.jpeg",
+          "thumb": "images/pumpkin-patch/web/13-tide-pool-quartet.jpg",
+          "year": "2026",
+          "price": 50,
+          "note": "Sold separately, $50 each"
+        },
+        {
+          "id": "pumpkin-patch-14",
+          "title": "Harvest Trio, no. 2",
+          "photo": "images/pumpkin-patch/14-harvest-trio-2.jpeg",
+          "thumb": "images/pumpkin-patch/web/14-harvest-trio-2.jpg",
+          "year": "2026",
+          "price": 50,
+          "note": "Sold separately, $50 each"
+        }
+      ]
     }
   ],
   "studioWall": [
