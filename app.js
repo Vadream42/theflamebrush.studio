@@ -391,7 +391,7 @@
      COLLECTIONS INDEX
      ========================================================= */
   function collectionsIndex() {
-    return h("div", {},
+    return h("div", { class: "fb-collections-page" },
       h("section", { class: "fb-section tight fb-coll-index-hero", style: { paddingBottom: "32px" } },
         h("div", { class: "fb-eyebrow" }, h("span", { class: "rule" }), "Collections"),
         h("h1", {
@@ -531,8 +531,11 @@
           piece.note ? h("div", {
             style: { fontSize: "14px", color: "var(--paper-300)", letterSpacing: "0.04em" },
           }, piece.note) : null,
-          // Primary action right under the title — easy to reach on mobile
-          h("div", { class: "actions" },
+          // Primary action right under the title — easy to reach on mobile.
+          // Sold pieces get the longer "similar commission" label, which doesn't
+          // fit the 300px sidebar on one line — stack it above Close so the two
+          // never crowd/overlap regardless of how the label wraps.
+          h("div", { class: piece.sold ? "actions actions-stack" : "actions" },
             piece.sold
               ? h("button", {
                   class: "fb-btn fb-btn-primary",

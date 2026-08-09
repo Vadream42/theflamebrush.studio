@@ -333,40 +333,43 @@ a:hover { background-size: 100% 1px; }
 }
 .fb-home-blurb .quote em { color: var(--ember-500); }
 
-/* Collections index — faded Plum Petals vase behind the hero heading.
+/* Collections index — faded Plum Petals vase pinned as the whole page's
+   background (viewport-fixed, same technique as .fb-about-wrap). The vase
+   stays put while the heading, grid, and cards scroll over it.
+   Uses position:fixed pseudo-elements (instead of background-attachment:
+   fixed which iOS Safari breaks on long pages). Image is always sized to
+   the visible viewport, not the entire tall page.
    To swap pieces, change the URL to any image in images/<collection>/web/. */
-.fb-coll-index-hero {
+.fb-collections-page {
   position: relative;
-  overflow: hidden;
+  isolation: isolate; /* contains the negative-z pseudos so the footer isn't affected */
 }
-.fb-coll-index-hero::before {
+.fb-collections-page::before,
+.fb-collections-page::after {
   content: "";
-  position: absolute; inset: 0;
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+.fb-collections-page::before {
   background-image: url("images/open-palette/web/05-plum-petals.jpg");
   background-size: cover;
-  background-position: right center;
+  background-position: center;
   background-repeat: no-repeat;
   opacity: 0.4;
   filter: saturate(1.1);
-  z-index: 0; pointer-events: none;
+  z-index: -2;
 }
-.fb-coll-index-hero::after {
-  content: "";
-  position: absolute; inset: 0;
+.fb-collections-page::after {
   background:
-    linear-gradient(90deg,
-      var(--ink-900) 0%,
-      rgba(34,27,40,0.88) 38%,
-      rgba(34,27,40,0.42) 74%,
-      var(--ink-900) 100%),
     linear-gradient(180deg,
-      var(--ink-900) 0%,
-      transparent 24%,
-      transparent 60%,
-      var(--ink-900) 100%);
-  z-index: 0; pointer-events: none;
+      rgba(34, 27, 40, 0.88) 0%,
+      rgba(34, 27, 40, 0.78) 35%,
+      rgba(34, 27, 40, 0.84) 70%,
+      rgba(34, 27, 40, 0.94) 100%);
+  z-index: -1;
 }
-.fb-coll-index-hero > * { position: relative; z-index: 1; }
+.fb-coll-index-hero { position: relative; }
 
 .fb-collections-wrap { display: flex; flex-direction: column; gap: 32px; }
 .fb-collections {
@@ -592,6 +595,19 @@ a:hover { background-size: 100% 1px; }
 .fb-lightbox .stage .info .actions {
   display: flex; gap: 12px; flex-wrap: wrap;
   margin-top: 20px;
+}
+/* Sold pieces: the "Inquire about a similar commission" label is too long for
+   the 300px sidebar to fit beside Close on one row, so stack them instead —
+   guarantees a clean gap between the button and Close no matter how the
+   button's own label wraps. */
+.fb-lightbox .stage .info .actions.actions-stack {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.fb-lightbox .stage .info .actions.actions-stack .fb-btn-primary {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
 }
 .fb-lightbox .counter {
   position: absolute; top: 32px; left: 32px;
