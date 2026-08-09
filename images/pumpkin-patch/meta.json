@@ -2,23 +2,84 @@
   "title": "Pumpkin Patch",
   "season": "2026",
   "tagline": "Our third body of work — hand-blown pumpkins, gathered for the season.",
-  "blurb": "A seasonal gather. Each pumpkin is hand-blown to order at the bench — no molds, no two alike — with its own hand-pulled, twisted stem. A few were photographed together as a patch, but every pumpkin goes home on its own.",
+  "blurb": "A seasonal gather. Each pumpkin is hand-blown to order at the bench with its own hand-pulled, twisted stem. A few were photographed together as a patch, but every pumpkin goes home on its own.",
   "cover": "13-tide-pool-quartet.jpeg",
   "order": 3,
   "pieces": {
-    "01-robins-egg.jpeg":       { "title": "Robin's Egg",           "year": "2026", "price": 50 },
-    "02-quiet-lagoon.jpeg":     { "title": "Quiet Lagoon",          "year": "2026", "price": 50 },
-    "03-azure-curl.jpeg":       { "title": "Azure Curl",            "year": "2026", "price": 50 },
-    "04-smoked-garnet.jpeg":    { "title": "Smoked Garnet",         "year": "2026", "price": 50 },
-    "05-violet-marble.jpeg":    { "title": "Violet Marble",         "year": "2026", "price": 50 },
-    "06-harvest-duo.jpeg":      { "title": "Harvest, duo",          "year": "2026", "price": 50, "note": "Sold separately, $50 each" },
-    "07-harvest-trio-1.jpeg":   { "title": "Harvest Trio, no. 1",   "year": "2026", "price": 50, "note": "Sold separately, $50 each" },
-    "08-midnight-cobalt.jpeg":  { "title": "Midnight Cobalt",       "year": "2026", "price": 50 },
-    "09-emerald-forest.jpeg":   { "title": "Emerald Forest",        "year": "2026", "price": 50 },
-    "10-wicked-plum.jpeg":      { "title": "Wicked Plum",           "year": "2026", "price": 50 },
-    "11-classic-pair.jpeg":     { "title": "Classic, pair",         "year": "2026", "price": 50, "note": "Sold separately, $50 each" },
-    "12-carnival-glass.jpeg":   { "title": "Carnival Glass",        "year": "2026", "price": 50 },
-    "13-tide-pool-quartet.jpeg":{ "title": "Tide Pool, quartet",    "year": "2026", "price": 50, "note": "Sold separately, $50 each" },
-    "14-harvest-trio-2.jpeg":   { "title": "Harvest Trio, no. 2",   "year": "2026", "price": 50, "note": "Sold separately, $50 each" }
+    "01-robins-egg.jpeg": {
+      "title": "Robin's Egg",
+      "year": "2026",
+      "price": 50
+    },
+    "02-quiet-lagoon.jpeg": {
+      "title": "Quiet Lagoon",
+      "year": "2026",
+      "price": 50
+    },
+    "03-azure-curl.jpeg": {
+      "title": "Azure Curl",
+      "year": "2026",
+      "price": 50
+    },
+    "04-smoked-garnet.jpeg": {
+      "title": "Smoked Garnet",
+      "year": "2026",
+      "price": 50
+    },
+    "05-violet-marble.jpeg": {
+      "title": "Violet Marble",
+      "year": "2026",
+      "price": 50
+    },
+    "06-harvest-duo.jpeg": {
+      "title": "Harvest, duo",
+      "year": "2026",
+      "price": 50,
+      "note": "Sold separately, $50 each"
+    },
+    "07-harvest-trio-1.jpeg": {
+      "title": "Harvest Trio, no. 1",
+      "year": "2026",
+      "price": 50,
+      "note": "Sold separately, $50 each"
+    },
+    "08-midnight-cobalt.jpeg": {
+      "title": "Midnight Cobalt",
+      "year": "2026",
+      "price": 50
+    },
+    "09-emerald-forest.jpeg": {
+      "title": "Emerald Forest",
+      "year": "2026",
+      "price": 50
+    },
+    "10-wicked-plum.jpeg": {
+      "title": "Wicked Plum",
+      "year": "2026",
+      "price": 50
+    },
+    "11-classic-pair.jpeg": {
+      "title": "Classic, pair",
+      "year": "2026",
+      "price": 50,
+      "note": "Sold separately, $50 each"
+    },
+    "12-carnival-glass.jpeg": {
+      "title": "Carnival Glass",
+      "year": "2026",
+      "price": 50
+    },
+    "13-tide-pool-quartet.jpeg": {
+      "title": "Tide Pool, quartet",
+      "year": "2026",
+      "price": 50,
+      "note": "Sold separately, $50 each"
+    },
+    "14-harvest-trio-2.jpeg": {
+      "title": "Harvest Trio, no. 2",
+      "year": "2026",
+      "price": 50,
+      "note": "Sold separately, $50 each"
+    }
   }
 }
