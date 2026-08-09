@@ -9,7 +9,8 @@
     "01-robins-egg.jpeg": {
       "title": "Robin's Egg",
       "year": "2026",
-      "price": 50
+      "price": 50,
+      "sold": true
     },
     "02-quiet-lagoon.jpeg": {
       "title": "Quiet Lagoon",
@@ -51,7 +52,8 @@
     "09-emerald-forest.jpeg": {
       "title": "Emerald Forest",
       "year": "2026",
-      "price": 50
+      "price": 50,
+      "sold": true
     },
     "10-wicked-plum.jpeg": {
       "title": "Wicked Plum",
@@ -62,12 +64,14 @@
       "title": "Classic, pair",
       "year": "2026",
       "price": 50,
-      "note": "Sold separately, $50 each"
+      "note": "Sold separately, $50 each",
+      "sold": true
     },
     "12-carnival-glass.jpeg": {
       "title": "Carnival Glass",
       "year": "2026",
-      "price": 50
+      "price": 50,
+      "sold": true
     },
     "13-tide-pool-quartet.jpeg": {
       "title": "Tide Pool, quartet",

@@ -15,7 +15,8 @@
           "photo": "images/pumpkin-patch/01-robins-egg.jpeg",
           "thumb": "images/pumpkin-patch/web/01-robins-egg.jpg",
           "year": "2026",
-          "price": 50
+          "price": 50,
+          "sold": true
         },
         {
           "id": "pumpkin-patch-02",
@@ -81,7 +82,8 @@
           "photo": "images/pumpkin-patch/09-emerald-forest.jpeg",
           "thumb": "images/pumpkin-patch/web/09-emerald-forest.jpg",
           "year": "2026",
-          "price": 50
+          "price": 50,
+          "sold": true
         },
         {
           "id": "pumpkin-patch-10",
@@ -98,7 +100,8 @@
           "thumb": "images/pumpkin-patch/web/11-classic-pair.jpg",
           "year": "2026",
           "price": 50,
-          "note": "Sold separately, $50 each"
+          "note": "Sold separately, $50 each",
+          "sold": true
         },
         {
           "id": "pumpkin-patch-12",
@@ -106,7 +109,8 @@
           "photo": "images/pumpkin-patch/12-carnival-glass.jpeg",
           "thumb": "images/pumpkin-patch/web/12-carnival-glass.jpg",
           "year": "2026",
-          "price": 50
+          "price": 50,
+          "sold": true
         },
         {
           "id": "pumpkin-patch-13",
