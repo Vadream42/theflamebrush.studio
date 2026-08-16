@@ -20,6 +20,21 @@
     bookingLine: "Custom orders",
   };
 
+  /* ---------- pop-up event banner (edit me) -----------------
+     Shows on every page until `hideAfter` passes, then
+     disappears on its own — no code change needed after the
+     event. To announce the next pop-up, just update the fields
+     below and bump `hideAfter`. ------------------------------ */
+  const EVENT = {
+    lead: "Come join us at",
+    name: "Two Marys' Mercantile — Friday Night Social",
+    date: "Friday, August 21",
+    time: "5–8 PM",
+    address: "2021 Alaska Packer Place, Alameda, CA 94501",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=2021+Alaska+Packer+Place%2C+Alameda%2C+CA+94501",
+    hideAfter: "2026-08-21T23:59:00-07:00",
+  };
+
   /* ---------- helpers ------------------------------------- */
   const $ = (sel, root = document) => root.querySelector(sel);
   const h = (tag, attrs = {}, ...children) => {
@@ -102,6 +117,28 @@
   /* =========================================================
      SHARED CHROME
      ========================================================= */
+  function eventBanner() {
+    if (!EVENT || !EVENT.name) return null;
+    if (EVENT.hideAfter && Date.now() > new Date(EVENT.hideAfter).getTime()) return null;
+    return h("div", { class: "fb-event-banner", role: "region", "aria-label": "Upcoming pop-up event" },
+      h("div", { class: "inner" },
+        h("span", { class: "lead" }, EVENT.lead),
+        h("span", { class: "event-name" }, EVENT.name),
+        h("span", { class: "detail" },
+          h("span", { class: "when" }, `${EVENT.date} · ${EVENT.time}`),
+          h("span", { class: "sep", "aria-hidden": "true" }, "·"),
+          h("a", {
+            class: "where",
+            href: EVENT.mapsUrl,
+            target: "_blank",
+            rel: "noopener",
+            title: "Open in Google Maps",
+          }, `${EVENT.address} ↗`),
+        ),
+      ),
+    );
+  }
+
   function studioStrip() {
     return h("div", { class: "fb-strip" },
       h("div", {}, STUDIO.bookingLine),
@@ -884,6 +921,8 @@
     const root = document.getElementById("app");
     root.innerHTML = "";
     root.append(studioStrip(), topNav(route.name));
+    const banner = eventBanner();
+    if (banner) root.append(banner);
 
     if (route.name === "home") root.append(homePage());
     else if (route.name === "collections") root.append(collectionsIndex());

@@ -173,6 +173,58 @@ a:hover { background-size: 100% 1px; }
 }
 .fb-strip .dot { color: var(--ember-400); margin-right: 6px; }
 
+/* =========================================================
+   Pop-up event banner — teal pulled from the Two Marys'
+   Friday Night Socials flyer
+   ========================================================= */
+.fb-event-banner {
+  --social-teal: #9cbdb4;      /* flyer panel teal */
+  --social-red:  #93372e;      /* flyer headline red */
+  background: var(--social-teal);
+  color: var(--ink-900);
+  padding: 12px 32px;
+  position: relative; z-index: 2;
+  border-bottom: 1px solid rgba(20, 16, 28, 0.14);
+}
+.fb-event-banner .inner {
+  max-width: 1280px; margin: 0 auto;
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline;
+  column-gap: 10px; row-gap: 2px;
+  text-align: center;
+  font-size: 17px; letter-spacing: 0.02em; line-height: 1.5;
+}
+.fb-event-banner .lead {
+  font-family: var(--font-display); font-style: italic;
+  font-size: 21px; color: var(--ink-900);
+}
+.fb-event-banner .event-name {
+  font-weight: 600; color: var(--social-red);
+  letter-spacing: 0.01em;
+}
+.fb-event-banner .detail {
+  display: inline-flex; flex-wrap: wrap; justify-content: center;
+  align-items: baseline; column-gap: 10px; row-gap: 2px;
+}
+.fb-event-banner .when { font-weight: 500; }
+.fb-event-banner .sep { color: rgba(20, 16, 28, 0.45); }
+.fb-event-banner a.where {
+  color: var(--ink-900);
+  text-decoration: underline;
+  text-decoration-color: rgba(20, 16, 28, 0.4);
+  text-underline-offset: 3px;
+  transition: color 200ms var(--ease-out-quint), text-decoration-color 200ms var(--ease-out-quint);
+}
+.fb-event-banner a.where:hover {
+  color: var(--social-red);
+  text-decoration-color: var(--social-red);
+}
+@media (max-width: 640px) {
+  .fb-event-banner { padding: 12px 20px; }
+  .fb-event-banner .inner { font-size: 15px; }
+  .fb-event-banner .lead { font-size: 19px; }
+  .fb-event-banner .sep { display: none; }
+}
+
 .fb-nav {
   position: sticky; top: 0; z-index: 50;
   background: rgba(34, 27, 40, 0.78);
