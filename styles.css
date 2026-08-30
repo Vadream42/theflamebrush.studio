@@ -174,31 +174,32 @@ a:hover { background-size: 100% 1px; }
 .fb-strip .dot { color: var(--ember-400); margin-right: 6px; }
 
 /* =========================================================
-   Pop-up event banner — teal pulled from the Two Marys'
-   Friday Night Socials flyer
+   Pop-up event banner — palette pulled from the Two Marys'
+   Makers Market flyer (cream / navy / rose)
    ========================================================= */
 .fb-event-banner {
-  --social-teal: #9cbdb4;      /* flyer panel teal */
-  --social-red:  #93372e;      /* flyer headline red */
-  background: var(--social-teal);
-  color: var(--ink-900);
-  padding: 12px 32px;
+  --market-cream: #f4f1e0;     /* flyer background cream */
+  --market-navy:  #0e2a48;     /* flyer headline navy */
+  --market-rose:  #c9725d;     /* flyer rose flower */
+  background: var(--market-rose);
+  color: var(--market-cream);
+  padding: 16px 32px;
   position: relative; z-index: 2;
-  border-bottom: 1px solid rgba(20, 16, 28, 0.14);
+  border-bottom: 1px solid rgba(14, 42, 72, 0.25);
 }
 .fb-event-banner .inner {
   max-width: 1280px; margin: 0 auto;
   display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline;
   column-gap: 10px; row-gap: 2px;
   text-align: center;
-  font-size: 17px; letter-spacing: 0.02em; line-height: 1.5;
+  font-size: 21px; letter-spacing: 0.02em; line-height: 1.5;
 }
 .fb-event-banner .lead {
   font-family: var(--font-display); font-style: italic;
-  font-size: 21px; color: var(--ink-900);
+  font-size: 26px; color: var(--market-cream);
 }
 .fb-event-banner .event-name {
-  font-weight: 600; color: var(--social-red);
+  font-weight: 700; font-size: 25px; color: var(--market-navy);
   letter-spacing: 0.01em;
 }
 .fb-event-banner .detail {
@@ -206,22 +207,23 @@ a:hover { background-size: 100% 1px; }
   align-items: baseline; column-gap: 10px; row-gap: 2px;
 }
 .fb-event-banner .when { font-weight: 500; }
-.fb-event-banner .sep { color: rgba(20, 16, 28, 0.45); }
+.fb-event-banner .sep { color: rgba(244, 241, 224, 0.6); }
 .fb-event-banner a.where {
-  color: var(--ink-900);
+  color: var(--market-cream);
   text-decoration: underline;
-  text-decoration-color: rgba(20, 16, 28, 0.4);
+  text-decoration-color: rgba(244, 241, 224, 0.5);
   text-underline-offset: 3px;
   transition: color 200ms var(--ease-out-quint), text-decoration-color 200ms var(--ease-out-quint);
 }
 .fb-event-banner a.where:hover {
-  color: var(--social-red);
-  text-decoration-color: var(--social-red);
+  color: var(--market-navy);
+  text-decoration-color: var(--market-navy);
 }
 @media (max-width: 640px) {
-  .fb-event-banner { padding: 12px 20px; }
-  .fb-event-banner .inner { font-size: 15px; }
-  .fb-event-banner .lead { font-size: 19px; }
+  .fb-event-banner { padding: 14px 20px; }
+  .fb-event-banner .inner { font-size: 18px; }
+  .fb-event-banner .lead { font-size: 22px; }
+  .fb-event-banner .event-name { font-size: 21px; }
   .fb-event-banner .sep { display: none; }
 }
 

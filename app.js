@@ -27,12 +27,12 @@
      below and bump `hideAfter`. ------------------------------ */
   const EVENT = {
     lead: "Come join us at",
-    name: "Two Marys' Mercantile — Friday Night Social",
-    date: "Friday, August 21",
-    time: "5–8 PM",
-    address: "2021 Alaska Packer Place, Alameda, CA 94501",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=2021+Alaska+Packer+Place%2C+Alameda%2C+CA+94501",
-    hideAfter: "2026-08-21T23:59:00-07:00",
+    name: "Two Marys' Makers Market",
+    date: "Saturday, October 3",
+    time: "11 AM – 4 PM",
+    address: "Alameda Marina (the lot behind The Launch), 1815 Clement Avenue, Alameda",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=1815+Clement+Avenue%2C+Alameda%2C+CA+94501",
+    hideAfter: "2026-10-03T23:59:00-07:00",
   };
 
   /* ---------- helpers ------------------------------------- */
