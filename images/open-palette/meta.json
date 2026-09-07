@@ -13,14 +13,7 @@
       "price": 95,
       "edition": "1/1"
     },
-    "02-emerald-lake.jpeg": {
-      "title": "Emerald Lake",
-      "size": "4″ × 4″",
-      "year": "2026",
-      "price": 125,
-      "edition": "1/1"
-    },
-    "03-green-goddess.jpeg": {
+    "02-green-goddess.jpeg": {
       "title": "Green Goddess",
       "size": "5″ × 4″",
       "year": "2026",
@@ -28,28 +21,28 @@
       "set": true,
       "note": "Pieces available individually"
     },
-    "04-mardi-gras.jpeg": {
+    "03-mardi-gras.jpeg": {
       "title": "Mardi Gras",
       "size": "7″ × 4″",
       "year": "2026",
       "price": 125,
       "edition": "1/1"
     },
-    "05-violet-moment.jpeg": {
+    "04-violet-moment.jpeg": {
       "title": "Violet Moment",
       "size": "5½″ × 4″",
       "year": "2026",
       "price": 35,
       "edition": "1/1"
     },
-    "06-frozenwater.jpeg": {
+    "05-frozenwater.jpeg": {
       "title": "Frozenwater",
       "size": "5″ × 3½″",
       "year": "2026",
       "price": 95,
       "edition": "1/1"
     },
-    "07-tide-pool-pair.jpeg": {
+    "06-tide-pool-pair.jpeg": {
       "title": "Tide Pool, pair",
       "size": "3″ × 3″",
       "year": "2026",
@@ -57,14 +50,14 @@
       "set": true,
       "note": "Pieces available individually"
     },
-    "08-evening-lavender.jpeg": {
+    "07-evening-lavender.jpeg": {
       "title": "Evening Lavender",
       "size": "4″ wide",
       "year": "2026",
       "price": 85,
       "edition": "1/1"
     },
-    "09-confetti-pair.jpeg": {
+    "08-confetti-pair.jpeg": {
       "title": "Confetti Pair",
       "size": "6″ × 4″",
       "year": "2026",
@@ -72,7 +65,7 @@
       "set": true,
       "note": "Pieces available individually"
     },
-    "10-cool-mirage.jpeg": {
+    "09-cool-mirage.jpeg": {
       "title": "Cool Mirage",
       "size": "6″ × 4″",
       "year": "2026",
@@ -80,12 +73,20 @@
       "set": true,
       "note": "Pieces available individually"
     },
-    "11-calm-lake.jpeg": {
+    "10-calm-lake.jpeg": {
       "title": "Calm Lake",
       "size": "5½″ × 4″",
       "year": "2026",
       "price": 85,
       "edition": "1/1"
+    },
+    "11-emerald-lake.jpeg": {
+      "title": "Emerald Lake",
+      "size": "4″ × 4″",
+      "year": "2026",
+      "price": 125,
+      "edition": "1/1",
+      "sold": true
     },
     "12-coral-burst.jpeg": {
       "title": "Coral Burst",
