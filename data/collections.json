@@ -6,131 +6,131 @@
       "season": "2026",
       "tagline": "Our third body of work — hand-blown pumpkins, gathered for the season.",
       "blurb": "A seasonal gather. Each pumpkin is hand-blown to order at the bench with its own hand-pulled, twisted stem. A few were photographed together as a patch, but every pumpkin goes home on its own.",
-      "cover": "images/pumpkin-patch/web/13-tide-pool-quartet.jpg",
+      "cover": "images/pumpkin-patch/web/09-tide-pool-quartet.jpg",
       "order": 1,
       "pieces": [
         {
           "id": "pumpkin-patch-01",
-          "title": "Robin's Egg",
-          "photo": "images/pumpkin-patch/01-robins-egg.jpeg",
-          "thumb": "images/pumpkin-patch/web/01-robins-egg.jpg",
+          "title": "Quiet Lagoon",
+          "photo": "images/pumpkin-patch/01-quiet-lagoon.jpeg",
+          "thumb": "images/pumpkin-patch/web/01-quiet-lagoon.jpg",
           "year": "2026",
-          "price": 50,
-          "sold": true
+          "price": 50
         },
         {
           "id": "pumpkin-patch-02",
-          "title": "Quiet Lagoon",
-          "photo": "images/pumpkin-patch/02-quiet-lagoon.jpeg",
-          "thumb": "images/pumpkin-patch/web/02-quiet-lagoon.jpg",
+          "title": "Azure Curl",
+          "photo": "images/pumpkin-patch/02-azure-curl.jpeg",
+          "thumb": "images/pumpkin-patch/web/02-azure-curl.jpg",
           "year": "2026",
           "price": 50
         },
         {
           "id": "pumpkin-patch-03",
-          "title": "Azure Curl",
-          "photo": "images/pumpkin-patch/03-azure-curl.jpeg",
-          "thumb": "images/pumpkin-patch/web/03-azure-curl.jpg",
+          "title": "Smoked Garnet",
+          "photo": "images/pumpkin-patch/03-smoked-garnet.jpeg",
+          "thumb": "images/pumpkin-patch/web/03-smoked-garnet.jpg",
           "year": "2026",
           "price": 50
         },
         {
           "id": "pumpkin-patch-04",
-          "title": "Smoked Garnet",
-          "photo": "images/pumpkin-patch/04-smoked-garnet.jpeg",
-          "thumb": "images/pumpkin-patch/web/04-smoked-garnet.jpg",
+          "title": "Violet Marble",
+          "photo": "images/pumpkin-patch/04-violet-marble.jpeg",
+          "thumb": "images/pumpkin-patch/web/04-violet-marble.jpg",
           "year": "2026",
           "price": 50
         },
         {
           "id": "pumpkin-patch-05",
-          "title": "Violet Marble",
-          "photo": "images/pumpkin-patch/05-violet-marble.jpeg",
-          "thumb": "images/pumpkin-patch/web/05-violet-marble.jpg",
+          "title": "Harvest, duo",
+          "photo": "images/pumpkin-patch/05-harvest-duo.jpeg",
+          "thumb": "images/pumpkin-patch/web/05-harvest-duo.jpg",
           "year": "2026",
-          "price": 50
+          "price": 50,
+          "note": "Sold separately, $50 each"
         },
         {
           "id": "pumpkin-patch-06",
-          "title": "Harvest, duo",
-          "photo": "images/pumpkin-patch/06-harvest-duo.jpeg",
-          "thumb": "images/pumpkin-patch/web/06-harvest-duo.jpg",
+          "title": "Harvest Trio, no. 1",
+          "photo": "images/pumpkin-patch/06-harvest-trio-1.jpeg",
+          "thumb": "images/pumpkin-patch/web/06-harvest-trio-1.jpg",
           "year": "2026",
           "price": 50,
           "note": "Sold separately, $50 each"
         },
         {
           "id": "pumpkin-patch-07",
-          "title": "Harvest Trio, no. 1",
-          "photo": "images/pumpkin-patch/07-harvest-trio-1.jpeg",
-          "thumb": "images/pumpkin-patch/web/07-harvest-trio-1.jpg",
-          "year": "2026",
-          "price": 50,
-          "note": "Sold separately, $50 each"
-        },
-        {
-          "id": "pumpkin-patch-08",
-          "title": "Midnight Cobalt",
-          "photo": "images/pumpkin-patch/08-midnight-cobalt.jpeg",
-          "thumb": "images/pumpkin-patch/web/08-midnight-cobalt.jpg",
-          "year": "2026",
-          "price": 50,
-          "sold": true
-        },
-        {
-          "id": "pumpkin-patch-09",
           "title": "Emerald Forest",
-          "photo": "images/pumpkin-patch/09-emerald-forest.jpeg",
-          "thumb": "images/pumpkin-patch/web/09-emerald-forest.jpg",
+          "photo": "images/pumpkin-patch/07-emerald-forest.jpeg",
+          "thumb": "images/pumpkin-patch/web/07-emerald-forest.jpg",
           "year": "2026",
           "price": 50,
           "sold": false
         },
         {
-          "id": "pumpkin-patch-10",
-          "title": "Wicked Plum",
-          "photo": "images/pumpkin-patch/10-wicked-plum.jpeg",
-          "thumb": "images/pumpkin-patch/web/10-wicked-plum.jpg",
+          "id": "pumpkin-patch-08",
+          "title": "Carnival Glass",
+          "photo": "images/pumpkin-patch/08-carnival-glass.jpeg",
+          "thumb": "images/pumpkin-patch/web/08-carnival-glass.jpg",
           "year": "2026",
           "price": 50,
-          "sold": true
+          "sold": false
+        },
+        {
+          "id": "pumpkin-patch-09",
+          "title": "Tide Pool, quartet",
+          "photo": "images/pumpkin-patch/09-tide-pool-quartet.jpeg",
+          "thumb": "images/pumpkin-patch/web/09-tide-pool-quartet.jpg",
+          "year": "2026",
+          "price": 50,
+          "note": "Sold separately, $50 each"
+        },
+        {
+          "id": "pumpkin-patch-10",
+          "title": "Harvest Trio, no. 2",
+          "photo": "images/pumpkin-patch/10-harvest-trio-2.jpeg",
+          "thumb": "images/pumpkin-patch/web/10-harvest-trio-2.jpg",
+          "year": "2026",
+          "price": 50,
+          "note": "Sold separately, $50 each"
         },
         {
           "id": "pumpkin-patch-11",
-          "title": "Classic, pair",
-          "photo": "images/pumpkin-patch/11-classic-pair.jpeg",
-          "thumb": "images/pumpkin-patch/web/11-classic-pair.jpg",
+          "title": "Robin's Egg",
+          "photo": "images/pumpkin-patch/11-robins-egg.jpeg",
+          "thumb": "images/pumpkin-patch/web/11-robins-egg.jpg",
           "year": "2026",
           "price": 50,
-          "note": "Sold separately, $50 each",
           "sold": true
         },
         {
           "id": "pumpkin-patch-12",
-          "title": "Carnival Glass",
-          "photo": "images/pumpkin-patch/12-carnival-glass.jpeg",
-          "thumb": "images/pumpkin-patch/web/12-carnival-glass.jpg",
+          "title": "Midnight Cobalt",
+          "photo": "images/pumpkin-patch/12-midnight-cobalt.jpeg",
+          "thumb": "images/pumpkin-patch/web/12-midnight-cobalt.jpg",
           "year": "2026",
           "price": 50,
-          "sold": false
+          "sold": true
         },
         {
           "id": "pumpkin-patch-13",
-          "title": "Tide Pool, quartet",
-          "photo": "images/pumpkin-patch/13-tide-pool-quartet.jpeg",
-          "thumb": "images/pumpkin-patch/web/13-tide-pool-quartet.jpg",
+          "title": "Wicked Plum",
+          "photo": "images/pumpkin-patch/13-wicked-plum.jpeg",
+          "thumb": "images/pumpkin-patch/web/13-wicked-plum.jpg",
           "year": "2026",
           "price": 50,
-          "note": "Sold separately, $50 each"
+          "sold": true
         },
         {
           "id": "pumpkin-patch-14",
-          "title": "Harvest Trio, no. 2",
-          "photo": "images/pumpkin-patch/14-harvest-trio-2.jpeg",
-          "thumb": "images/pumpkin-patch/web/14-harvest-trio-2.jpg",
+          "title": "Classic, pair",
+          "photo": "images/pumpkin-patch/14-classic-pair.jpeg",
+          "thumb": "images/pumpkin-patch/web/14-classic-pair.jpg",
           "year": "2026",
           "price": 50,
-          "note": "Sold separately, $50 each"
+          "note": "Sold separately, $50 each",
+          "sold": true
         }
       ]
     },
@@ -140,68 +140,34 @@
       "season": "2026",
       "tagline": "Our second body of work — cobalt to coral, the slow and the loud.",
       "blurb": "Soft structure, organic movement — this group of work was shaped slowly at the bench, letting the color and pattern form naturally in the heat. Each piece holds its own rhythm — meant to live with flowers, light, and every day moments. One piece at a time.",
-      "cover": "images/open-palette/web/01-coral-burst.jpg",
+      "cover": "images/open-palette/web/12-coral-burst.jpg",
       "order": 2,
       "pieces": [
         {
           "id": "open-palette-01",
-          "title": "Coral Burst",
-          "photo": "images/open-palette/01-coral-burst.jpeg",
-          "thumb": "images/open-palette/web/01-coral-burst.jpg",
-          "size": "6″ × 4″",
-          "year": "2026",
-          "price": 85,
-          "edition": "1/1",
-          "sold": true
-        },
-        {
-          "id": "open-palette-02",
           "title": "Stillwater",
-          "photo": "images/open-palette/02-stillwater.jpeg",
-          "thumb": "images/open-palette/web/02-stillwater.jpg",
+          "photo": "images/open-palette/01-stillwater.jpeg",
+          "thumb": "images/open-palette/web/01-stillwater.jpg",
           "size": "6½″ × 4″",
           "year": "2026",
           "price": 95,
           "edition": "1/1"
         },
         {
-          "id": "open-palette-03",
+          "id": "open-palette-02",
           "title": "Emerald Lake",
-          "photo": "images/open-palette/03-emerald-lake.jpeg",
-          "thumb": "images/open-palette/web/03-emerald-lake.jpg",
+          "photo": "images/open-palette/02-emerald-lake.jpeg",
+          "thumb": "images/open-palette/web/02-emerald-lake.jpg",
           "size": "4″ × 4″",
           "year": "2026",
           "price": 125,
           "edition": "1/1"
         },
         {
-          "id": "open-palette-04",
-          "title": "Cobalt Burst",
-          "photo": "images/open-palette/04-cobalt-burst.jpeg",
-          "thumb": "images/open-palette/web/04-cobalt-burst.jpg",
-          "size": "5″ × 3½″",
-          "year": "2026",
-          "price": 85,
-          "edition": "1/1",
-          "sold": true
-        },
-        {
-          "id": "open-palette-05",
-          "title": "Plum Petals",
-          "photo": "images/open-palette/05-plum-petals.jpeg",
-          "thumb": "images/open-palette/web/05-plum-petals.jpg",
-          "size": "7″ × 4″",
-          "year": "2026",
-          "price": 150,
-          "note": "Pieces available individually",
-          "sold": true,
-          "set": true
-        },
-        {
-          "id": "open-palette-06",
+          "id": "open-palette-03",
           "title": "Green Goddess",
-          "photo": "images/open-palette/06-green-goddess.jpeg",
-          "thumb": "images/open-palette/web/06-green-goddess.jpg",
+          "photo": "images/open-palette/03-green-goddess.jpeg",
+          "thumb": "images/open-palette/web/03-green-goddess.jpg",
           "size": "5″ × 4″",
           "year": "2026",
           "price": 175,
@@ -209,40 +175,40 @@
           "set": true
         },
         {
-          "id": "open-palette-07",
+          "id": "open-palette-04",
           "title": "Mardi Gras",
-          "photo": "images/open-palette/07-mardi-gras.jpeg",
-          "thumb": "images/open-palette/web/07-mardi-gras.jpg",
+          "photo": "images/open-palette/04-mardi-gras.jpeg",
+          "thumb": "images/open-palette/web/04-mardi-gras.jpg",
           "size": "7″ × 4″",
           "year": "2026",
           "price": 125,
           "edition": "1/1"
         },
         {
-          "id": "open-palette-08",
+          "id": "open-palette-05",
           "title": "Violet Moment",
-          "photo": "images/open-palette/08-violet-moment.jpeg",
-          "thumb": "images/open-palette/web/08-violet-moment.jpg",
+          "photo": "images/open-palette/05-violet-moment.jpeg",
+          "thumb": "images/open-palette/web/05-violet-moment.jpg",
           "size": "5½″ × 4″",
           "year": "2026",
           "price": 35,
           "edition": "1/1"
         },
         {
-          "id": "open-palette-09",
+          "id": "open-palette-06",
           "title": "Frozenwater",
-          "photo": "images/open-palette/09-frozenwater.jpeg",
-          "thumb": "images/open-palette/web/09-frozenwater.jpg",
+          "photo": "images/open-palette/06-frozenwater.jpeg",
+          "thumb": "images/open-palette/web/06-frozenwater.jpg",
           "size": "5″ × 3½″",
           "year": "2026",
           "price": 95,
           "edition": "1/1"
         },
         {
-          "id": "open-palette-10",
+          "id": "open-palette-07",
           "title": "Tide Pool, pair",
-          "photo": "images/open-palette/10-tide-pool-pair.jpeg",
-          "thumb": "images/open-palette/web/10-tide-pool-pair.jpg",
+          "photo": "images/open-palette/07-tide-pool-pair.jpeg",
+          "thumb": "images/open-palette/web/07-tide-pool-pair.jpg",
           "size": "3″ × 3″",
           "year": "2026",
           "price": 100,
@@ -250,20 +216,20 @@
           "set": true
         },
         {
-          "id": "open-palette-11",
+          "id": "open-palette-08",
           "title": "Evening Lavender",
-          "photo": "images/open-palette/11-evening-lavender.jpeg",
-          "thumb": "images/open-palette/web/11-evening-lavender.jpg",
+          "photo": "images/open-palette/08-evening-lavender.jpeg",
+          "thumb": "images/open-palette/web/08-evening-lavender.jpg",
           "size": "4″ wide",
           "year": "2026",
           "price": 85,
           "edition": "1/1"
         },
         {
-          "id": "open-palette-12",
+          "id": "open-palette-09",
           "title": "Confetti Pair",
-          "photo": "images/open-palette/12-confetti-pair.jpeg",
-          "thumb": "images/open-palette/web/12-confetti-pair.jpg",
+          "photo": "images/open-palette/09-confetti-pair.jpeg",
+          "thumb": "images/open-palette/web/09-confetti-pair.jpg",
           "size": "6″ × 4″",
           "year": "2026",
           "price": 60,
@@ -271,10 +237,10 @@
           "set": true
         },
         {
-          "id": "open-palette-13",
+          "id": "open-palette-10",
           "title": "Cool Mirage",
-          "photo": "images/open-palette/13-cool-mirage.jpeg",
-          "thumb": "images/open-palette/web/13-cool-mirage.jpg",
+          "photo": "images/open-palette/10-cool-mirage.jpeg",
+          "thumb": "images/open-palette/web/10-cool-mirage.jpg",
           "size": "6″ × 4″",
           "year": "2026",
           "price": 60,
@@ -282,14 +248,48 @@
           "set": true
         },
         {
-          "id": "open-palette-14",
+          "id": "open-palette-11",
           "title": "Calm Lake",
-          "photo": "images/open-palette/14-calm-lake.jpeg",
-          "thumb": "images/open-palette/web/14-calm-lake.jpg",
+          "photo": "images/open-palette/11-calm-lake.jpeg",
+          "thumb": "images/open-palette/web/11-calm-lake.jpg",
           "size": "5½″ × 4″",
           "year": "2026",
           "price": 85,
           "edition": "1/1"
+        },
+        {
+          "id": "open-palette-12",
+          "title": "Coral Burst",
+          "photo": "images/open-palette/12-coral-burst.jpeg",
+          "thumb": "images/open-palette/web/12-coral-burst.jpg",
+          "size": "6″ × 4″",
+          "year": "2026",
+          "price": 85,
+          "edition": "1/1",
+          "sold": true
+        },
+        {
+          "id": "open-palette-13",
+          "title": "Cobalt Burst",
+          "photo": "images/open-palette/13-cobalt-burst.jpeg",
+          "thumb": "images/open-palette/web/13-cobalt-burst.jpg",
+          "size": "5″ × 3½″",
+          "year": "2026",
+          "price": 85,
+          "edition": "1/1",
+          "sold": true
+        },
+        {
+          "id": "open-palette-14",
+          "title": "Plum Petals",
+          "photo": "images/open-palette/14-plum-petals.jpeg",
+          "thumb": "images/open-palette/web/14-plum-petals.jpg",
+          "size": "7″ × 4″",
+          "year": "2026",
+          "price": 150,
+          "note": "Pieces available individually",
+          "sold": true,
+          "set": true
         }
       ]
     },
@@ -299,14 +299,24 @@
       "season": "2025",
       "tagline": "Our first body of work — swirls of color.",
       "blurb": "Our first gather. Inspired by abstract brushstrokes, each piece is unique and crafted with a mixture of colors applied via swirled bits of colored glass — giving the impression of a painter's brush.",
-      "cover": "images/first-gather/web/03-tangerine-swirl.jpg",
+      "cover": "images/first-gather/web/04-tangerine-swirl.jpg",
       "order": 3,
       "pieces": [
         {
           "id": "first-gather-01",
+          "title": "Elphaba and Glinda",
+          "photo": "images/first-gather/01-spring-pair.jpeg",
+          "thumb": "images/first-gather/web/01-spring-pair.jpg",
+          "size": "4″ × 4″ each",
+          "year": "2025",
+          "price": 200,
+          "note": "Set of two"
+        },
+        {
+          "id": "first-gather-02",
           "title": "Cobalt carrier",
-          "photo": "images/first-gather/01-cobalt-carrier.jpeg",
-          "thumb": "images/first-gather/web/01-cobalt-carrier.jpg",
+          "photo": "images/first-gather/02-cobalt-carrier.jpeg",
+          "thumb": "images/first-gather/web/02-cobalt-carrier.jpg",
           "size": "6″ × 4″",
           "year": "2025",
           "price": 240,
@@ -314,10 +324,10 @@
           "sold": true
         },
         {
-          "id": "first-gather-02",
+          "id": "first-gather-03",
           "title": "Garnet & ash",
-          "photo": "images/first-gather/02-garnet-and-ash.jpeg",
-          "thumb": "images/first-gather/web/02-garnet-and-ash.jpg",
+          "photo": "images/first-gather/03-garnet-and-ash.jpeg",
+          "thumb": "images/first-gather/web/03-garnet-and-ash.jpg",
           "size": "5½″ × 4″",
           "year": "2025",
           "price": 220,
@@ -325,10 +335,10 @@
           "sold": true
         },
         {
-          "id": "first-gather-03",
+          "id": "first-gather-04",
           "title": "Tangerine swirl",
-          "photo": "images/first-gather/03-tangerine-swirl.jpeg",
-          "thumb": "images/first-gather/web/03-tangerine-swirl.jpg",
+          "photo": "images/first-gather/04-tangerine-swirl.jpeg",
+          "thumb": "images/first-gather/web/04-tangerine-swirl.jpg",
           "size": "6″ × 4″",
           "year": "2025",
           "price": 230,
@@ -336,7 +346,7 @@
           "sold": true
         },
         {
-          "id": "first-gather-04",
+          "id": "first-gather-05",
           "title": "Quiet aqua",
           "photo": "images/first-gather/05-quiet-aqua.jpeg",
           "thumb": "images/first-gather/web/05-quiet-aqua.jpg",
@@ -347,7 +357,7 @@
           "sold": true
         },
         {
-          "id": "first-gather-05",
+          "id": "first-gather-06",
           "title": "Brushstroke, blue",
           "photo": "images/first-gather/06-brushstroke-blue.jpeg",
           "thumb": "images/first-gather/web/06-brushstroke-blue.jpg",
@@ -358,7 +368,7 @@
           "sold": true
         },
         {
-          "id": "first-gather-06",
+          "id": "first-gather-07",
           "title": "Storm front",
           "photo": "images/first-gather/07-storm-front.jpeg",
           "thumb": "images/first-gather/web/07-storm-front.jpg",
@@ -369,7 +379,7 @@
           "sold": true
         },
         {
-          "id": "first-gather-07",
+          "id": "first-gather-08",
           "title": "Emerald gather",
           "photo": "images/first-gather/08-emerald-gather.jpeg",
           "thumb": "images/first-gather/web/08-emerald-gather.jpg",
@@ -380,7 +390,7 @@
           "sold": true
         },
         {
-          "id": "first-gather-08",
+          "id": "first-gather-09",
           "title": "Sap green",
           "photo": "images/first-gather/09-sap-green.jpeg",
           "thumb": "images/first-gather/web/09-sap-green.jpg",
@@ -391,7 +401,7 @@
           "sold": true
         },
         {
-          "id": "first-gather-09",
+          "id": "first-gather-10",
           "title": "Hydrangea, lime",
           "photo": "images/first-gather/10-hydrangea-lime.jpeg",
           "thumb": "images/first-gather/web/10-hydrangea-lime.jpg",
@@ -402,7 +412,7 @@
           "sold": true
         },
         {
-          "id": "first-gather-10",
+          "id": "first-gather-11",
           "title": "Plum & cream",
           "photo": "images/first-gather/11-plum-and-cream.jpeg",
           "thumb": "images/first-gather/web/11-plum-and-cream.jpg",
@@ -413,7 +423,7 @@
           "sold": true
         },
         {
-          "id": "first-gather-11",
+          "id": "first-gather-12",
           "title": "Plum well",
           "photo": "images/first-gather/12-plum-well.jpeg",
           "thumb": "images/first-gather/web/12-plum-well.jpg",
@@ -424,7 +434,7 @@
           "sold": true
         },
         {
-          "id": "first-gather-12",
+          "id": "first-gather-13",
           "title": "Deep tide",
           "photo": "images/first-gather/13-deep-tide.jpeg",
           "thumb": "images/first-gather/web/13-deep-tide.jpg",
@@ -435,7 +445,7 @@
           "sold": true
         },
         {
-          "id": "first-gather-13",
+          "id": "first-gather-14",
           "title": "Pink marble rose",
           "photo": "images/first-gather/14-pink-marble-rose.jpeg",
           "thumb": "images/first-gather/web/14-pink-marble-rose.jpg",
@@ -446,7 +456,7 @@
           "sold": true
         },
         {
-          "id": "first-gather-14",
+          "id": "first-gather-15",
           "title": "Blush marble",
           "photo": "images/first-gather/15-blush-marble.jpeg",
           "thumb": "images/first-gather/web/15-blush-marble.jpg",
@@ -457,20 +467,10 @@
           "sold": true
         },
         {
-          "id": "first-gather-15",
-          "title": "Elphaba and Glinda",
-          "photo": "images/first-gather/16-spring-pair.jpeg",
-          "thumb": "images/first-gather/web/16-spring-pair.jpg",
-          "size": "4″ × 4″ each",
-          "year": "2025",
-          "price": 200,
-          "note": "Set of two"
-        },
-        {
           "id": "first-gather-16",
           "title": "Aurora",
-          "photo": "images/first-gather/17-aurora.jpeg",
-          "thumb": "images/first-gather/web/17-aurora.jpg",
+          "photo": "images/first-gather/16-aurora.jpeg",
+          "thumb": "images/first-gather/web/16-aurora.jpg",
           "size": "5½″ × 3½″",
           "year": "2025",
           "price": 225,
@@ -480,8 +480,8 @@
         {
           "id": "first-gather-17",
           "title": "Confetti dish",
-          "photo": "images/first-gather/18-confetti-dish.jpeg",
-          "thumb": "images/first-gather/web/18-confetti-dish.jpg",
+          "photo": "images/first-gather/17-confetti-dish.jpeg",
+          "thumb": "images/first-gather/web/17-confetti-dish.jpg",
           "size": "4″ wide",
           "year": "2025",
           "price": 95,
@@ -491,8 +491,8 @@
         {
           "id": "first-gather-18",
           "title": "Tidal Wave",
-          "photo": "images/first-gather/21-single-coral.jpeg",
-          "thumb": "images/first-gather/web/21-single-coral.jpg",
+          "photo": "images/first-gather/18-single-coral.jpeg",
+          "thumb": "images/first-gather/web/18-single-coral.jpg",
           "size": "4″ × 2½″",
           "year": "2025",
           "price": 135,
@@ -502,8 +502,8 @@
         {
           "id": "first-gather-19",
           "title": "Three greens",
-          "photo": "images/first-gather/22-three-greens.jpeg",
-          "thumb": "images/first-gather/web/22-three-greens.jpg",
+          "photo": "images/first-gather/19-three-greens.jpeg",
+          "thumb": "images/first-gather/web/19-three-greens.jpg",
           "size": "3–6″ each",
           "year": "2025",
           "price": 385,
@@ -513,8 +513,8 @@
         {
           "id": "first-gather-20",
           "title": "Emerald, pair",
-          "photo": "images/first-gather/23-emerald-pair.jpeg",
-          "thumb": "images/first-gather/web/23-emerald-pair.jpg",
+          "photo": "images/first-gather/20-emerald-pair.jpeg",
+          "thumb": "images/first-gather/web/20-emerald-pair.jpg",
           "size": "4–6″",
           "year": "2025",
           "price": 290,
@@ -524,8 +524,8 @@
         {
           "id": "first-gather-21",
           "title": "Cool duet",
-          "photo": "images/first-gather/24-cool-duet.jpeg",
-          "thumb": "images/first-gather/web/24-cool-duet.jpg",
+          "photo": "images/first-gather/21-cool-duet.jpeg",
+          "thumb": "images/first-gather/web/21-cool-duet.jpg",
           "size": "4–5″",
           "year": "2025",
           "price": 285,
@@ -535,8 +535,8 @@
         {
           "id": "first-gather-22",
           "title": "Plum, pair",
-          "photo": "images/first-gather/25-plum-pair.jpeg",
-          "thumb": "images/first-gather/web/25-plum-pair.jpg",
+          "photo": "images/first-gather/22-plum-pair.jpeg",
+          "thumb": "images/first-gather/web/22-plum-pair.jpg",
           "size": "5″ × 4″ each",
           "year": "2025",
           "price": 310,

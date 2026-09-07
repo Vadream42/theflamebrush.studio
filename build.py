@@ -145,6 +145,16 @@ def build_collection(folder: Path) -> dict | None:
         else f"images/{slug}/{cover_path.name}"
     )
 
+    # Available pieces always come before sold pieces. The sort is stable, so
+    # filename order (01-, 02-, ...) is preserved within each group. Piece ids
+    # and the lightbox "03 / 14" counter are numbered from this final order,
+    # so marking a piece `"sold": true` in meta.json is enough to move it to
+    # the back of the collection — no renaming required.
+    def is_sold(img: Path) -> bool:
+        pm = piece_meta.get(img.name, {}) if isinstance(piece_meta, dict) else {}
+        return bool(pm.get("sold"))
+    images = [i for i in images if not is_sold(i)] + [i for i in images if is_sold(i)]
+
     pieces = []
     for idx, img in enumerate(images, start=1):
         pm = piece_meta.get(img.name, {}) if isinstance(piece_meta, dict) else {}

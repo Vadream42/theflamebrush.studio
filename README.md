@@ -18,7 +18,7 @@ images/
     meta.json
 ```
 
-Filenames are sorted alphabetically, so prefix with `01-`, `02-`, … to control order. The first image (alphabetically, or whichever you name in `meta.json`) becomes the **cover** for the collection card and the collection-hero banner.
+Filenames are sorted alphabetically, so prefix with `01-`, `02-`, … to control order. **Sold pieces always sink to the end of a collection**: the build puts every available piece first (in filename order), then every piece marked `"sold": true` in `meta.json` (also in filename order), and numbers them from that final order. So when a piece sells, just add `"sold": true` to it in `meta.json` — no need to rename files. The first image (alphabetically, or whichever you name in `meta.json`) becomes the **cover** for the collection card and the collection-hero banner.
 
 ### Optional `meta.json`
 

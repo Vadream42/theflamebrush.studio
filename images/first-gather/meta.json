@@ -3,10 +3,17 @@
   "season": "2025",
   "tagline": "Our first body of work — swirls of color.",
   "blurb": "Our first gather. Inspired by abstract brushstrokes, each piece is unique and crafted with a mixture of colors applied via swirled bits of colored glass — giving the impression of a painter's brush.",
-  "cover": "03-tangerine-swirl.jpeg",
+  "cover": "04-tangerine-swirl.jpeg",
   "order": 3,
   "pieces": {
-    "01-cobalt-carrier.jpeg": {
+    "01-spring-pair.jpeg": {
+      "title": "Elphaba and Glinda",
+      "size": "4″ × 4″ each",
+      "year": "2025",
+      "price": 200,
+      "note": "Set of two"
+    },
+    "02-cobalt-carrier.jpeg": {
       "title": "Cobalt carrier",
       "size": "6″ × 4″",
       "year": "2025",
@@ -14,7 +21,7 @@
       "edition": "1/1",
       "sold": true
     },
-    "02-garnet-and-ash.jpeg": {
+    "03-garnet-and-ash.jpeg": {
       "title": "Garnet & ash",
       "size": "5½″ × 4″",
       "year": "2025",
@@ -22,7 +29,7 @@
       "edition": "1/1",
       "sold": true
     },
-    "03-tangerine-swirl.jpeg": {
+    "04-tangerine-swirl.jpeg": {
       "title": "Tangerine swirl",
       "size": "6″ × 4″",
       "year": "2025",
@@ -118,14 +125,7 @@
       "edition": "1/1",
       "sold": true
     },
-    "16-spring-pair.jpeg": {
-      "title": "Elphaba and Glinda",
-      "size": "4″ × 4″ each",
-      "year": "2025",
-      "price": 200,
-      "note": "Set of two"
-    },
-    "17-aurora.jpeg": {
+    "16-aurora.jpeg": {
       "title": "Aurora",
       "size": "5½″ × 3½″",
       "year": "2025",
@@ -133,7 +133,7 @@
       "edition": "1/1",
       "sold": true
     },
-    "18-confetti-dish.jpeg": {
+    "17-confetti-dish.jpeg": {
       "title": "Confetti dish",
       "size": "4″ wide",
       "year": "2025",
@@ -141,7 +141,7 @@
       "edition": "1/1",
       "sold": true
     },
-    "21-single-coral.jpeg": {
+    "18-single-coral.jpeg": {
       "title": "Tidal Wave",
       "size": "4″ × 2½″",
       "year": "2025",
@@ -149,7 +149,7 @@
       "note": "Bud vase",
       "sold": true
     },
-    "22-three-greens.jpeg": {
+    "19-three-greens.jpeg": {
       "title": "Three greens",
       "size": "3–6″ each",
       "year": "2025",
@@ -157,7 +157,7 @@
       "note": "Set of three",
       "sold": true
     },
-    "23-emerald-pair.jpeg": {
+    "20-emerald-pair.jpeg": {
       "title": "Emerald, pair",
       "size": "4–6″",
       "year": "2025",
@@ -165,7 +165,7 @@
       "note": "Set of two",
       "sold": true
     },
-    "24-cool-duet.jpeg": {
+    "21-cool-duet.jpeg": {
       "title": "Cool duet",
       "size": "4–5″",
       "year": "2025",
@@ -173,7 +173,7 @@
       "note": "Set of two",
       "sold": true
     },
-    "25-plum-pair.jpeg": {
+    "22-plum-pair.jpeg": {
       "title": "Plum, pair",
       "size": "5″ × 4″ each",
       "year": "2025",
