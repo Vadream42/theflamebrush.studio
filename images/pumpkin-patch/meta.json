@@ -3,7 +3,7 @@
   "season": "2026",
   "tagline": "Our third body of work — hand-blown pumpkins, gathered for the season.",
   "blurb": "A seasonal gather. Each pumpkin is hand-blown to order at the bench with its own hand-pulled, twisted stem. A few were photographed together as a patch, but every pumpkin goes home on its own.",
-  "cover": "09-tide-pool-quartet.jpeg",
+  "cover": "08-tide-pool-quartet.jpeg",
   "order": 1,
   "pieces": {
     "01-quiet-lagoon.jpeg": {
@@ -38,29 +38,29 @@
       "price": 50,
       "note": "Sold separately, $50 each"
     },
-    "07-emerald-forest.jpeg": {
-      "title": "Emerald Forest",
-      "year": "2026",
-      "price": 50,
-      "sold": false
-    },
-    "08-carnival-glass.jpeg": {
+    "07-carnival-glass.jpeg": {
       "title": "Carnival Glass",
       "year": "2026",
       "price": 50,
       "sold": false
     },
-    "09-tide-pool-quartet.jpeg": {
+    "08-tide-pool-quartet.jpeg": {
       "title": "Tide Pool, quartet",
       "year": "2026",
       "price": 50,
       "note": "Sold separately, $50 each"
     },
-    "10-harvest-trio-2.jpeg": {
+    "09-harvest-trio-2.jpeg": {
       "title": "Harvest Trio, no. 2",
       "year": "2026",
       "price": 50,
       "note": "Sold separately, $50 each"
+    },
+    "10-emerald-forest.jpeg": {
+      "title": "Emerald Forest",
+      "year": "2026",
+      "price": 50,
+      "sold": true
     },
     "11-robins-egg.jpeg": {
       "title": "Robin's Egg",
